@@ -1,0 +1,7 @@
+# Dev / CI tooling. Pinned to versions known to pass — do NOT unpin ruff
+# without checking signalforge issue #34 (unpinned ruff added ~500 default-rule
+# findings on legacy code and killed CI in Sep 2026).
+ruff==0.15.8
+pytest>=8,<9
+pytest-xdist>=3.5
+pip-audit>=2.6

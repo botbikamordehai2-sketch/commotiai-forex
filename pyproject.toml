@@ -23,14 +23,23 @@ select = [
 ignore = [
     "E501",    # line too long (set to 120)
     "SIM108",  # ternary suggestion — often less readable
-    "RUF001",  # ambiguous unicode (false positive for Hebrew comments)
+    "RUF001",  # ambiguous unicode in string literals — Hebrew is intentional
+    "RUF002",  # ambiguous unicode in docstrings — Hebrew is intentional
+    "RUF003",  # ambiguous unicode in comments — Hebrew is intentional
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*.py" = ["F841"]  # unused vars OK in tests
+"tests/*.py" = ["F841", "E402"]      # unused vars OK in tests; late imports OK (sys.path shim)
+"entry_monitor.py" = ["E722"]        # bare except OK for API/yfinance fallback
+"daily_review.py" = ["E722"]         # bare except OK for API/yfinance fallback
+# risk_policy.py migrated verbatim from signalforge (Wave 1). Style-only findings
+# below are ignored here to preserve copy fidelity; a follow-up PR can either
+# fix them upstream in signalforge first or refactor once the code stabilises.
+"risk_policy.py" = ["RUF005", "SIM105"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 python_files = "test_*.py"
 addopts = "-v --tb=short"
 

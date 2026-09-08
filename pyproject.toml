@@ -1,0 +1,41 @@
+[project]
+name = "commotiai-forex"
+version = "0.1.0-alpha"
+description = "Forex/Trading system — ICT/SMC, RSI+MA20 EA, entry monitor, sim engine"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+# Match the working config from signalforge (issue-34 baseline).
+# Do NOT add DTZ/BLE/S/I here — they light up ~500 findings on legacy code
+# and offer no correctness value at bootstrap. Revisit per-Wave if needed.
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes (unused imports, undefined names)
+    "B",     # flake8-bugbear (common bugs)
+    "SIM",   # flake8-simplify
+    "RUF",   # ruff-specific
+]
+ignore = [
+    "E501",    # line too long (set to 120)
+    "SIM108",  # ternary suggestion — often less readable
+    "RUF001",  # ambiguous unicode (false positive for Hebrew comments)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*.py" = ["F841"]  # unused vars OK in tests
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --tb=short"
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+warn_return_any = false
+disallow_untyped_defs = false

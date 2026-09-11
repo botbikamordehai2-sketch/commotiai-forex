@@ -1,0 +1,39 @@
+name: Claude Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  claude-review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          include_fix_links: false
+          prompt: |
+            You are reviewing this PR under a RESEARCH_ONLY / review-not-merge policy.
+
+            Rules:
+            - Never approve, merge, or take any write action beyond posting review comments.
+            - Do not propose "fix" commits or branches — suggest only, in comments.
+            - Label each claim you make as one of: FACT (backed by code/diff evidence you can
+              point to), OBSERVATION (your inference from the diff, clearly marked as such), or
+              UNSUPPORTED (a concern you can't verify from the diff — flag it as a question, not
+              a claim).
+            - Focus on: correctness bugs, security issues (secrets, injection, auth), and missing
+              test coverage.
+            - Leave inline comments at the specific lines in question. Do not restate the whole
+              diff.
+            - End with a short summary: what's safe to merge as-is, what needs a human decision,
+              and what you were unable to verify (UNSUPPORTED items).

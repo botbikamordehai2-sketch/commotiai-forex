@@ -8,6 +8,7 @@ This repository is developed by two AI coding agents in coordination. This file 
 |---|---|---|
 | **Claude Code** | Remote cloud session, GitHub MCP access to both `signalforge` and `commotiai-forex` | Architecture, migration from `signalforge`, PR authoring, cross-repo coordination |
 | **Cline** | Local VS Code, on user's Windows machine with live MT5, `.env`, Task Scheduler | Local validation (`run_checks.bat`), Windows-specific fixes (batch files, MT5 paths), per-file polish, live-adjacent testing |
+| **Claude Review Bot** | GitHub Action (`.github/workflows/claude-code-review.yml`), triggered on every PR | Automated PR review only — inline comments (FACT/OBSERVATION/UNSUPPORTED). Never commits, pushes, or merges. Not the same agent as "Claude Code" above. |
 
 ## Ground rules
 
@@ -18,6 +19,7 @@ This repository is developed by two AI coding agents in coordination. This file 
    - Cline: `Co-Authored-By: Cline <noreply@cline.bot>`
 4. **CI must be green before merge.** Ruff clean + tests pass on the head SHA.
 5. **The user is the only human reviewer.** All approvals route through them.
+6. **Claude Review Bot is not a third development agent.** It runs automatically on every PR and leaves review comments only — it has no push/merge access and doesn't participate in the Wave handoff protocol. Treat its comments like a second pair of eyes, not a required approval.
 
 ## Handoff protocol
 

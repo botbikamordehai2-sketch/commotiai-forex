@@ -1,0 +1,340 @@
+המאמר השני נסרק במלואו. הוא חשוב במיוחד עבורך: הוא מסביר איזה Runtime לבחור לבטיחות, מתי להשתמש ב־CLI, ומה Studio Code יכול לבצע בתוך סביבת WordPress מקומית. [wordpress](https://wordpress.com/blog/)
+
+## מסמך לימוד 02
+
+**שם קובץ מוצע:**
+
+```text
+02_WORDPRESS_STUDIO_SPEED_CLI_SONNET.md
+```
+
+```markdown
+# 02 — WordPress Studio: מהירות, CLI ו-Studio Code
+
+## פרטי מקור
+- כותרת: WordPress Studio Just Got Faster, the CLI is Now Dependency-Free, and Sonnet 5 is Supported
+- תאריך: 13 ביולי 2026
+- מחבר: Fredrik Rombach Ekelund
+- זמן קריאה: 4 דקות
+- מקור:
+  https://wordpress.com/blog/2026/07/13/faster-wordpress-studio/
+- סטטוס: נלמד ונסרק
+- נושא ראשי: סביבת פיתוח WordPress מקומית
+
+## מטרת השיעור
+להבין שלושה שדרוגים ב-WordPress Studio:
+
+1. סביבת עבודה מקומית מהירה יותר באמצעות Native PHP Runtime
+2. Studio CLI שניתן להתקין ללא Node.js או npm
+3. Studio Code עם Sonnet 5 כברירת מחדל
+
+## מסקנה מרכזית
+WordPress Studio הוא כלי Local Development חינמי וקוד פתוח.
+
+הוא מאפשר:
+- יצירה וניהול של אתרי WordPress מקומיים
+- פיתוח Themes, Plugins ו-Blocks
+- בדיקות לפני הפצה
+- עבודה דרך ממשק גרפי או טרמינל
+- שימוש בסוכן AI שמבין את הקשר האתר המקומי
+
+אין צורך לפרסם אתר או לחבר Hosting כדי ללמוד ולעבוד מקומית.
+
+## חלק א' — Native PHP Runtime
+
+### מה השתנה
+WordPress Studio עבר ל-Native PHP Runtime כברירת מחדל.
+
+לפי WordPress:
+- טעינת דפים מקומיים מהירה ב-30% עד 50%
+- צריכת זיכרון נמוכה משליש מהמצב הקודם
+- השיפור מורגש במיוחד באתרי ניסוי עם הרבה Plugins
+
+### למה זה חשוב
+Runtime הוא שכבת ההרצה של PHP באתר המקומי.
+
+Native Runtime:
+- מהיר יותר
+- משתמש בפחות זיכרון
+- מתאים לפיתוח רגיל
+- מתאים לבניית אתר או Theme שאתה מכיר וסומך עליו
+
+### גרסת מינימום
+Native PHP Runtime זמין ב-WordPress Studio 1.12.0 ומעלה.
+
+בדיקה:
+Site Settings → Edit site → PHP runtime
+
+## חלק ב' — Sandbox Runtime
+
+### מהו Sandbox
+Sandbox Runtime מיועד להרצת קוד שאינך סומך עליו לחלוטין.
+
+הוא מבוסס על WordPress Playground.
+
+מטרתו:
+- למנוע מהקוד להפעיל תוכנות אחרות במחשב
+- למנוע גישה של הקוד מחוץ לתיקיית האתר
+- ליצור הפרדה טובה יותר בעת בדיקת Theme או Plugin חיצוני
+
+### מתי לבחור Sandbox
+השתמש ב-Sandbox אם אתה:
+
+- בודק Plugin שהורדת ממקור לא מוכר
+- בודק Theme חיצוני
+- בוחן ZIP של לקוח או ספק
+- מריץ קוד AI לפני שאתה מכיר אותו
+- בודק Plugin שנוצר על ידי סוכן AI
+- רוצה לבצע ניסוי לפני העברה לסביבת Local רגילה
+
+### מתי לבחור Native
+השתמש ב-Native אם:
+
+- אתה עובד על פרויקט שלך
+- הקוד כבר נבדק
+- אתה צריך מהירות
+- אתה מריץ אתר עם הרבה Plugins
+- אתה מפתח ושולט בקבצים
+
+### כלל בטיחות
+Unknown code → Sandbox Runtime
+
+Reviewed code → Native Runtime
+
+אין להעביר קוד לא מוכר ישירות לאתר חי.
+
+## חלק ג' — Studio CLI
+
+### מהו CLI
+CLI הוא ממשק פקודות דרך Terminal או PowerShell.
+
+במקום ללחוץ בממשק, אפשר:
+- ליצור ולנהל אתרים מקומיים
+- להריץ WP-CLI
+- להפעיל פקודות פיתוח
+- לבצע Pull או Push
+- לעבוד בצורה סקריפטבילית
+- להתחבר לכלי אוטומציה ו-CI בעתיד
+
+### שינוי מרכזי
+אין צורך להתקין Node.js או npm כדי להתקין Studio CLI.
+
+ב-Windows מופיעה פקודת התקנה אחת:
+
+```powershell
+irm [https://wordpress.studio/install.ps1](https://wordpress.studio/install.ps1) | iex
+```
+
+### אזהרת אבטחה חשובה
+הפקודה מורידה סקריפט מהרשת ומריצה אותו מיידית.
+
+לכן, לפני הרצה:
+
+1. פתח את כתובת הסקריפט בדפדפן.
+2. ודא שהדומיין הוא `wordpress.studio`.
+3. קרא את הסקריפט או שמור עותק לבדיקה.
+4. ודא שיש לך גיבוי או נקודת שחזור.
+5. הרץ רק לאחר החלטה מפורשת.
+
+גישה בטוחה יותר:
+
+```powershell
+Invoke-WebRequest `
+  -Uri "https://wordpress.studio/install.ps1" `
+  -OutFile "$env:USERPROFILE\Downloads\wordpress-studio-install.ps1"
+```
+
+לאחר ההורדה:
+- פתח את הקובץ ב-VS Code או Notepad
+- בדוק שהוא סקריפט התקנה תקין
+- רק לאחר review, החלט אם להריץ אותו
+
+### האם חייבים CLI?
+לא.
+
+לשלב הראשון, Studio Desktop מספיק בהחלט.
+
+CLI רלוונטי כאשר רוצים:
+- אוטומציה
+- WP-CLI
+- עבודה עם Git ו-PowerShell
+- CI/CD
+- סקריפטים חוזרים
+- ניהול מספר אתרי ניסוי
+
+## חלק ד' — Sonnet 5 בתוך Studio Code
+
+### מה השתנה
+ב-Studio 1.14.0 ומעלה, Studio Code משתמש ב-Claude Sonnet 5 כברירת מחדל לפי המאמר.
+
+אפשר לבחור מודל אחר:
+- מתוך תפריט המודלים באפליקציית Desktop
+- באמצעות הפקודה `/model` בטרמינל
+
+### מה הסוכן יודע לעשות
+Studio Code מקבל גישה להקשר של סביבת WordPress המקומית.
+
+הוא יכול:
+- לקרוא Logs
+- לזהות קבצים רלוונטיים
+- לעקוב אחרי תקלה בין מספר קבצים
+- להסביר סיבת תקלה
+- להציע שינוי לבדיקה
+- ליצור Plugin
+- ליצור Block מותאם
+- ליצור Custom Post Type
+- לשנות Theme
+- להריץ פקודות פיתוח
+
+### מה הסוכן אינו מחליף
+Studio Code אינו מחליף:
+
+- אימות אנושי
+- בדיקת אבטחה
+- Code Review
+- Git Commit
+- בדיקת מובייל
+- בדיקת ביצועים
+- בדיקת SEO
+- אישור פרסום
+- אחריות על תוכן פיננסי
+
+## תהליך עבודה בטוח עם Studio Code
+
+1. צור אתר Local חדש או Clone בסביבת Studio
+2. בחר Sandbox Runtime לקוד חדש, חיצוני או לא מאומת
+3. תעד דרישה ב-Notion
+4. בקש מהסוכן תוכנית בלבד, ללא שינוי קבצים
+5. בקש רשימת קבצים שהסוכן מתכוון לשנות
+6. אשר שינוי קטן אחד בלבד
+7. בדוק את התוצאה ב-Live Preview
+8. בדוק Desktop, Tablet ו-Mobile
+9. בדוק Logs וטעינת העמוד
+10. תעד Keep / Revise / Revert
+11. בצע Git Commit לפני כל ניסוי משמעותי
+12. עבור ל-Native Runtime רק לאחר שהקוד מוכר ונבדק
+13. העבר ל-Staging רק לאחר אישור ידני
+14. העבר ל-Production רק לאחר גיבוי ובדיקת Staging
+
+## Prompt בטוח לסוכן
+
+```text
+עבוד באתר WordPress מקומי בלבד.
+
+אל תבצע Sync, Push, Pull, Deploy, Publish,
+התקנה של Plugin חיצוני או שינוי באתר חי.
+
+בשלב ראשון:
+1. בדוק את מבנה הפרויקט בקריאה בלבד
+2. הצג את התוכנית
+3. הצג את רשימת הקבצים שיידרשו לשינוי
+4. המתן לאישור מפורש לפני כתיבה
+
+בכל שינוי:
+- בצע שינוי קטן וממוקד
+- הסבר איך בודקים את התוצאה
+- הסבר איך לבצע Revert
+- אל תכניס API keys, סיסמאות או tokens לקוד
+```
+
+## משימת תרגול 02 — ללא סיכון
+
+### מטרה
+לבדוק את גרסת Studio ואת Runtime הפעיל,
+בלי להתקין CLI ובלי לגעת באתר חי.
+
+### פעולות
+1. פתח WordPress Studio.
+2. צור אתר Local בשם:
+   `forex-content-lab`
+3. פתח:
+   `Site Settings → Edit site → PHP runtime`
+4. צלם או תעד איזה Runtime פעיל:
+   - Native
+   - Sandbox
+5. בחר Sandbox אם האתר כולל קוד חדש או Plugin לא מאומת.
+6. אל תפעיל Sync.
+7. אל תתקין CLI עדיין.
+8. אל תיתן לסוכן לבצע שינוי.
+9. תעד את תוצאת הבדיקה ב-Notion.
+
+### תיעוד נדרש
+- תאריך
+- גרסת Studio
+- שם האתר המקומי
+- Runtime פעיל
+- האם האתר רץ
+- האם נפתח Admin
+- האם נפתח Preview
+- Sync בוצע: No
+- Publish בוצע: No
+- CLI הותקן: No
+
+## צ'קליסט סיום שיעור
+
+- [ ] הבנתי את ההבדל בין Native ל-Sandbox Runtime
+- [ ] הבנתי ש-Sandbox מיועד לקוד לא מאומת
+- [ ] הבנתי ש-Native מתאים לקוד מוכר ולביצועים
+- [ ] הבנתי מהו Studio CLI
+- [ ] לא הרצתי פקודת התקנה מהרשת ללא בדיקה
+- [ ] הבנתי ש-CLI אינו נדרש בשלב הלימוד
+- [ ] הבנתי מה Studio Code יכול לעשות
+- [ ] הבנתי ש-AI אינו מחליף בדיקה ואישור
+- [ ] לא חיברתי אתר חי
+- [ ] לא ביצעתי Sync או Deploy
+```
+
+## ההחלטה המעשית
+
+עבורך, סדר הפעולה הנכון כרגע הוא: **Studio Desktop → אתר Local → Sandbox Runtime → בדיקת Preview → תיעוד**. אין צורך ב־CLI עדיין, ובוודאי שאין להריץ את פקודת `irm ... | iex` לפני הורדה ובדיקה ידנית של הסקריפט. Studio מציע Native Runtime מהיר כברירת מחדל, אך Sandbox הוא הבחירה הנכונה כשבודקים תוסף, Theme או קוד AI לא מוכר.  [wordpress](https://wordpress.com/blog/)
+
+## קובץ האינדקס
+
+הוסף את השורה הבאה ל־`WORDPRESS_DEVELOPMENT_LEARNING_INDEX.md`:
+
+```markdown
+| 02 | WordPress Studio: Speed, CLI & Sonnet | נלמד | Native vs Sandbox, CLI בטוח, סוכן AI בהקשר Local | 2026-09-11 |
+```
+
+**העמוד הבא ללמידה:**  
+[How to build a WordPress plugin with AI (Cursor + WordPress Studio)](https://wordpress.com/blog/2026/07/03/build-wordpress-plugin-cursor/) — זהו המשך טבעי, כי הוא מלמד לבנות Plugin בפועל בתוך Sandbox מקומי, עם AI ובדיקות לפני שימוש. [        [                 נכון לעצור. בדף הזה יש קישורים מסוגים שונים — **לא כולם הם “השיעור הבא”**, ולא כולם דורשים פתיחה עכשיו. הנה מיפוי ברור של כל הקישורים המהותיים בדף. [wordpress](https://wordpress.com/blog/)
+
+## קישורי לימוד
+
+| קישור | מה זה | האם לפתוח עכשיו |
+|---|---|---|
+| [WordPress Studio](https://developer.wordpress.com/studio/) | העמוד הרשמי להורדה, יכולות Desktop, CLI, Studio Code, Sync ו־Preview | כבר סרקנו אותו; נשאיר כמסמך בסיס |
+| [Native PHP runtime](https://developer.wordpress.com/docs/developer-tools/studio/php-runtimes/) | תיעוד טכני על שני מצבי ההרצה: Native המהיר מול Sandbox המבודד | **כן, בהמשך** — חשוב לבטיחות |
+| [WordPress Playground](https://wordpress.org/playground/) | הטכנולוגיה שעליה מבוסס Sandbox; סביבת WordPress מבודדת להרצת קוד | **כן, בהמשך** — חשוב לקוד לא מוכר |
+| [Studio CLI docs](https://developer.wordpress.com/docs/developer-tools/studio/cli/) | תיעוד פקודות טרמינל לניהול אתרים מקומיים, WP‑CLI ו־Sync | **לא עכשיו** — רק לאחר שימוש בסיסי ב־Desktop |
+| [Studio Code](https://wordpress.com/blog/2026/06/25/studio-code-desktop/) | מאמר ייעודי על סוכן ה־AI של WordPress Studio | **כן, אחר כך** — מסמך לימוד נפרד |
+| [Claude Sonnet 5](https://www.anthropic.com/news/claude-sonnet-5) | הכרזה של Anthropic על המודל; לא תיעוד WordPress Studio עצמו | לא חובה למסלול WordPress |
+| [Release notes](https://github.com/Automattic/studio/releases) | היסטוריית גרסאות ושינויים בתוכנת Studio | לשמור למעקב, לא ללמידה כעת |
+| [GitHub issues](https://github.com/Automattic/studio/issues) | מקום לדיווח באגים ובקשות לפיצ’רים | רק אם נתקלת בתקלה או דרישת פיצ’ר |
+| [How to build a WordPress plugin with AI](https://wordpress.com/blog/2026/07/03/build-wordpress-plugin-cursor/) | מדריך מעשי לבניית Plugin עם Cursor ו־WordPress Studio | **כן**, אך רק אחרי שנלמד Native/Sandbox |
+| [המאמר הקודם על Agentic Beta](https://wordpress.com/blog/2026/08/24/studio-agentic-beta/) | שיעור 01 שכבר סיכמנו | אין צורך לפתוח שוב |
+
+## קישורי פעולה
+
+אלו קישורים שמבצעים פעולה או מובילים לשירות; הם אינם חומר לימוד:
+
+- **Download WordPress Studio** — הורדת אפליקציית Desktop למחשב.
+- `https://wordpress.studio/install.ps1` — סקריפט התקנה עבור Windows CLI.
+- `https://wordpress.studio/install.sh` — סקריפט התקנה עבור macOS/Linux CLI.
+- כפתורי Share — שיתוף המאמר ברשתות חברתיות.
+- Like / Reblog / Subscribe — אינטראקציה עם האתר, לא קשור ללימוד.
+- קישורי App Store ו־Google Play — אפליקציות מובייל של WordPress.com, לא WordPress Studio למחשב. [wordpress](https://wordpress.com/blog/)
+
+## קישורי רקע
+
+- **תגית WordPress Studio** — עמוד שמרכז מאמרים הקשורים ל־Studio.
+- **עמוד המחבר Fredrik Rombach Ekelund** — כל הפרסומים של מחבר המאמר.
+- **תמיכה WordPress.com** — תמיכה באתרים ובחשבונות WordPress.com.
+- **קישור לשפות אחרות** — אותו מאמר בתרגום, לא מידע חדש.
+- **YouTube על Local LLMs** — הופיע רק בשאלת תגובה של משתמש; הוא אינו תיעוד רשמי לכך ש־Studio תומך ב־Ollama או במודלים מקומיים. [wordpress](https://wordpress.com/blog/)
+
+## הסדר הנכון
+
+אל תעבור עדיין ל־Plugin עם Cursor. קודם נפתח את הקישור **Native PHP runtime**, כי הוא יסביר בפועל את ההבדל בין Native לבין Sandbox ומה לבחור בכל ניסוי. אחריו נפתח את **WordPress Playground**, ורק אז את Studio Code ואת מדריך ה־Plugin. [wordpress](https://wordpress.com/blog/)
+
+כרגע אין לבצע הורדה, התקנת CLI, Sync או תשלום — אנחנו רק ממפים ולומדים את התיעוד. [wordpress](https://wordpress.com/blog/)                                                                       wordpress](https://wordpress.com/blog/)

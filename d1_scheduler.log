@@ -1,0 +1,1376 @@
+
+==================================================
+D1 scan started: Wed 08/12/2026 21:49:18.59
+API_LOCK_BUSY action=SKIP age_minutes=0.1 max_age_minutes=10
+D1 scan skipped: global API lock is active.
+
+==================================================
+D1 scan started: Thu 08/13/2026 11:29:30.52
+API_LOCK_ACQUIRED pid=16292 process=run_d1.bat started_at_utc=2026-08-13T08:29:30.6772218Z
+2026-08-13 11:29:31,169 - INFO - Requesting interval=1day, outputsize=5
+2026-08-13 11:29:31,690 - ERROR - 1D fetch failed: 1D API returned HTTP 429
+ERROR: fetch_1d_to_csv.py failed.
+API_LOCK_RELEASED process=run_d1.bat
+
+==================================================
+D1 scan started: Thu 08/13/2026 11:29:50.19
+API_LOCK_ACQUIRED pid=14480 process=run_d1.bat started_at_utc=2026-08-13T08:29:50.3733086Z
+2026-08-13 11:29:50,863 - INFO - Requesting interval=1day, outputsize=5
+2026-08-13 11:29:51,314 - ERROR - 1D fetch failed: 1D API returned HTTP 429
+ERROR: fetch_1d_to_csv.py failed.
+API_LOCK_RELEASED process=run_d1.bat
+
+==================================================
+D1 scan started: Thu 08/13/2026 15:25:42.34
+API_LOCK_ACQUIRED pid=9152 process=run_d1.bat started_at_utc=2026-08-13T12:25:42.5137270Z
+2026-08-13 15:25:43,058 - INFO - Requesting interval=1day, outputsize=5
+2026-08-13 15:25:43,776 - INFO - 1D EUR/USD -> bar_open=2026-08-12T00:00:00+00:00 bar_close=2026-08-13T00:00:00+00:00 age=12:25:43.058907 open=1.15429 close=1.15247 change=-0.001577
+2026-08-13 15:25:43,777 - INFO - 1D USD/CHF -> bar_open=2026-08-12T00:00:00+00:00 bar_close=2026-08-13T00:00:00+00:00 age=12:25:43.058907 open=0.81096 close=0.81364 change=0.003305
+2026-08-13 15:25:43,778 - INFO - 1D NZD/USD -> bar_open=2026-08-12T00:00:00+00:00 bar_close=2026-08-13T00:00:00+00:00 age=12:25:43.058907 open=0.58806 close=0.58584 change=-0.003775
+2026-08-13 15:25:43,778 - INFO - 1D GBP/USD -> bar_open=2026-08-12T00:00:00+00:00 bar_close=2026-08-13T00:00:00+00:00 age=12:25:43.058907 open=1.3508 close=1.34956 change=-0.000918
+2026-08-13 15:25:43,779 - INFO - 1D USD/JPY -> bar_open=2026-08-12T00:00:00+00:00 bar_close=2026-08-13T00:00:00+00:00 age=12:25:43.058907 open=159.30271 close=159.43154 change=0.000809
+2026-08-13 15:25:43,784 - INFO - Saved pair_changes_1d.csv with 5 rows
+API_LOCK_RELEASED process=run_d1.bat
+2026-08-13 15:25:44,468 - INFO - 1D input timestamp=2026-08-13T00:00:00+00:00 age=12:25:44.468008 rows=5
+2026-08-13 15:25:44,471 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.002077
+     JPY -0.000809
+     GBP -0.000918
+     EUR -0.001577
+     CHF -0.003305
+     NZD -0.003775
+2026-08-13 15:25:44,473 - INFO - 1D Base/Quote Strength Matrix:
+               USD       JPY       GBP       EUR       CHF       NZD
+currency                                                            
+USD       0.000000  0.002885  0.002995  0.003653  0.005381  0.005852
+JPY      -0.002885  0.000000  0.000109  0.000768  0.002496  0.002966
+GBP      -0.002995 -0.000109  0.000000  0.000659  0.002387  0.002857
+EUR      -0.003653 -0.000768 -0.000659  0.000000  0.001728  0.002198
+CHF      -0.005381 -0.002496 -0.002387 -0.001728  0.000000  0.000470
+NZD      -0.005852 -0.002966 -0.002857 -0.002198 -0.000470  0.000000
+2026-08-13 15:25:44,476 - INFO - 1D Signals:
+   pair  score_diff signal
+EUR/USD   -0.003653  SHORT
+GBP/USD   -0.002995  SHORT
+NZD/USD   -0.005852  SHORT
+USD/CHF    0.005381   LONG
+USD/JPY    0.002885   LONG
+2026-08-13 15:25:44,477 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=16168
+Added 5 new journal rows.
+Directional signals: 5
+Neutral signals: 0
+Recorded entry prices: 5
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=16168
+D1 scan completed: Thu 08/13/2026 15:25:44.64
+
+==================================================
+D1 scan started: Thu 08/13/2026 20:34:31.97
+API_LOCK_ACQUIRED pid=31316 process=run_d1.bat started_at_utc=2026-08-13T17:34:32.1575210Z
+2026-08-13 20:34:32,693 - INFO - Requesting interval=1day, outputsize=5
+2026-08-13 20:34:33,236 - ERROR - 1D fetch failed: 1D API returned HTTP 429
+ERROR: fetch_1d_to_csv.py failed.
+API_LOCK_RELEASED process=run_d1.bat
+
+==================================================
+D1 scan started: Fri 08/14/2026  7:16:33.21
+API_LOCK_ACQUIRED pid=9256 process=run_d1.bat started_at_utc=2026-08-14T04:16:33.3964433Z
+2026-08-14 07:16:33,961 - INFO - Requesting interval=1day, outputsize=5
+2026-08-14 07:16:34,476 - INFO - 1D EUR/USD -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=4:16:33.961835 open=1.15251 close=1.15291 change=0.000347
+2026-08-14 07:16:34,476 - INFO - 1D USD/CHF -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=4:16:33.961835 open=0.81367 close=0.81417 change=0.000614
+2026-08-14 07:16:34,477 - INFO - 1D NZD/USD -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=4:16:33.961835 open=0.58581 close=0.58507 change=-0.001263
+2026-08-14 07:16:34,477 - INFO - 1D GBP/USD -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=4:16:33.961835 open=1.34952 close=1.3487 change=-0.000608
+2026-08-14 07:16:34,478 - INFO - 1D USD/JPY -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=4:16:33.961835 open=159.43219 close=159.52336 change=0.000572
+2026-08-14 07:16:34,488 - INFO - Saved pair_changes_1d.csv with 5 rows
+API_LOCK_RELEASED process=run_d1.bat
+2026-08-14 07:16:35,191 - INFO - 1D input timestamp=2026-08-14T00:00:00+00:00 age=4:16:35.191707 rows=5
+2026-08-14 07:16:35,200 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.000542
+     EUR  0.000347
+     JPY -0.000572
+     GBP -0.000608
+     CHF -0.000614
+     NZD -0.001263
+2026-08-14 07:16:35,201 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       JPY       GBP       CHF       NZD
+currency                                                            
+USD       0.000000  0.000195  0.001114  0.001150  0.001157  0.001805
+EUR      -0.000195  0.000000  0.000919  0.000955  0.000962  0.001610
+JPY      -0.001114 -0.000919  0.000000  0.000036  0.000043  0.000691
+GBP      -0.001150 -0.000955 -0.000036  0.000000  0.000007  0.000656
+CHF      -0.001157 -0.000962 -0.000043 -0.000007  0.000000  0.000649
+NZD      -0.001805 -0.001610 -0.000691 -0.000656 -0.000649  0.000000
+2026-08-14 07:16:35,204 - INFO - 1D Signals:
+   pair  score_diff  signal
+EUR/USD   -0.000195 NEUTRAL
+GBP/USD   -0.001150   SHORT
+NZD/USD   -0.001805   SHORT
+USD/CHF    0.001157    LONG
+USD/JPY    0.001114    LONG
+2026-08-14 07:16:35,206 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=16396
+Added 5 new journal rows.
+Directional signals: 4
+Neutral signals: 1
+Recorded entry prices: 4
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=16396
+D1 scan completed: Fri 08/14/2026  7:16:35.39
+
+==================================================
+D1 scan started: Fri 08/14/2026 20:26:21.04
+API_LOCK_ACQUIRED pid=10940 process=run_d1.bat started_at_utc=2026-08-14T17:26:22.1102089Z
+2026-08-14 20:26:24,307 - INFO - Requesting interval=1day, outputsize=5
+2026-08-14 20:26:25,204 - INFO - 1D EUR/USD -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=17:26:24.307576 open=1.15251 close=1.15291 change=0.000347
+2026-08-14 20:26:25,205 - INFO - 1D USD/CHF -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=17:26:24.307576 open=0.81367 close=0.81417 change=0.000614
+2026-08-14 20:26:25,206 - INFO - 1D NZD/USD -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=17:26:24.307576 open=0.58581 close=0.58507 change=-0.001263
+2026-08-14 20:26:25,207 - INFO - 1D GBP/USD -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=17:26:24.307576 open=1.34952 close=1.3487 change=-0.000608
+2026-08-14 20:26:25,207 - INFO - 1D USD/JPY -> bar_open=2026-08-13T00:00:00+00:00 bar_close=2026-08-14T00:00:00+00:00 age=17:26:24.307576 open=159.43219 close=159.52336 change=0.000572
+2026-08-14 20:26:25,215 - INFO - Saved pair_changes_1d.csv with 5 rows
+API_LOCK_RELEASED process=run_d1.bat
+2026-08-14 20:26:26,620 - INFO - 1D input timestamp=2026-08-14T00:00:00+00:00 age=17:26:26.620620 rows=5
+2026-08-14 20:26:26,626 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.000542
+     EUR  0.000347
+     JPY -0.000572
+     GBP -0.000608
+     CHF -0.000614
+     NZD -0.001263
+2026-08-14 20:26:26,627 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       JPY       GBP       CHF       NZD
+currency                                                            
+USD       0.000000  0.000195  0.001114  0.001150  0.001157  0.001805
+EUR      -0.000195  0.000000  0.000919  0.000955  0.000962  0.001610
+JPY      -0.001114 -0.000919  0.000000  0.000036  0.000043  0.000691
+GBP      -0.001150 -0.000955 -0.000036  0.000000  0.000007  0.000656
+CHF      -0.001157 -0.000962 -0.000043 -0.000007  0.000000  0.000649
+NZD      -0.001805 -0.001610 -0.000691 -0.000656 -0.000649  0.000000
+2026-08-14 20:26:26,629 - INFO - 1D Signals:
+   pair  score_diff  signal
+EUR/USD   -0.000195 NEUTRAL
+GBP/USD   -0.001150   SHORT
+NZD/USD   -0.001805   SHORT
+USD/CHF    0.001157    LONG
+USD/JPY    0.001114    LONG
+2026-08-14 20:26:26,631 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=4176
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=4176
+D1 scan completed: Fri 08/14/2026 20:26:26.79
+
+==================================================
+D1 scan started: Tue 08/18/2026 21:20:47.70
+2026-08-18 21:20:48,213 - INFO - Requesting interval=1day, outputsize=5
+2026-08-18 21:20:48,779 - INFO - 1D EUR/USD -> bar_open=2026-08-17T00:00:00+00:00 bar_close=2026-08-18T00:00:00+00:00 age=18:20:48.213429 open=1.15671 close=1.15801 change=0.001124
+2026-08-18 21:20:48,780 - INFO - 1D USD/CHF -> bar_open=2026-08-17T00:00:00+00:00 bar_close=2026-08-18T00:00:00+00:00 age=18:20:48.213429 open=0.81227 close=0.81094 change=-0.001637
+2026-08-18 21:20:48,780 - INFO - 1D NZD/USD -> bar_open=2026-08-17T00:00:00+00:00 bar_close=2026-08-18T00:00:00+00:00 age=18:20:48.213429 open=0.58916 close=0.59014 change=0.001663
+2026-08-18 21:20:48,781 - INFO - 1D GBP/USD -> bar_open=2026-08-17T00:00:00+00:00 bar_close=2026-08-18T00:00:00+00:00 age=18:20:48.213429 open=1.35362 close=1.35407 change=0.000332
+2026-08-18 21:20:48,782 - INFO - 1D USD/JPY -> bar_open=2026-08-17T00:00:00+00:00 bar_close=2026-08-18T00:00:00+00:00 age=18:20:48.213429 open=159.31442 close=159.4692 change=0.000972
+2026-08-18 21:20:48,786 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-18 21:20:49,230 - INFO - 1D input timestamp=2026-08-18T00:00:00+00:00 age=18:20:49.230082 rows=5
+2026-08-18 21:20:49,233 - INFO - 1D Currency Strength:
+currency  strength
+     NZD  0.001663
+     CHF  0.001637
+     EUR  0.001124
+     GBP  0.000332
+     USD -0.000757
+     JPY -0.000972
+2026-08-18 21:20:49,234 - INFO - 1D Base/Quote Strength Matrix:
+               NZD       CHF       EUR       GBP       USD       JPY
+currency                                                            
+NZD       0.000000  0.000026  0.000540  0.001331  0.002420  0.002635
+CHF      -0.000026  0.000000  0.000514  0.001305  0.002394  0.002609
+EUR      -0.000540 -0.000514  0.000000  0.000791  0.001881  0.002095
+GBP      -0.001331 -0.001305 -0.000791  0.000000  0.001090  0.001304
+USD      -0.002420 -0.002394 -0.001881 -0.001090  0.000000  0.000214
+JPY      -0.002635 -0.002609 -0.002095 -0.001304 -0.000214  0.000000
+2026-08-18 21:20:49,236 - INFO - 1D Signals:
+   pair  score_diff  signal
+EUR/USD    0.001881    LONG
+GBP/USD    0.001090    LONG
+NZD/USD    0.002420    LONG
+USD/CHF   -0.002394   SHORT
+USD/JPY    0.000214 NEUTRAL
+2026-08-18 21:20:49,238 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=6444
+Added 5 new journal rows.
+Directional signals: 4
+Neutral signals: 1
+Recorded entry prices: 4
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=6444
+D1 scan completed: Tue 08/18/2026 21:20:49.39
+
+==================================================
+D1 scan started: Wed 08/19/2026  3:13:11.80
+2026-08-19 03:13:12,231 - INFO - Requesting interval=1day, outputsize=5
+2026-08-19 03:13:12,728 - INFO - 1D EUR/USD -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=0:13:12.231631 open=1.15796 close=1.15769 change=-0.000233
+2026-08-19 03:13:12,729 - INFO - 1D USD/CHF -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=0:13:12.231631 open=0.81094 close=0.81241 change=0.001813
+2026-08-19 03:13:12,729 - INFO - 1D NZD/USD -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=0:13:12.231631 open=0.59013 close=0.58748 change=-0.004491
+2026-08-19 03:13:12,730 - INFO - 1D GBP/USD -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=0:13:12.231631 open=1.35416 close=1.35324 change=-0.000679
+2026-08-19 03:13:12,731 - INFO - 1D USD/JPY -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=0:13:12.231631 open=159.4717 close=159.62429 change=0.000957
+2026-08-19 03:13:12,735 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-19 03:13:13,187 - INFO - 1D input timestamp=2026-08-19T00:00:00+00:00 age=0:13:13.187812 rows=5
+2026-08-19 03:13:13,190 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.001635
+     EUR -0.000233
+     GBP -0.000679
+     JPY -0.000957
+     CHF -0.001813
+     NZD -0.004491
+2026-08-19 03:13:13,192 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       GBP       JPY       CHF       NZD
+currency                                                            
+USD       0.000000  0.001868  0.002314  0.002591  0.003447  0.006125
+EUR      -0.001868  0.000000  0.000446  0.000724  0.001580  0.004257
+GBP      -0.002314 -0.000446  0.000000  0.000277  0.001133  0.003811
+JPY      -0.002591 -0.000724 -0.000277  0.000000  0.000856  0.003534
+CHF      -0.003447 -0.001580 -0.001133 -0.000856  0.000000  0.002678
+NZD      -0.006125 -0.004257 -0.003811 -0.003534 -0.002678  0.000000
+2026-08-19 03:13:13,194 - INFO - 1D Signals:
+   pair  score_diff signal
+EUR/USD   -0.001868  SHORT
+GBP/USD   -0.002314  SHORT
+NZD/USD   -0.006125  SHORT
+USD/CHF    0.003447   LONG
+USD/JPY    0.002591   LONG
+2026-08-19 03:13:13,195 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=8340
+Added 5 new journal rows.
+Directional signals: 5
+Neutral signals: 0
+Recorded entry prices: 5
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=8340
+D1 scan completed: Wed 08/19/2026  3:13:13.34
+
+==================================================
+D1 scan started: Thu 08/20/2026  0:10:11.15
+2026-08-20 00:10:11,559 - INFO - Requesting interval=1day, outputsize=5
+2026-08-20 00:10:12,035 - INFO - 1D EUR/USD -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=21:10:11.559696 open=1.15796 close=1.15769 change=-0.000233
+2026-08-20 00:10:12,036 - INFO - 1D USD/CHF -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=21:10:11.559696 open=0.81094 close=0.81241 change=0.001813
+2026-08-20 00:10:12,037 - INFO - 1D NZD/USD -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=21:10:11.559696 open=0.59013 close=0.58748 change=-0.004491
+2026-08-20 00:10:12,038 - INFO - 1D GBP/USD -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=21:10:11.559696 open=1.35416 close=1.35324 change=-0.000679
+2026-08-20 00:10:12,039 - INFO - 1D USD/JPY -> bar_open=2026-08-18T00:00:00+00:00 bar_close=2026-08-19T00:00:00+00:00 age=21:10:11.559696 open=159.4717 close=159.62429 change=0.000957
+2026-08-20 00:10:12,043 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-20 00:10:12,427 - INFO - 1D input timestamp=2026-08-19T00:00:00+00:00 age=21:10:12.427298 rows=5
+2026-08-20 00:10:12,430 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.001635
+     EUR -0.000233
+     GBP -0.000679
+     JPY -0.000957
+     CHF -0.001813
+     NZD -0.004491
+2026-08-20 00:10:12,431 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       GBP       JPY       CHF       NZD
+currency                                                            
+USD       0.000000  0.001868  0.002314  0.002591  0.003447  0.006125
+EUR      -0.001868  0.000000  0.000446  0.000724  0.001580  0.004257
+GBP      -0.002314 -0.000446  0.000000  0.000277  0.001133  0.003811
+JPY      -0.002591 -0.000724 -0.000277  0.000000  0.000856  0.003534
+CHF      -0.003447 -0.001580 -0.001133 -0.000856  0.000000  0.002678
+NZD      -0.006125 -0.004257 -0.003811 -0.003534 -0.002678  0.000000
+2026-08-20 00:10:12,433 - INFO - 1D Signals:
+   pair  score_diff signal
+EUR/USD   -0.001868  SHORT
+GBP/USD   -0.002314  SHORT
+NZD/USD   -0.006125  SHORT
+USD/CHF    0.003447   LONG
+USD/JPY    0.002591   LONG
+2026-08-20 00:10:12,434 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=27488
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=27488
+D1 scan completed: Thu 08/20/2026  0:10:12.58
+
+==================================================
+D1 scan started: Fri 08/21/2026  0:10:11.62
+2026-08-21 00:10:12,139 - INFO - Requesting interval=1day, outputsize=5
+2026-08-21 00:10:12,615 - INFO - 1D EUR/USD -> bar_open=2026-08-19T00:00:00+00:00 bar_close=2026-08-20T00:00:00+00:00 age=21:10:12.139880 open=1.15764 close=1.1678 change=0.008776
+2026-08-21 00:10:12,616 - INFO - 1D USD/CHF -> bar_open=2026-08-19T00:00:00+00:00 bar_close=2026-08-20T00:00:00+00:00 age=21:10:12.139880 open=0.81244 close=0.79725 change=-0.018697
+2026-08-21 00:10:12,617 - INFO - 1D NZD/USD -> bar_open=2026-08-19T00:00:00+00:00 bar_close=2026-08-20T00:00:00+00:00 age=21:10:12.139880 open=0.58744 close=0.59356 change=0.010418
+2026-08-21 00:10:12,617 - INFO - 1D GBP/USD -> bar_open=2026-08-19T00:00:00+00:00 bar_close=2026-08-20T00:00:00+00:00 age=21:10:12.139880 open=1.35321 close=1.36071 change=0.005542
+2026-08-21 00:10:12,618 - INFO - 1D USD/JPY -> bar_open=2026-08-19T00:00:00+00:00 bar_close=2026-08-20T00:00:00+00:00 age=21:10:12.139880 open=159.6287 close=158.15784 change=-0.009214
+2026-08-21 00:10:12,624 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-21 00:10:13,066 - INFO - 1D input timestamp=2026-08-20T00:00:00+00:00 age=21:10:13.065905 rows=5
+2026-08-21 00:10:13,069 - INFO - 1D Currency Strength:
+currency  strength
+     CHF  0.018697
+     NZD  0.010418
+     JPY  0.009214
+     EUR  0.008776
+     GBP  0.005542
+     USD -0.010530
+2026-08-21 00:10:13,071 - INFO - 1D Base/Quote Strength Matrix:
+               CHF       NZD       JPY       EUR       GBP       USD
+currency                                                            
+CHF       0.000000  0.008279  0.009483  0.009920  0.013154  0.029226
+NZD      -0.008279  0.000000  0.001204  0.001642  0.004876  0.020948
+JPY      -0.009483 -0.001204  0.000000  0.000438  0.003672  0.019744
+EUR      -0.009920 -0.001642 -0.000438  0.000000  0.003234  0.019306
+GBP      -0.013154 -0.004876 -0.003672 -0.003234  0.000000  0.016072
+USD      -0.029226 -0.020948 -0.019744 -0.019306 -0.016072  0.000000
+2026-08-21 00:10:13,073 - INFO - 1D Signals:
+   pair  score_diff signal
+EUR/USD    0.019306   LONG
+GBP/USD    0.016072   LONG
+NZD/USD    0.020948   LONG
+USD/CHF   -0.029226  SHORT
+USD/JPY   -0.019744  SHORT
+2026-08-21 00:10:13,074 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=21448
+Added 5 new journal rows.
+Directional signals: 5
+Neutral signals: 0
+Recorded entry prices: 5
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=21448
+D1 scan completed: Fri 08/21/2026  0:10:13.23
+
+==================================================
+D1 scan started: Mon 08/24/2026  0:10:11.87
+2026-08-24 00:10:13,264 - INFO - Requesting interval=1day, outputsize=5
+2026-08-24 00:10:14,073 - INFO - 1D EUR/USD -> bar_open=2026-08-22T00:00:00+00:00 bar_close=2026-08-23T00:00:00+00:00 age=21:10:13.264650 open=1.16764 close=1.16788 change=0.000206
+2026-08-24 00:10:14,074 - INFO - 1D USD/CHF -> bar_open=2026-08-22T00:00:00+00:00 bar_close=2026-08-23T00:00:00+00:00 age=21:10:13.264650 open=0.80135 close=0.80106 change=-0.000362
+2026-08-24 00:10:14,075 - INFO - 1D NZD/USD -> bar_open=2026-08-22T00:00:00+00:00 bar_close=2026-08-23T00:00:00+00:00 age=21:10:13.264650 open=0.59793 close=0.59793 change=0.000000
+2026-08-24 00:10:14,076 - INFO - 1D GBP/USD -> bar_open=2026-08-22T00:00:00+00:00 bar_close=2026-08-23T00:00:00+00:00 age=21:10:13.264650 open=1.36448 close=1.36443 change=-0.000037
+2026-08-24 00:10:14,076 - INFO - 1D USD/JPY -> bar_open=2026-08-22T00:00:00+00:00 bar_close=2026-08-23T00:00:00+00:00 age=21:10:13.264650 open=158.98351 close=158.96065 change=-0.000144
+2026-08-24 00:10:14,093 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-24 00:10:14,654 - INFO - 1D input timestamp=2026-08-23T00:00:00+00:00 age=21:10:14.654022 rows=5
+2026-08-24 00:10:14,660 - INFO - 1D Currency Strength:
+currency  strength
+     CHF  0.000362
+     EUR  0.000206
+     JPY  0.000144
+     NZD  0.000000
+     GBP -0.000037
+     USD -0.000135
+2026-08-24 00:10:14,662 - INFO - 1D Base/Quote Strength Matrix:
+               CHF       EUR       JPY       NZD       GBP       USD
+currency                                                            
+CHF       0.000000  0.000156  0.000218  0.000362  0.000399  0.000497
+EUR      -0.000156  0.000000  0.000062  0.000206  0.000242  0.000340
+JPY      -0.000218 -0.000062  0.000000  0.000144  0.000180  0.000279
+NZD      -0.000362 -0.000206 -0.000144  0.000000  0.000037  0.000135
+GBP      -0.000399 -0.000242 -0.000180 -0.000037  0.000000  0.000098
+USD      -0.000497 -0.000340 -0.000279 -0.000135 -0.000098  0.000000
+2026-08-24 00:10:14,664 - INFO - 1D Signals:
+   pair  score_diff  signal
+EUR/USD    0.000340 NEUTRAL
+GBP/USD    0.000098 NEUTRAL
+NZD/USD    0.000135 NEUTRAL
+USD/CHF   -0.000497 NEUTRAL
+USD/JPY   -0.000279 NEUTRAL
+2026-08-24 00:10:14,666 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=30564
+Added 5 new journal rows.
+Directional signals: 0
+Neutral signals: 5
+Recorded entry prices: 0
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=30564
+D1 scan completed: Mon 08/24/2026  0:10:14.88
+
+==================================================
+D1 scan started: Tue 08/25/2026  0:10:12.01
+2026-08-25 00:10:12,780 - INFO - Requesting interval=1day, outputsize=5
+2026-08-25 00:10:13,509 - INFO - 1D EUR/USD -> bar_open=2026-08-23T00:00:00+00:00 bar_close=2026-08-24T00:00:00+00:00 age=21:10:12.780710 open=1.16788 close=1.16761 change=-0.000231
+2026-08-25 00:10:13,510 - INFO - 1D USD/CHF -> bar_open=2026-08-23T00:00:00+00:00 bar_close=2026-08-24T00:00:00+00:00 age=21:10:12.780710 open=0.80106 close=0.80161 change=0.000687
+2026-08-25 00:10:13,510 - INFO - 1D NZD/USD -> bar_open=2026-08-23T00:00:00+00:00 bar_close=2026-08-24T00:00:00+00:00 age=21:10:12.780710 open=0.59792 close=0.5974 change=-0.000870
+2026-08-25 00:10:13,511 - INFO - 1D GBP/USD -> bar_open=2026-08-23T00:00:00+00:00 bar_close=2026-08-24T00:00:00+00:00 age=21:10:12.780710 open=1.36444 close=1.36352 change=-0.000674
+2026-08-25 00:10:13,512 - INFO - 1D USD/JPY -> bar_open=2026-08-23T00:00:00+00:00 bar_close=2026-08-24T00:00:00+00:00 age=21:10:12.780710 open=158.96173 close=159.01237 change=0.000319
+2026-08-25 00:10:13,524 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-25 00:10:14,046 - INFO - 1D input timestamp=2026-08-24T00:00:00+00:00 age=21:10:14.045926 rows=5
+2026-08-25 00:10:14,053 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.000556
+     EUR -0.000231
+     JPY -0.000319
+     GBP -0.000674
+     CHF -0.000687
+     NZD -0.000870
+2026-08-25 00:10:14,055 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       JPY       GBP       CHF       NZD
+currency                                                            
+USD       0.000000  0.000787  0.000875  0.001230  0.001243  0.001426
+EUR      -0.000787  0.000000  0.000087  0.000443  0.000455  0.000638
+JPY      -0.000875 -0.000087  0.000000  0.000356  0.000368  0.000551
+GBP      -0.001230 -0.000443 -0.000356  0.000000  0.000012  0.000195
+CHF      -0.001243 -0.000455 -0.000368 -0.000012  0.000000  0.000183
+NZD      -0.001426 -0.000638 -0.000551 -0.000195 -0.000183  0.000000
+2026-08-25 00:10:14,057 - INFO - 1D Signals:
+   pair  score_diff signal
+EUR/USD   -0.000787  SHORT
+GBP/USD   -0.001230  SHORT
+NZD/USD   -0.001426  SHORT
+USD/CHF    0.001243   LONG
+USD/JPY    0.000875   LONG
+2026-08-25 00:10:14,059 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=36484
+Added 5 new journal rows.
+Directional signals: 5
+Neutral signals: 0
+Recorded entry prices: 5
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=36484
+D1 scan completed: Tue 08/25/2026  0:10:14.26
+
+==================================================
+D1 scan started: Wed 08/26/2026  0:10:11.45
+2026-08-26 00:10:13,614 - INFO - Requesting interval=1day, outputsize=5
+2026-08-26 00:10:14,524 - INFO - 1D EUR/USD -> bar_open=2026-08-24T00:00:00+00:00 bar_close=2026-08-25T00:00:00+00:00 age=21:10:13.614238 open=1.16763 close=1.16643 change=-0.001028
+2026-08-26 00:10:14,526 - INFO - 1D USD/CHF -> bar_open=2026-08-24T00:00:00+00:00 bar_close=2026-08-25T00:00:00+00:00 age=21:10:13.614238 open=0.80162 close=0.80257 change=0.001185
+2026-08-26 00:10:14,527 - INFO - 1D NZD/USD -> bar_open=2026-08-24T00:00:00+00:00 bar_close=2026-08-25T00:00:00+00:00 age=21:10:13.614238 open=0.59738 close=0.59596 change=-0.002377
+2026-08-26 00:10:14,528 - INFO - 1D GBP/USD -> bar_open=2026-08-24T00:00:00+00:00 bar_close=2026-08-25T00:00:00+00:00 age=21:10:13.614238 open=1.36357 close=1.36313 change=-0.000323
+2026-08-26 00:10:14,528 - INFO - 1D USD/JPY -> bar_open=2026-08-24T00:00:00+00:00 bar_close=2026-08-25T00:00:00+00:00 age=21:10:13.614238 open=159.01255 close=159.09768 change=0.000535
+2026-08-26 00:10:14,548 - INFO - Saved pair_changes_1d.csv with 5 rows
+2026-08-26 00:10:15,267 - INFO - 1D input timestamp=2026-08-25T00:00:00+00:00 age=21:10:15.267466 rows=5
+2026-08-26 00:10:15,275 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.001090
+     GBP -0.000323
+     JPY -0.000535
+     EUR -0.001028
+     CHF -0.001185
+     NZD -0.002377
+2026-08-26 00:10:15,277 - INFO - 1D Base/Quote Strength Matrix:
+               USD       GBP       JPY       EUR       CHF       NZD
+currency                                                            
+USD       0.000000  0.001412  0.001625  0.002117  0.002275  0.003467
+GBP      -0.001412  0.000000  0.000213  0.000705  0.000862  0.002054
+JPY      -0.001625 -0.000213  0.000000  0.000492  0.000650  0.001842
+EUR      -0.002117 -0.000705 -0.000492  0.000000  0.000157  0.001349
+CHF      -0.002275 -0.000862 -0.000650 -0.000157  0.000000  0.001192
+NZD      -0.003467 -0.002054 -0.001842 -0.001349 -0.001192  0.000000
+2026-08-26 00:10:15,280 - INFO - 1D Signals:
+   pair  score_diff signal
+EUR/USD   -0.002117  SHORT
+GBP/USD   -0.001412  SHORT
+NZD/USD   -0.003467  SHORT
+USD/CHF    0.002275   LONG
+USD/JPY    0.001625   LONG
+2026-08-26 00:10:15,283 - INFO - Saved signals_1d.csv with 5 rows
+JOURNAL_LOCK_ACQUIRED pid=37560
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=37560
+D1 scan completed: Wed 08/26/2026  0:10:15.65
+
+==================================================
+D1 scan started: Thu 08/27/2026 10:33:11.87
+2026-08-27 10:33:12,828 - INFO - Requesting interval=1day, outputsize=5
+2026-08-27 10:33:13,629 - INFO - 1D AUD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=0.71651 close=0.71742 change=0.001270
+2026-08-27 10:33:13,629 - INFO - 1D EUR/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=1.16752 close=1.1654 change=-0.001816
+2026-08-27 10:33:13,631 - INFO - 1D GBP/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=1.36494 close=1.35983 change=-0.003744
+2026-08-27 10:33:13,631 - INFO - 1D NZD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=0.59779 close=0.59441 change=-0.005654
+2026-08-27 10:33:13,632 - INFO - 1D USD/CAD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=1.38426 close=1.3876 change=0.002413
+2026-08-27 10:33:13,633 - INFO - 1D USD/CHF -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=0.80137 close=0.80527 change=0.004867
+2026-08-27 10:33:13,634 - INFO - 1D USD/JPY -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:33:12.828046 open=159.20786 close=159.31576 change=0.000678
+2026-08-27 10:33:13,646 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-08-27 10:33:14,354 - INFO - 1D input timestamp=2026-08-27T00:00:00+00:00 age=7:33:14.354815 rows=7
+2026-08-27 10:33:14,366 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.002557
+     AUD  0.001270
+     JPY -0.000678
+     EUR -0.001816
+     CAD -0.002413
+     GBP -0.003744
+     CHF -0.004867
+     NZD -0.005654
+2026-08-27 10:33:14,368 - INFO - 1D Base/Quote Strength Matrix:
+               USD       AUD       JPY       EUR       CAD       GBP       CHF       NZD
+currency                                                                                
+USD       0.000000  0.001287  0.003235  0.004373  0.004970  0.006301  0.007424  0.008211
+AUD      -0.001287  0.000000  0.001948  0.003086  0.003683  0.005014  0.006137  0.006924
+JPY      -0.003235 -0.001948  0.000000  0.001138  0.001735  0.003066  0.004189  0.004976
+EUR      -0.004373 -0.003086 -0.001138  0.000000  0.000597  0.001928  0.003051  0.003838
+CAD      -0.004970 -0.003683 -0.001735 -0.000597  0.000000  0.001331  0.002454  0.003241
+GBP      -0.006301 -0.005014 -0.003066 -0.001928 -0.001331  0.000000  0.001123  0.001910
+CHF      -0.007424 -0.006137 -0.004189 -0.003051 -0.002454 -0.001123  0.000000  0.000787
+NZD      -0.008211 -0.006924 -0.004976 -0.003838 -0.003241 -0.001910 -0.000787  0.000000
+2026-08-27 10:33:14,371 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD   -0.001287  SHORT
+EUR/USD   -0.004373  SHORT
+GBP/USD   -0.006301  SHORT
+NZD/USD   -0.008211  SHORT
+USD/CAD    0.004970   LONG
+USD/CHF    0.007424   LONG
+USD/JPY    0.003235   LONG
+2026-08-27 10:33:14,374 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=14348
+Added 7 new journal rows.
+Directional signals: 7
+Neutral signals: 0
+Recorded entry prices: 7
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=14348
+2026-08-27 10:33:15,260 - INFO - D1: saved price_history_1d.csv; total rows=14; minimum per pair=2
+2026-08-27 10:33:15,271 - INFO - H4: saved price_history_4h.csv; total rows=14; minimum per pair=2
+2026-08-27 10:33:15,285 - INFO - H1: saved price_history_1h.csv; total rows=21; minimum per pair=3
+2026-08-27 10:33:16,044 - INFO - Saved reversal_signals.json
+2026-08-27 10:33:16,755 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+D1 scan completed: Thu 08/27/2026 10:33:16.83
+
+==================================================
+D1 scan started: Thu 08/27/2026 10:34:30.00
+2026-08-27 10:34:30,831 - INFO - Requesting interval=1day, outputsize=5
+2026-08-27 10:34:31,391 - INFO - 1D AUD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=0.71651 close=0.71742 change=0.001270
+2026-08-27 10:34:31,392 - INFO - 1D EUR/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=1.16752 close=1.1654 change=-0.001816
+2026-08-27 10:34:31,394 - INFO - 1D GBP/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=1.36494 close=1.35983 change=-0.003744
+2026-08-27 10:34:31,395 - INFO - 1D NZD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=0.59779 close=0.59441 change=-0.005654
+2026-08-27 10:34:31,396 - INFO - 1D USD/CAD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=1.38426 close=1.3876 change=0.002413
+2026-08-27 10:34:31,397 - INFO - 1D USD/CHF -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=0.80137 close=0.80527 change=0.004867
+2026-08-27 10:34:31,398 - INFO - 1D USD/JPY -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=7:34:30.831759 open=159.20786 close=159.31576 change=0.000678
+2026-08-27 10:34:31,407 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-08-27 10:34:32,063 - INFO - 1D input timestamp=2026-08-27T00:00:00+00:00 age=7:34:32.063415 rows=7
+2026-08-27 10:34:32,067 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.002557
+     AUD  0.001270
+     JPY -0.000678
+     EUR -0.001816
+     CAD -0.002413
+     GBP -0.003744
+     CHF -0.004867
+     NZD -0.005654
+2026-08-27 10:34:32,069 - INFO - 1D Base/Quote Strength Matrix:
+               USD       AUD       JPY       EUR       CAD       GBP       CHF       NZD
+currency                                                                                
+USD       0.000000  0.001287  0.003235  0.004373  0.004970  0.006301  0.007424  0.008211
+AUD      -0.001287  0.000000  0.001948  0.003086  0.003683  0.005014  0.006137  0.006924
+JPY      -0.003235 -0.001948  0.000000  0.001138  0.001735  0.003066  0.004189  0.004976
+EUR      -0.004373 -0.003086 -0.001138  0.000000  0.000597  0.001928  0.003051  0.003838
+CAD      -0.004970 -0.003683 -0.001735 -0.000597  0.000000  0.001331  0.002454  0.003241
+GBP      -0.006301 -0.005014 -0.003066 -0.001928 -0.001331  0.000000  0.001123  0.001910
+CHF      -0.007424 -0.006137 -0.004189 -0.003051 -0.002454 -0.001123  0.000000  0.000787
+NZD      -0.008211 -0.006924 -0.004976 -0.003838 -0.003241 -0.001910 -0.000787  0.000000
+2026-08-27 10:34:32,072 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD   -0.001287  SHORT
+EUR/USD   -0.004373  SHORT
+GBP/USD   -0.006301  SHORT
+NZD/USD   -0.008211  SHORT
+USD/CAD    0.004970   LONG
+USD/CHF    0.007424   LONG
+USD/JPY    0.003235   LONG
+2026-08-27 10:34:32,074 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=27800
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=27800
+2026-08-27 10:34:32,865 - INFO - D1: saved price_history_1d.csv; total rows=14; minimum per pair=2
+2026-08-27 10:34:32,874 - INFO - H4: saved price_history_4h.csv; total rows=14; minimum per pair=2
+2026-08-27 10:34:32,883 - INFO - H1: saved price_history_1h.csv; total rows=21; minimum per pair=3
+2026-08-27 10:34:33,848 - INFO - Saved reversal_signals.json
+2026-08-27 10:34:34,637 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+D1 scan completed: Thu 08/27/2026 10:34:34.70
+
+==================================================
+D1 scan started: Thu 08/27/2026 20:33:40.11
+2026-08-27 20:33:41,246 - INFO - Requesting interval=1day, outputsize=5
+2026-08-27 20:33:42,128 - INFO - 1D AUD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=0.71651 close=0.71742 change=0.001270
+2026-08-27 20:33:42,129 - INFO - 1D EUR/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=1.16752 close=1.1654 change=-0.001816
+2026-08-27 20:33:42,129 - INFO - 1D GBP/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=1.36494 close=1.35983 change=-0.003744
+2026-08-27 20:33:42,130 - INFO - 1D NZD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=0.59779 close=0.59441 change=-0.005654
+2026-08-27 20:33:42,131 - INFO - 1D USD/CAD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=1.38426 close=1.3876 change=0.002413
+2026-08-27 20:33:42,131 - INFO - 1D USD/CHF -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=0.80137 close=0.80527 change=0.004867
+2026-08-27 20:33:42,132 - INFO - 1D USD/JPY -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=17:33:41.246876 open=159.20786 close=159.31576 change=0.000678
+2026-08-27 20:33:42,158 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-08-27 20:33:42,866 - INFO - 1D input timestamp=2026-08-27T00:00:00+00:00 age=17:33:42.866194 rows=7
+2026-08-27 20:33:42,874 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.002557
+     AUD  0.001270
+     JPY -0.000678
+     EUR -0.001816
+     CAD -0.002413
+     GBP -0.003744
+     CHF -0.004867
+     NZD -0.005654
+2026-08-27 20:33:42,877 - INFO - 1D Base/Quote Strength Matrix:
+               USD       AUD       JPY       EUR       CAD       GBP       CHF       NZD
+currency                                                                                
+USD       0.000000  0.001287  0.003235  0.004373  0.004970  0.006301  0.007424  0.008211
+AUD      -0.001287  0.000000  0.001948  0.003086  0.003683  0.005014  0.006137  0.006924
+JPY      -0.003235 -0.001948  0.000000  0.001138  0.001735  0.003066  0.004189  0.004976
+EUR      -0.004373 -0.003086 -0.001138  0.000000  0.000597  0.001928  0.003051  0.003838
+CAD      -0.004970 -0.003683 -0.001735 -0.000597  0.000000  0.001331  0.002454  0.003241
+GBP      -0.006301 -0.005014 -0.003066 -0.001928 -0.001331  0.000000  0.001123  0.001910
+CHF      -0.007424 -0.006137 -0.004189 -0.003051 -0.002454 -0.001123  0.000000  0.000787
+NZD      -0.008211 -0.006924 -0.004976 -0.003838 -0.003241 -0.001910 -0.000787  0.000000
+2026-08-27 20:33:42,879 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD   -0.001287  SHORT
+EUR/USD   -0.004373  SHORT
+GBP/USD   -0.006301  SHORT
+NZD/USD   -0.008211  SHORT
+USD/CAD    0.004970   LONG
+USD/CHF    0.007424   LONG
+USD/JPY    0.003235   LONG
+2026-08-27 20:33:42,881 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=23528
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=23528
+2026-08-27 20:33:43,710 - INFO - D1: saved price_history_1d.csv; total rows=14; minimum per pair=2
+2026-08-27 20:33:43,722 - INFO - H4: saved price_history_4h.csv; total rows=28; minimum per pair=4
+2026-08-27 20:33:43,733 - INFO - H1: saved price_history_1h.csv; total rows=77; minimum per pair=11
+2026-08-27 20:33:44,778 - INFO - Saved reversal_signals.json
+2026-08-27 20:33:45,544 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-08-27 20:33:46,323 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=5; pairs=5; manual_notes_seen=15
+D1 scan completed: Thu 08/27/2026 20:33:46.69
+
+==================================================
+D1 scan started: Fri 08/28/2026  0:10:12.10
+2026-08-28 00:10:26,407 - INFO - Requesting interval=1day, outputsize=5
+2026-08-28 00:10:29,443 - INFO - 1D AUD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=0.71651 close=0.71742 change=0.001270
+2026-08-28 00:10:29,478 - INFO - 1D EUR/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=1.16752 close=1.1654 change=-0.001816
+2026-08-28 00:10:29,481 - INFO - 1D GBP/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=1.36494 close=1.35983 change=-0.003744
+2026-08-28 00:10:29,485 - INFO - 1D NZD/USD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=0.59779 close=0.59441 change=-0.005654
+2026-08-28 00:10:29,493 - INFO - 1D USD/CAD -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=1.38426 close=1.3876 change=0.002413
+2026-08-28 00:10:29,504 - INFO - 1D USD/CHF -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=0.80137 close=0.80527 change=0.004867
+2026-08-28 00:10:29,507 - INFO - 1D USD/JPY -> bar_open=2026-08-26T00:00:00+00:00 bar_close=2026-08-27T00:00:00+00:00 age=21:10:26.379103 open=159.20786 close=159.31576 change=0.000678
+2026-08-28 00:10:30,728 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-08-28 00:10:35,292 - INFO - 1D input timestamp=2026-08-27T00:00:00+00:00 age=21:10:35.291980 rows=7
+2026-08-28 00:10:35,303 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.002557
+     AUD  0.001270
+     JPY -0.000678
+     EUR -0.001816
+     CAD -0.002413
+     GBP -0.003744
+     CHF -0.004867
+     NZD -0.005654
+2026-08-28 00:10:35,306 - INFO - 1D Base/Quote Strength Matrix:
+               USD       AUD       JPY       EUR       CAD       GBP       CHF       NZD
+currency                                                                                
+USD       0.000000  0.001287  0.003235  0.004373  0.004970  0.006301  0.007424  0.008211
+AUD      -0.001287  0.000000  0.001948  0.003086  0.003683  0.005014  0.006137  0.006924
+JPY      -0.003235 -0.001948  0.000000  0.001138  0.001735  0.003066  0.004189  0.004976
+EUR      -0.004373 -0.003086 -0.001138  0.000000  0.000597  0.001928  0.003051  0.003838
+CAD      -0.004970 -0.003683 -0.001735 -0.000597  0.000000  0.001331  0.002454  0.003241
+GBP      -0.006301 -0.005014 -0.003066 -0.001928 -0.001331  0.000000  0.001123  0.001910
+CHF      -0.007424 -0.006137 -0.004189 -0.003051 -0.002454 -0.001123  0.000000  0.000787
+NZD      -0.008211 -0.006924 -0.004976 -0.003838 -0.003241 -0.001910 -0.000787  0.000000
+2026-08-28 00:10:35,309 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD   -0.001287  SHORT
+EUR/USD   -0.004373  SHORT
+GBP/USD   -0.006301  SHORT
+NZD/USD   -0.008211  SHORT
+USD/CAD    0.004970   LONG
+USD/CHF    0.007424   LONG
+USD/JPY    0.003235   LONG
+2026-08-28 00:10:35,315 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=34932
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=34932
+2026-08-28 00:10:37,444 - INFO - D1: saved price_history_1d.csv; total rows=14; minimum per pair=2
+2026-08-28 00:10:37,455 - INFO - H4: saved price_history_4h.csv; total rows=35; minimum per pair=5
+2026-08-28 00:10:37,467 - INFO - H1: saved price_history_1h.csv; total rows=98; minimum per pair=14
+2026-08-28 00:10:38,413 - INFO - Saved reversal_signals.json
+2026-08-28 00:10:39,541 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-08-28 00:10:39,974 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=10; pairs=5; manual_notes_seen=15
+D1 scan completed: Fri 08/28/2026  0:10:40.42
+
+==================================================
+D1 scan started: Mon 08/31/2026  0:10:11.16
+2026-08-31 00:10:11,678 - INFO - Requesting interval=1day, outputsize=5
+2026-08-31 00:10:12,281 - INFO - 1D AUD/USD -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=0.71615 close=0.71634 change=0.000265
+2026-08-31 00:10:12,282 - INFO - 1D EUR/USD -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=1.15829 close=1.15836 change=0.000060
+2026-08-31 00:10:12,283 - INFO - 1D GBP/USD -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=1.35352 close=1.35348 change=-0.000030
+2026-08-31 00:10:12,284 - INFO - 1D NZD/USD -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=0.5913 close=0.59134 change=0.000068
+2026-08-31 00:10:12,284 - INFO - 1D USD/CAD -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=1.39055 close=1.39054 change=-0.000007
+2026-08-31 00:10:12,285 - INFO - 1D USD/CHF -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=0.80943 close=0.80858 change=-0.001050
+2026-08-31 00:10:12,286 - INFO - 1D USD/JPY -> bar_open=2026-08-29T00:00:00+00:00 bar_close=2026-08-30T00:00:00+00:00 age=21:10:11.678595 open=160.10921 close=160.10152 change=-0.000048
+2026-08-31 00:10:12,290 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-08-31 00:10:12,763 - INFO - 1D input timestamp=2026-08-30T00:00:00+00:00 age=21:10:12.763789 rows=7
+2026-08-31 00:10:12,767 - INFO - 1D Currency Strength:
+currency  strength
+     CHF  0.001050
+     AUD  0.000265
+     NZD  0.000068
+     EUR  0.000060
+     JPY  0.000048
+     CAD  0.000007
+     GBP -0.000030
+     USD -0.000210
+2026-08-31 00:10:12,770 - INFO - 1D Base/Quote Strength Matrix:
+               CHF       AUD       NZD       EUR       JPY       CAD       GBP       USD
+currency                                                                                
+CHF       0.000000  0.000785  0.000982  0.000990  0.001002  0.001043  0.001080  0.001260
+AUD      -0.000785  0.000000  0.000198  0.000205  0.000217  0.000258  0.000295  0.000475
+NZD      -0.000982 -0.000198  0.000000  0.000007  0.000020  0.000060  0.000097  0.000278
+EUR      -0.000990 -0.000205 -0.000007  0.000000  0.000012  0.000053  0.000090  0.000270
+JPY      -0.001002 -0.000217 -0.000020 -0.000012  0.000000  0.000041  0.000078  0.000258
+CAD      -0.001043 -0.000258 -0.000060 -0.000053 -0.000041  0.000000  0.000037  0.000217
+GBP      -0.001080 -0.000295 -0.000097 -0.000090 -0.000078 -0.000037  0.000000  0.000180
+USD      -0.001260 -0.000475 -0.000278 -0.000270 -0.000258 -0.000217 -0.000180  0.000000
+2026-08-31 00:10:12,771 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD    0.000475 NEUTRAL
+EUR/USD    0.000270 NEUTRAL
+GBP/USD    0.000180 NEUTRAL
+NZD/USD    0.000278 NEUTRAL
+USD/CAD   -0.000217 NEUTRAL
+USD/CHF   -0.001260   SHORT
+USD/JPY   -0.000258 NEUTRAL
+2026-08-31 00:10:12,773 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=33004
+Added 7 new journal rows.
+Directional signals: 1
+Neutral signals: 6
+Recorded entry prices: 1
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=33004
+2026-08-31 00:10:13,374 - INFO - D1: saved price_history_1d.csv; total rows=21; minimum per pair=3
+2026-08-31 00:10:13,381 - INFO - H4: saved price_history_4h.csv; total rows=91; minimum per pair=13
+2026-08-31 00:10:13,389 - INFO - H1: saved price_history_1h.csv; total rows=287; minimum per pair=41
+2026-08-31 00:10:13,916 - INFO - Saved reversal_signals.json
+2026-08-31 00:10:14,456 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-08-31 00:10:14,652 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=12; pairs=7; manual_notes_seen=15
+D1 scan completed: Mon 08/31/2026  0:10:14.89
+
+==================================================
+D1 scan started: Tue 09/01/2026  0:10:11.79
+2026-09-01 00:10:13,841 - INFO - Requesting interval=1day, outputsize=5
+2026-09-01 00:10:14,578 - INFO - 1D AUD/USD -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=0.7163 close=0.71575 change=-0.000768
+2026-09-01 00:10:14,579 - INFO - 1D EUR/USD -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=1.15834 close=1.15827 change=-0.000060
+2026-09-01 00:10:14,580 - INFO - 1D GBP/USD -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=1.35347 close=1.35338 change=-0.000066
+2026-09-01 00:10:14,581 - INFO - 1D NZD/USD -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=0.59134 close=0.59175 change=0.000693
+2026-09-01 00:10:14,582 - INFO - 1D USD/CAD -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=1.39053 close=1.39074 change=0.000151
+2026-09-01 00:10:14,583 - INFO - 1D USD/CHF -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=0.80851 close=0.80926 change=0.000928
+2026-09-01 00:10:14,584 - INFO - 1D USD/JPY -> bar_open=2026-08-30T00:00:00+00:00 bar_close=2026-08-31T00:00:00+00:00 age=21:10:13.841434 open=160.1027 close=160.06593 change=-0.000230
+2026-09-01 00:10:14,609 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-01 00:10:15,850 - INFO - 1D input timestamp=2026-08-31T00:00:00+00:00 age=21:10:15.847948 rows=7
+2026-09-01 00:10:15,903 - INFO - 1D Currency Strength:
+currency  strength
+     NZD  0.000693
+     JPY  0.000230
+     USD  0.000150
+     EUR -0.000060
+     GBP -0.000066
+     CAD -0.000151
+     AUD -0.000768
+     CHF -0.000928
+2026-09-01 00:10:15,906 - INFO - 1D Base/Quote Strength Matrix:
+               NZD       JPY       USD       EUR       GBP       CAD       AUD       CHF
+currency                                                                                
+NZD       0.000000  0.000464  0.000543  0.000754  0.000760  0.000844  0.001461  0.001621
+JPY      -0.000464  0.000000  0.000080  0.000290  0.000296  0.000381  0.000997  0.001157
+USD      -0.000543 -0.000080  0.000000  0.000210  0.000217  0.000301  0.000918  0.001078
+EUR      -0.000754 -0.000290 -0.000210  0.000000  0.000006  0.000091  0.000707  0.000867
+GBP      -0.000760 -0.000296 -0.000217 -0.000006  0.000000  0.000085  0.000701  0.000861
+CAD      -0.000844 -0.000381 -0.000301 -0.000091 -0.000085  0.000000  0.000617  0.000777
+AUD      -0.001461 -0.000997 -0.000918 -0.000707 -0.000701 -0.000617  0.000000  0.000160
+CHF      -0.001621 -0.001157 -0.001078 -0.000867 -0.000861 -0.000777 -0.000160  0.000000
+2026-09-01 00:10:15,909 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD   -0.000918   SHORT
+EUR/USD   -0.000210 NEUTRAL
+GBP/USD   -0.000217 NEUTRAL
+NZD/USD    0.000543 NEUTRAL
+USD/CAD    0.000301 NEUTRAL
+USD/CHF    0.001078    LONG
+USD/JPY   -0.000080 NEUTRAL
+2026-09-01 00:10:15,911 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=24580
+Added 7 new journal rows.
+Directional signals: 2
+Neutral signals: 5
+Recorded entry prices: 2
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=24580
+2026-09-01 00:10:17,236 - INFO - D1: saved price_history_1d.csv; total rows=28; minimum per pair=4
+2026-09-01 00:10:17,245 - INFO - H4: saved price_history_4h.csv; total rows=112; minimum per pair=16
+2026-09-01 00:10:17,255 - INFO - H1: saved price_history_1h.csv; total rows=357; minimum per pair=51
+2026-09-01 00:10:18,346 - INFO - Saved reversal_signals.json
+2026-09-01 00:10:19,238 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-01 00:10:19,477 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=14; pairs=7; manual_notes_seen=15
+D1 scan completed: Tue 09/01/2026  0:10:19.64
+
+==================================================
+D1 scan started: Wed 09/02/2026  0:10:11.91
+2026-09-02 00:10:16,174 - INFO - Requesting interval=1day, outputsize=5
+2026-09-02 00:10:17,792 - INFO - 1D AUD/USD -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=0.71576 close=0.71669 change=0.001299
+2026-09-02 00:10:17,808 - INFO - 1D EUR/USD -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=1.15814 close=1.16174 change=0.003108
+2026-09-02 00:10:17,809 - INFO - 1D GBP/USD -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=1.35336 close=1.3549 change=0.001138
+2026-09-02 00:10:17,809 - INFO - 1D NZD/USD -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=0.59188 close=0.59164 change=-0.000405
+2026-09-02 00:10:17,810 - INFO - 1D USD/CAD -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=1.39079 close=1.38554 change=-0.003775
+2026-09-02 00:10:17,811 - INFO - 1D USD/CHF -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=0.80911 close=0.8084 change=-0.000878
+2026-09-02 00:10:17,811 - INFO - 1D USD/JPY -> bar_open=2026-08-31T00:00:00+00:00 bar_close=2026-09-01T00:00:00+00:00 age=21:10:16.174499 open=160.07273 close=159.74629 change=-0.002039
+2026-09-02 00:10:18,165 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-02 00:10:20,501 - INFO - 1D input timestamp=2026-09-01T00:00:00+00:00 age=21:10:20.501301 rows=7
+2026-09-02 00:10:20,510 - INFO - 1D Currency Strength:
+currency  strength
+     CAD  0.003775
+     EUR  0.003108
+     JPY  0.002039
+     AUD  0.001299
+     GBP  0.001138
+     CHF  0.000878
+     NZD -0.000405
+     USD -0.001690
+2026-09-02 00:10:20,511 - INFO - 1D Base/Quote Strength Matrix:
+               CAD       EUR       JPY       AUD       GBP       CHF       NZD       USD
+currency                                                                                
+CAD       0.000000  0.000666  0.001736  0.002476  0.002637  0.002897  0.004180  0.005465
+EUR      -0.000666  0.000000  0.001069  0.001809  0.001971  0.002231  0.003514  0.004799
+JPY      -0.001736 -0.001069  0.000000  0.000740  0.000901  0.001162  0.002445  0.003730
+AUD      -0.002476 -0.001809 -0.000740  0.000000  0.000161  0.000422  0.001705  0.002990
+GBP      -0.002637 -0.001971 -0.000901 -0.000161  0.000000  0.000260  0.001543  0.002828
+CHF      -0.002897 -0.002231 -0.001162 -0.000422 -0.000260  0.000000  0.001283  0.002568
+NZD      -0.004180 -0.003514 -0.002445 -0.001705 -0.001543 -0.001283  0.000000  0.001285
+USD      -0.005465 -0.004799 -0.003730 -0.002990 -0.002828 -0.002568 -0.001285  0.000000
+2026-09-02 00:10:20,513 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD    0.002990   LONG
+EUR/USD    0.004799   LONG
+GBP/USD    0.002828   LONG
+NZD/USD    0.001285   LONG
+USD/CAD   -0.005465  SHORT
+USD/CHF   -0.002568  SHORT
+USD/JPY   -0.003730  SHORT
+2026-09-02 00:10:20,515 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=34404
+Added 7 new journal rows.
+Directional signals: 7
+Neutral signals: 0
+Recorded entry prices: 7
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=34404
+2026-09-02 00:10:21,227 - INFO - D1: saved price_history_1d.csv; total rows=35; minimum per pair=5
+2026-09-02 00:10:21,234 - INFO - H4: saved price_history_4h.csv; total rows=119; minimum per pair=17
+2026-09-02 00:10:21,242 - INFO - H1: saved price_history_1h.csv; total rows=420; minimum per pair=60
+2026-09-02 00:10:21,774 - INFO - Saved reversal_signals.json
+2026-09-02 00:10:23,810 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-02 00:10:27,171 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=15; pairs=7; manual_notes_seen=15
+D1 scan completed: Wed 09/02/2026  0:10:27.81
+
+==================================================
+D1 scan started: Thu 09/03/2026  0:10:11.79
+2026-09-03 00:10:13,298 - INFO - Requesting interval=1day, outputsize=5
+2026-09-03 00:10:14,385 - INFO - 1D AUD/USD -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=0.71666 close=0.71448 change=-0.003042
+2026-09-03 00:10:14,386 - INFO - 1D EUR/USD -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=1.1617 close=1.1593 change=-0.002066
+2026-09-03 00:10:14,387 - INFO - 1D GBP/USD -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=1.35484 close=1.35163 change=-0.002369
+2026-09-03 00:10:14,387 - INFO - 1D NZD/USD -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=0.59162 close=0.58913 change=-0.004209
+2026-09-03 00:10:14,388 - INFO - 1D USD/CAD -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=1.38557 close=1.3897 change=0.002981
+2026-09-03 00:10:14,389 - INFO - 1D USD/CHF -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=0.80839 close=0.81163 change=0.004008
+2026-09-03 00:10:14,390 - INFO - 1D USD/JPY -> bar_open=2026-09-01T00:00:00+00:00 bar_close=2026-09-02T00:00:00+00:00 age=21:10:13.298760 open=159.74676 close=160.19861 change=0.002829
+2026-09-03 00:10:14,407 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-03 00:10:14,974 - INFO - 1D input timestamp=2026-09-02T00:00:00+00:00 age=21:10:14.974256 rows=7
+2026-09-03 00:10:14,981 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.003072
+     EUR -0.002066
+     GBP -0.002369
+     JPY -0.002829
+     CAD -0.002981
+     AUD -0.003042
+     CHF -0.004008
+     NZD -0.004209
+2026-09-03 00:10:14,983 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       GBP       JPY       CAD       AUD       CHF       NZD
+currency                                                                                
+USD       0.000000  0.005138  0.005441  0.005900  0.006053  0.006114  0.007080  0.007281
+EUR      -0.005138  0.000000  0.000303  0.000763  0.000915  0.000976  0.001942  0.002143
+GBP      -0.005441 -0.000303  0.000000  0.000459  0.000611  0.000673  0.001639  0.001839
+JPY      -0.005900 -0.000763 -0.000459  0.000000  0.000152  0.000213  0.001179  0.001380
+CAD      -0.006053 -0.000915 -0.000611 -0.000152  0.000000  0.000061  0.001027  0.001228
+AUD      -0.006114 -0.000976 -0.000673 -0.000213 -0.000061  0.000000  0.000966  0.001167
+CHF      -0.007080 -0.001942 -0.001639 -0.001179 -0.001027 -0.000966  0.000000  0.000201
+NZD      -0.007281 -0.002143 -0.001839 -0.001380 -0.001228 -0.001167 -0.000201  0.000000
+2026-09-03 00:10:14,985 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD   -0.006114  SHORT
+EUR/USD   -0.005138  SHORT
+GBP/USD   -0.005441  SHORT
+NZD/USD   -0.007281  SHORT
+USD/CAD    0.006053   LONG
+USD/CHF    0.007080   LONG
+USD/JPY    0.005900   LONG
+2026-09-03 00:10:14,987 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=5892
+Added 7 new journal rows.
+Directional signals: 7
+Neutral signals: 0
+Recorded entry prices: 7
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=5892
+2026-09-03 00:10:15,702 - INFO - D1: saved price_history_1d.csv; total rows=42; minimum per pair=6
+2026-09-03 00:10:15,710 - INFO - H4: saved price_history_4h.csv; total rows=154; minimum per pair=22
+2026-09-03 00:10:15,720 - INFO - H1: saved price_history_1h.csv; total rows=525; minimum per pair=75
+2026-09-03 00:10:16,298 - INFO - Saved reversal_signals.json
+2026-09-03 00:10:16,915 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-03 00:10:17,142 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=16; pairs=7; manual_notes_seen=15
+D1 scan completed: Thu 09/03/2026  0:10:17.31
+
+==================================================
+D1 scan started: Thu 09/03/2026 15:43:05.28
+2026-09-03 15:43:05,905 - INFO - Requesting interval=1day, outputsize=5
+2026-09-03 15:43:06,699 - INFO - 1D AUD/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=0.71445 close=0.71701 change=0.003583
+2026-09-03 15:43:06,700 - INFO - 1D EUR/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=1.15929 close=1.15884 change=-0.000388
+2026-09-03 15:43:06,700 - INFO - 1D GBP/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=1.35162 close=1.34841 change=-0.002375
+2026-09-03 15:43:06,701 - INFO - 1D NZD/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=0.58912 close=0.58508 change=-0.006858
+2026-09-03 15:43:06,702 - INFO - 1D USD/CAD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=1.38969 close=1.3845 change=-0.003735
+2026-09-03 15:43:06,702 - INFO - 1D USD/CHF -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=0.81156 close=0.81298 change=0.001750
+2026-09-03 15:43:06,703 - INFO - 1D USD/JPY -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=12:43:05.905549 open=160.19916 close=158.72699 change=-0.009190
+2026-09-03 15:43:06,708 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-03 15:43:07,213 - INFO - 1D input timestamp=2026-09-03T00:00:00+00:00 age=12:43:07.213557 rows=7
+2026-09-03 15:43:07,222 - INFO - 1D Currency Strength:
+currency  strength
+     JPY  0.009190
+     CAD  0.003735
+     AUD  0.003583
+     EUR -0.000388
+     USD -0.000734
+     CHF -0.001750
+     GBP -0.002375
+     NZD -0.006858
+2026-09-03 15:43:07,224 - INFO - 1D Base/Quote Strength Matrix:
+               JPY       CAD       AUD       EUR       USD       CHF       GBP       NZD
+currency                                                                                
+JPY       0.000000  0.005455  0.005606  0.009578  0.009923  0.010939  0.011565  0.016047
+CAD      -0.005455  0.000000  0.000151  0.004123  0.004468  0.005484  0.006110  0.010592
+AUD      -0.005606 -0.000151  0.000000  0.003971  0.004317  0.005333  0.005958  0.010441
+EUR      -0.009578 -0.004123 -0.003971  0.000000  0.000346  0.001362  0.001987  0.006470
+USD      -0.009923 -0.004468 -0.004317 -0.000346  0.000000  0.001016  0.001641  0.006124
+CHF      -0.010939 -0.005484 -0.005333 -0.001362 -0.001016  0.000000  0.000625  0.005108
+GBP      -0.011565 -0.006110 -0.005958 -0.001987 -0.001641 -0.000625  0.000000  0.004483
+NZD      -0.016047 -0.010592 -0.010441 -0.006470 -0.006124 -0.005108 -0.004483  0.000000
+2026-09-03 15:43:07,226 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD    0.004317    LONG
+EUR/USD    0.000346 NEUTRAL
+GBP/USD   -0.001641   SHORT
+NZD/USD   -0.006124   SHORT
+USD/CAD   -0.004468   SHORT
+USD/CHF    0.001016    LONG
+USD/JPY   -0.009923   SHORT
+2026-09-03 15:43:07,228 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=32216
+Added 7 new journal rows.
+Directional signals: 6
+Neutral signals: 1
+Recorded entry prices: 6
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=32216
+2026-09-03 15:43:07,843 - INFO - D1: saved price_history_1d.csv; total rows=49; minimum per pair=7
+2026-09-03 15:43:07,850 - INFO - H4: saved price_history_4h.csv; total rows=175; minimum per pair=25
+2026-09-03 15:43:07,861 - INFO - H1: saved price_history_1h.csv; total rows=595; minimum per pair=85
+2026-09-03 15:43:08,374 - INFO - Saved reversal_signals.json
+2026-09-03 15:43:08,869 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-03 15:43:09,069 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=17; pairs=7; manual_notes_seen=15
+D1 scan completed: Thu 09/03/2026 15:43:09.21
+
+==================================================
+D1 scan started: Thu 09/03/2026 15:43:42.48
+2026-09-03 15:43:42,965 - INFO - Requesting interval=1day, outputsize=5
+2026-09-03 15:43:43,483 - ERROR - 1D fetch failed: 1D API returned HTTP 429
+ERROR: fetch_1d_to_csv.py failed.
+
+==================================================
+D1 scan started: Fri 09/04/2026  0:10:11.45
+2026-09-04 00:10:13,183 - INFO - Requesting interval=1day, outputsize=5
+2026-09-04 00:10:14,068 - INFO - 1D AUD/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=0.71445 close=0.71701 change=0.003583
+2026-09-04 00:10:14,070 - INFO - 1D EUR/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=1.15929 close=1.15884 change=-0.000388
+2026-09-04 00:10:14,071 - INFO - 1D GBP/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=1.35162 close=1.34841 change=-0.002375
+2026-09-04 00:10:14,072 - INFO - 1D NZD/USD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=0.58912 close=0.58508 change=-0.006858
+2026-09-04 00:10:14,073 - INFO - 1D USD/CAD -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=1.38969 close=1.3845 change=-0.003735
+2026-09-04 00:10:14,073 - INFO - 1D USD/CHF -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=0.81156 close=0.81298 change=0.001750
+2026-09-04 00:10:14,074 - INFO - 1D USD/JPY -> bar_open=2026-09-02T00:00:00+00:00 bar_close=2026-09-03T00:00:00+00:00 age=21:10:13.183424 open=160.19916 close=158.72699 change=-0.009190
+2026-09-04 00:10:14,101 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-04 00:10:15,293 - INFO - 1D input timestamp=2026-09-03T00:00:00+00:00 age=21:10:15.293017 rows=7
+2026-09-04 00:10:15,301 - INFO - 1D Currency Strength:
+currency  strength
+     JPY  0.009190
+     CAD  0.003735
+     AUD  0.003583
+     EUR -0.000388
+     USD -0.000734
+     CHF -0.001750
+     GBP -0.002375
+     NZD -0.006858
+2026-09-04 00:10:15,304 - INFO - 1D Base/Quote Strength Matrix:
+               JPY       CAD       AUD       EUR       USD       CHF       GBP       NZD
+currency                                                                                
+JPY       0.000000  0.005455  0.005606  0.009578  0.009923  0.010939  0.011565  0.016047
+CAD      -0.005455  0.000000  0.000151  0.004123  0.004468  0.005484  0.006110  0.010592
+AUD      -0.005606 -0.000151  0.000000  0.003971  0.004317  0.005333  0.005958  0.010441
+EUR      -0.009578 -0.004123 -0.003971  0.000000  0.000346  0.001362  0.001987  0.006470
+USD      -0.009923 -0.004468 -0.004317 -0.000346  0.000000  0.001016  0.001641  0.006124
+CHF      -0.010939 -0.005484 -0.005333 -0.001362 -0.001016  0.000000  0.000625  0.005108
+GBP      -0.011565 -0.006110 -0.005958 -0.001987 -0.001641 -0.000625  0.000000  0.004483
+NZD      -0.016047 -0.010592 -0.010441 -0.006470 -0.006124 -0.005108 -0.004483  0.000000
+2026-09-04 00:10:15,307 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD    0.004317    LONG
+EUR/USD    0.000346 NEUTRAL
+GBP/USD   -0.001641   SHORT
+NZD/USD   -0.006124   SHORT
+USD/CAD   -0.004468   SHORT
+USD/CHF    0.001016    LONG
+USD/JPY   -0.009923   SHORT
+2026-09-04 00:10:15,309 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=35724
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=35724
+2026-09-04 00:10:16,121 - INFO - D1: saved price_history_1d.csv; total rows=49; minimum per pair=7
+2026-09-04 00:10:16,131 - INFO - H4: saved price_history_4h.csv; total rows=196; minimum per pair=28
+2026-09-04 00:10:16,146 - INFO - H1: saved price_history_1h.csv; total rows=630; minimum per pair=90
+2026-09-04 00:10:16,797 - INFO - Saved reversal_signals.json
+2026-09-04 00:10:17,389 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-04 00:10:17,656 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=18; pairs=7; manual_notes_seen=15
+D1 scan completed: Fri 09/04/2026  0:10:17.90
+
+==================================================
+D1 scan started: Sat 09/05/2026  0:10:12.48
+2026-09-05 00:10:16,180 - INFO - Requesting interval=1day, outputsize=5
+2026-09-05 00:10:17,045 - INFO - 1D AUD/USD -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=0.71699 close=0.72007 change=0.004296
+2026-09-05 00:10:17,046 - INFO - 1D EUR/USD -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=1.15882 close=1.16258 change=0.003245
+2026-09-05 00:10:17,048 - INFO - 1D GBP/USD -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=1.34847 close=1.35243 change=0.002937
+2026-09-05 00:10:17,049 - INFO - 1D NZD/USD -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=0.58506 close=0.58818 change=0.005333
+2026-09-05 00:10:17,050 - INFO - 1D USD/CAD -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=1.38449 close=1.37934 change=-0.003720
+2026-09-05 00:10:17,051 - INFO - 1D USD/CHF -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=0.81296 close=0.80763 change=-0.006556
+2026-09-05 00:10:17,052 - INFO - 1D USD/JPY -> bar_open=2026-09-03T00:00:00+00:00 bar_close=2026-09-04T00:00:00+00:00 age=21:10:16.180236 open=158.72599 close=155.8121 change=-0.018358
+2026-09-05 00:10:17,070 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-05 00:10:17,706 - INFO - 1D input timestamp=2026-09-04T00:00:00+00:00 age=21:10:17.705831 rows=7
+2026-09-05 00:10:17,714 - INFO - 1D Currency Strength:
+currency  strength
+     JPY  0.018358
+     CHF  0.006556
+     NZD  0.005333
+     AUD  0.004296
+     CAD  0.003720
+     EUR  0.003245
+     GBP  0.002937
+     USD -0.006349
+2026-09-05 00:10:17,716 - INFO - 1D Base/Quote Strength Matrix:
+               JPY       CHF       NZD       AUD       CAD       EUR       GBP       USD
+currency                                                                                
+JPY       0.000000  0.011802  0.013025  0.014062  0.014638  0.015113  0.015421  0.024707
+CHF      -0.011802  0.000000  0.001224  0.002261  0.002837  0.003312  0.003620  0.012905
+NZD      -0.013025 -0.001224  0.000000  0.001037  0.001613  0.002088  0.002396  0.011682
+AUD      -0.014062 -0.002261 -0.001037  0.000000  0.000576  0.001051  0.001359  0.010645
+CAD      -0.014638 -0.002837 -0.001613 -0.000576  0.000000  0.000475  0.000783  0.010069
+EUR      -0.015113 -0.003312 -0.002088 -0.001051 -0.000475  0.000000  0.000308  0.009594
+GBP      -0.015421 -0.003620 -0.002396 -0.001359 -0.000783 -0.000308  0.000000  0.009286
+USD      -0.024707 -0.012905 -0.011682 -0.010645 -0.010069 -0.009594 -0.009286  0.000000
+2026-09-05 00:10:17,719 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD    0.010645   LONG
+EUR/USD    0.009594   LONG
+GBP/USD    0.009286   LONG
+NZD/USD    0.011682   LONG
+USD/CAD   -0.010069  SHORT
+USD/CHF   -0.012905  SHORT
+USD/JPY   -0.024707  SHORT
+2026-09-05 00:10:17,721 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=37992
+Added 7 new journal rows.
+Directional signals: 7
+Neutral signals: 0
+Recorded entry prices: 7
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=37992
+2026-09-05 00:10:18,478 - INFO - D1: saved price_history_1d.csv; total rows=56; minimum per pair=8
+2026-09-05 00:10:18,487 - INFO - H4: saved price_history_4h.csv; total rows=224; minimum per pair=32
+2026-09-05 00:10:18,502 - INFO - H1: saved price_history_1h.csv; total rows=700; minimum per pair=100
+2026-09-05 00:10:19,112 - INFO - Saved reversal_signals.json
+2026-09-05 00:10:19,649 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-05 00:10:19,932 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=19; pairs=7; manual_notes_seen=15
+D1 scan completed: Sat 09/05/2026  0:10:20.14
+
+==================================================
+D1 scan started: Sun 09/06/2026  0:10:12.31
+2026-09-06 00:10:15,299 - INFO - Requesting interval=1day, outputsize=5
+2026-09-06 00:10:15,944 - ERROR - 1D fetch failed: 1D API returned HTTP 401
+ERROR: fetch_1d_to_csv.py failed.
+
+==================================================
+D1 scan started: Mon 09/07/2026  0:10:12.33
+2026-09-07 00:10:28,514 - INFO - Requesting interval=1day, outputsize=5
+2026-09-07 00:10:29,569 - ERROR - 1D fetch failed: 1D API returned HTTP 401
+ERROR: fetch_1d_to_csv.py failed.
+
+==================================================
+D1 scan started: Tue 09/08/2026  0:10:11.61
+2026-09-08 00:10:14,028 - INFO - Requesting interval=1day, outputsize=5
+2026-09-08 00:10:14,783 - ERROR - 1D fetch failed: 1D API returned HTTP 401
+ERROR: fetch_1d_to_csv.py failed.
+
+==================================================
+D1 scan started: Wed 09/09/2026  0:10:11.94
+2026-09-09 00:10:14,578 - INFO - Requesting interval=1day, outputsize=5
+2026-09-09 00:10:15,266 - ERROR - 1D fetch failed: 1D API returned HTTP 401
+ERROR: fetch_1d_to_csv.py failed.
+
+==================================================
+D1 scan started: Fri 09/11/2026  0:10:11.40
+2026-09-11 00:10:12,875 - INFO - Requesting interval=1day, outputsize=5
+2026-09-11 00:10:13,595 - INFO - 1D AUD/USD -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=0.72168 close=0.72185 change=0.000236
+2026-09-11 00:10:13,596 - INFO - 1D EUR/USD -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=1.1624 close=1.16334 change=0.000809
+2026-09-11 00:10:13,598 - INFO - 1D GBP/USD -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=1.35404 close=1.35469 change=0.000480
+2026-09-11 00:10:13,599 - INFO - 1D NZD/USD -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=0.58535 close=0.58384 change=-0.002580
+2026-09-11 00:10:13,600 - INFO - 1D USD/CAD -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=1.37839 close=1.38054 change=0.001560
+2026-09-11 00:10:13,601 - INFO - 1D USD/CHF -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=0.80963 close=0.81027 change=0.000790
+2026-09-11 00:10:13,602 - INFO - 1D USD/JPY -> bar_open=2026-09-09T00:00:00+00:00 bar_close=2026-09-10T00:00:00+00:00 age=21:10:12.875607 open=153.99968 close=153.5536 change=-0.002897
+2026-09-11 00:10:13,625 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-11 00:10:14,288 - INFO - 1D input timestamp=2026-09-10T00:00:00+00:00 age=21:10:14.287123 rows=7
+2026-09-11 00:10:14,298 - INFO - 1D Currency Strength:
+currency  strength
+     JPY  0.002897
+     EUR  0.000809
+     GBP  0.000480
+     AUD  0.000236
+     USD  0.000073
+     CHF -0.000790
+     CAD -0.001560
+     NZD -0.002580
+2026-09-11 00:10:14,300 - INFO - 1D Base/Quote Strength Matrix:
+               JPY       EUR       GBP       AUD       USD       CHF       CAD       NZD
+currency                                                                                
+JPY       0.000000  0.002088  0.002417  0.002661  0.002824  0.003687  0.004456  0.005476
+EUR      -0.002088  0.000000  0.000329  0.000573  0.000736  0.001599  0.002368  0.003388
+GBP      -0.002417 -0.000329  0.000000  0.000244  0.000407  0.001271  0.002040  0.003060
+AUD      -0.002661 -0.000573 -0.000244  0.000000  0.000163  0.001026  0.001795  0.002815
+USD      -0.002824 -0.000736 -0.000407 -0.000163  0.000000  0.000863  0.001633  0.002652
+CHF      -0.003687 -0.001599 -0.001271 -0.001026 -0.000863  0.000000  0.000769  0.001789
+CAD      -0.004456 -0.002368 -0.002040 -0.001795 -0.001633 -0.000769  0.000000  0.001020
+NZD      -0.005476 -0.003388 -0.003060 -0.002815 -0.002652 -0.001789 -0.001020  0.000000
+2026-09-11 00:10:14,303 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD    0.000163 NEUTRAL
+EUR/USD    0.000736    LONG
+GBP/USD    0.000407 NEUTRAL
+NZD/USD   -0.002652   SHORT
+USD/CAD    0.001633    LONG
+USD/CHF    0.000863    LONG
+USD/JPY   -0.002824   SHORT
+2026-09-11 00:10:14,323 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=11180
+Added 7 new journal rows.
+Directional signals: 5
+Neutral signals: 2
+Recorded entry prices: 5
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=11180
+2026-09-11 00:10:15,061 - INFO - D1: saved price_history_1d.csv; total rows=70; minimum per pair=10
+2026-09-11 00:10:15,072 - INFO - H4: saved price_history_4h.csv; total rows=294; minimum per pair=42
+2026-09-11 00:10:15,087 - INFO - H1: saved price_history_1h.csv; total rows=980; minimum per pair=140
+2026-09-11 00:10:16,010 - INFO - Saved reversal_signals.json
+2026-09-11 00:10:16,905 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-11 00:10:17,128 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=20; pairs=7; manual_notes_seen=15
+D1 scan completed: Fri 09/11/2026  0:10:17.31
+
+==================================================
+D1 scan started: Sat 09/12/2026  0:10:12.24
+2026-09-12 00:10:13,479 - INFO - Requesting interval=1day, outputsize=5
+2026-09-12 00:10:14,112 - INFO - 1D AUD/USD -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=0.72183 close=0.71565 change=-0.008562
+2026-09-12 00:10:14,113 - INFO - 1D EUR/USD -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=1.16331 close=1.16105 change=-0.001943
+2026-09-12 00:10:14,114 - INFO - 1D GBP/USD -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=1.35467 close=1.35116 change=-0.002591
+2026-09-12 00:10:14,115 - INFO - 1D NZD/USD -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=0.58383 close=0.57964 change=-0.007177
+2026-09-12 00:10:14,116 - INFO - 1D USD/CAD -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=1.38051 close=1.38334 change=0.002050
+2026-09-12 00:10:14,116 - INFO - 1D USD/CHF -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=0.81024 close=0.81297 change=0.003369
+2026-09-12 00:10:14,117 - INFO - 1D USD/JPY -> bar_open=2026-09-10T00:00:00+00:00 bar_close=2026-09-11T00:00:00+00:00 age=21:10:13.479690 open=153.5543 close=154.49485 change=0.006125
+2026-09-12 00:10:14,171 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-12 00:10:14,905 - INFO - 1D input timestamp=2026-09-11T00:00:00+00:00 age=21:10:14.904045 rows=7
+2026-09-12 00:10:14,914 - INFO - 1D Currency Strength:
+currency  strength
+     USD  0.004545
+     EUR -0.001943
+     CAD -0.002050
+     GBP -0.002591
+     CHF -0.003369
+     JPY -0.006125
+     NZD -0.007177
+     AUD -0.008562
+2026-09-12 00:10:14,916 - INFO - 1D Base/Quote Strength Matrix:
+               USD       EUR       CAD       GBP       CHF       JPY       NZD       AUD
+currency                                                                                
+USD       0.000000  0.006488  0.006595  0.007136  0.007915  0.010670  0.011722  0.013107
+EUR      -0.006488  0.000000  0.000107  0.000648  0.001427  0.004182  0.005234  0.006619
+CAD      -0.006595 -0.000107  0.000000  0.000541  0.001319  0.004075  0.005127  0.006512
+GBP      -0.007136 -0.000648 -0.000541  0.000000  0.000778  0.003534  0.004586  0.005971
+CHF      -0.007915 -0.001427 -0.001319 -0.000778  0.000000  0.002756  0.003807  0.005192
+JPY      -0.010670 -0.004182 -0.004075 -0.003534 -0.002756  0.000000  0.001052  0.002436
+NZD      -0.011722 -0.005234 -0.005127 -0.004586 -0.003807 -0.001052  0.000000  0.001385
+AUD      -0.013107 -0.006619 -0.006512 -0.005971 -0.005192 -0.002436 -0.001385  0.000000
+2026-09-12 00:10:14,918 - INFO - 1D Signals:
+   pair  score_diff signal
+AUD/USD   -0.013107  SHORT
+EUR/USD   -0.006488  SHORT
+GBP/USD   -0.007136  SHORT
+NZD/USD   -0.011722  SHORT
+USD/CAD    0.006595   LONG
+USD/CHF    0.007915   LONG
+USD/JPY    0.010670   LONG
+2026-09-12 00:10:14,920 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=9708
+Added 7 new journal rows.
+Directional signals: 7
+Neutral signals: 0
+Recorded entry prices: 7
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=9708
+2026-09-12 00:10:15,765 - INFO - D1: saved price_history_1d.csv; total rows=77; minimum per pair=11
+2026-09-12 00:10:15,774 - INFO - H4: saved price_history_4h.csv; total rows=329; minimum per pair=47
+2026-09-12 00:10:15,786 - INFO - H1: saved price_history_1h.csv; total rows=1099; minimum per pair=157
+2026-09-12 00:10:16,249 - INFO - Saved reversal_signals.json
+2026-09-12 00:10:16,748 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-12 00:10:17,065 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=21; pairs=7; manual_notes_seen=15
+D1 scan completed: Sat 09/12/2026  0:10:17.26
+
+==================================================
+D1 scan started: Sun 09/13/2026  0:10:11.75
+2026-09-13 00:10:13,299 - INFO - Requesting interval=1day, outputsize=5
+2026-09-13 00:10:13,926 - INFO - 1D AUD/USD -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=0.71565 close=0.71711 change=0.002040
+2026-09-13 00:10:13,926 - INFO - 1D EUR/USD -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=1.16102 close=1.15989 change=-0.000973
+2026-09-13 00:10:13,927 - INFO - 1D GBP/USD -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=1.35113 close=1.3526 change=0.001088
+2026-09-13 00:10:13,928 - INFO - 1D NZD/USD -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=0.57962 close=0.58135 change=0.002985
+2026-09-13 00:10:13,929 - INFO - 1D USD/CAD -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=1.38337 close=1.38725 change=0.002805
+2026-09-13 00:10:13,930 - INFO - 1D USD/CHF -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=0.81304 close=0.81645 change=0.004194
+2026-09-13 00:10:13,931 - INFO - 1D USD/JPY -> bar_open=2026-09-11T00:00:00+00:00 bar_close=2026-09-12T00:00:00+00:00 age=21:10:13.299522 open=154.48598 close=153.52682 change=-0.006209
+2026-09-13 00:10:13,951 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-13 00:10:14,638 - INFO - 1D input timestamp=2026-09-12T00:00:00+00:00 age=21:10:14.638126 rows=7
+2026-09-13 00:10:14,644 - INFO - 1D Currency Strength:
+currency  strength
+     JPY  0.006209
+     NZD  0.002985
+     AUD  0.002040
+     GBP  0.001088
+     USD -0.000621
+     EUR -0.000973
+     CAD -0.002805
+     CHF -0.004194
+2026-09-13 00:10:14,646 - INFO - 1D Base/Quote Strength Matrix:
+               JPY       NZD       AUD       GBP       USD       EUR       CAD       CHF
+currency                                                                                
+JPY       0.000000  0.003224  0.004169  0.005121  0.006830  0.007182  0.009013  0.010403
+NZD      -0.003224  0.000000  0.000945  0.001897  0.003606  0.003958  0.005789  0.007179
+AUD      -0.004169 -0.000945  0.000000  0.000952  0.002661  0.003013  0.004845  0.006234
+GBP      -0.005121 -0.001897 -0.000952  0.000000  0.001709  0.002061  0.003893  0.005282
+USD      -0.006830 -0.003606 -0.002661 -0.001709  0.000000  0.000352  0.002183  0.003573
+EUR      -0.007182 -0.003958 -0.003013 -0.002061 -0.000352  0.000000  0.001831  0.003221
+CAD      -0.009013 -0.005789 -0.004845 -0.003893 -0.002183 -0.001831  0.000000  0.001389
+CHF      -0.010403 -0.007179 -0.006234 -0.005282 -0.003573 -0.003221 -0.001389  0.000000
+2026-09-13 00:10:14,648 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD    0.002661    LONG
+EUR/USD   -0.000352 NEUTRAL
+GBP/USD    0.001709    LONG
+NZD/USD    0.003606    LONG
+USD/CAD    0.002183    LONG
+USD/CHF    0.003573    LONG
+USD/JPY   -0.006830   SHORT
+2026-09-13 00:10:14,650 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=36504
+Added 7 new journal rows.
+Directional signals: 6
+Neutral signals: 1
+Recorded entry prices: 6
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=36504
+2026-09-13 00:10:15,315 - INFO - D1: saved price_history_1d.csv; total rows=84; minimum per pair=12
+2026-09-13 00:10:15,323 - INFO - H4: saved price_history_4h.csv; total rows=371; minimum per pair=53
+2026-09-13 00:10:15,335 - INFO - H1: saved price_history_1h.csv; total rows=1197; minimum per pair=171
+2026-09-13 00:10:15,773 - INFO - Saved reversal_signals.json
+2026-09-13 00:10:16,168 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-13 00:10:16,357 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=22; pairs=7; manual_notes_seen=15
+D1 scan completed: Sun 09/13/2026  0:10:16.59
+
+==================================================
+D1 scan started: Mon 09/14/2026  0:10:11.79
+2026-09-14 00:10:16,204 - INFO - Requesting interval=1day, outputsize=5
+2026-09-14 00:10:17,166 - INFO - 1D AUD/USD -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=0.71709 close=0.71711 change=0.000028
+2026-09-14 00:10:17,167 - INFO - 1D EUR/USD -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=1.15986 close=1.15988 change=0.000017
+2026-09-14 00:10:17,167 - INFO - 1D GBP/USD -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=1.3526 close=1.35282 change=0.000163
+2026-09-14 00:10:17,168 - INFO - 1D NZD/USD -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=0.58134 close=0.58136 change=0.000034
+2026-09-14 00:10:17,169 - INFO - 1D USD/CAD -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=1.38722 close=1.38697 change=-0.000180
+2026-09-14 00:10:17,170 - INFO - 1D USD/CHF -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=0.81645 close=0.8165 change=0.000061
+2026-09-14 00:10:17,171 - INFO - 1D USD/JPY -> bar_open=2026-09-12T00:00:00+00:00 bar_close=2026-09-13T00:00:00+00:00 age=21:10:16.204298 open=153.51533 close=153.5706 change=0.000360
+2026-09-14 00:10:17,195 - INFO - Saved pair_changes_1d.csv with 7 rows
+2026-09-14 00:10:18,677 - INFO - 1D input timestamp=2026-09-13T00:00:00+00:00 age=21:10:18.677459 rows=7
+2026-09-14 00:10:18,687 - INFO - 1D Currency Strength:
+currency      strength
+     CAD  1.802165e-04
+     GBP  1.626497e-04
+     NZD  3.440328e-05
+     AUD  2.789050e-05
+     EUR  1.724346e-05
+     USD -1.619385e-07
+     CHF -6.124074e-05
+     JPY -3.600292e-04
+2026-09-14 00:10:18,689 - INFO - 1D Base/Quote Strength Matrix:
+               CAD       GBP       NZD       AUD       EUR       USD       CHF       JPY
+currency                                                                                
+CAD       0.000000  0.000018  0.000146  0.000152  0.000163  0.000180  0.000241  0.000540
+GBP      -0.000018  0.000000  0.000128  0.000135  0.000145  0.000163  0.000224  0.000523
+NZD      -0.000146 -0.000128  0.000000  0.000007  0.000017  0.000035  0.000096  0.000394
+AUD      -0.000152 -0.000135 -0.000007  0.000000  0.000011  0.000028  0.000089  0.000388
+EUR      -0.000163 -0.000145 -0.000017 -0.000011  0.000000  0.000017  0.000078  0.000377
+USD      -0.000180 -0.000163 -0.000035 -0.000028 -0.000017  0.000000  0.000061  0.000360
+CHF      -0.000241 -0.000224 -0.000096 -0.000089 -0.000078 -0.000061  0.000000  0.000299
+JPY      -0.000540 -0.000523 -0.000394 -0.000388 -0.000377 -0.000360 -0.000299  0.000000
+2026-09-14 00:10:18,691 - INFO - 1D Signals:
+   pair  score_diff  signal
+AUD/USD    0.000028 NEUTRAL
+EUR/USD    0.000017 NEUTRAL
+GBP/USD    0.000163 NEUTRAL
+NZD/USD    0.000035 NEUTRAL
+USD/CAD   -0.000180 NEUTRAL
+USD/CHF    0.000061 NEUTRAL
+USD/JPY    0.000360 NEUTRAL
+2026-09-14 00:10:18,693 - INFO - Saved signals_1d.csv with 7 rows
+JOURNAL_LOCK_ACQUIRED pid=33944
+Added 7 new journal rows.
+Directional signals: 0
+Neutral signals: 7
+Recorded entry prices: 0
+Missing entry prices: 0
+Saved to: signals_journal.csv
+JOURNAL_LOCK_RELEASED pid=33944
+2026-09-14 00:10:21,112 - INFO - D1: saved price_history_1d.csv; total rows=91; minimum per pair=13
+2026-09-14 00:10:21,121 - INFO - H4: saved price_history_4h.csv; total rows=413; minimum per pair=59
+2026-09-14 00:10:21,157 - INFO - H1: saved price_history_1h.csv; total rows=1302; minimum per pair=186
+2026-09-14 00:10:22,576 - INFO - Saved reversal_signals.json
+2026-09-14 00:10:23,094 - INFO - Saved dashboard_snapshot_v2.json with 7 pairs
+2026-09-14 00:10:23,318 - INFO - Saved research_context.json with 15 manual notes
+Loaded run_id=23; pairs=7; manual_notes_seen=15
+D1 scan completed: Mon 09/14/2026  0:10:23.55

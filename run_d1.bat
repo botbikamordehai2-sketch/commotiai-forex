@@ -1,0 +1,58 @@
+@echo off
+setlocal
+cd /d C:\Users\User\fx_strength
+
+echo.>> d1_scheduler.log
+echo ==================================================>> d1_scheduler.log
+echo D1 scan started: %date% %time%>> d1_scheduler.log
+
+echo.| py .\fetch_1d_to_csv.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: fetch_1d_to_csv.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\strength_matrix_1d.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: strength_matrix_1d.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\signal_journal.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: signal_journal.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\append_price_history.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: append_price_history.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\detect_reversals.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: detect_reversals.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\build_dashboard_data_v2.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: build_dashboard_data_v2.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\build_research_context.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: build_research_context.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\load_research_context.py >> d1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: load_research_context.py failed.>> d1_scheduler.log
+    exit /b 1
+)
+
+echo D1 scan completed: %date% %time%>> d1_scheduler.log
+exit /b 0

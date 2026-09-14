@@ -1,0 +1,17 @@
+
+==================================================
+Metrics scan started: Thu 08/13/2026 19:35:42.91
+API_LOCK_ACQUIRED pid=28280 process=run_metrics.bat started_at_utc=2026-08-13T16:35:43.1370941Z
+2026-08-13 19:35:45,550 - INFO - Saved signal_outcomes.csv with 156 rows; completed=132
+API_LOCK_RELEASED process=run_metrics.bat
+2026-08-13 19:35:46,426 - INFO - Saved performance_detail.csv with 132 evaluated records
+2026-08-13 19:35:46,426 - INFO - Saved performance_report.csv with 86 summary rows
+
+=== PERFORMANCE: OVERALL BY HORIZON ===
+          scope horizon  signals  wins  losses  flats  win_rate_pct  avg_return_pct  median_return_pct  total_return_pct  avg_win_pct  avg_loss_pct  expectancy_pct  min_return_pct  max_return_pct  minimum_sample_met timeframe pair signal score_diff_bucket
+overall_horizon      1H       52    14      26     12         26.92       -0.009477          -0.001112         -0.492820     0.033680     -0.037090       -0.009477       -0.134558        0.086113                True       NaN  NaN    NaN               NaN
+overall_horizon     24H       28    14      14      0         50.00        0.027264          -0.020750          0.763405     0.232847     -0.178318        0.027264       -0.431782        0.603365               False       NaN  NaN    NaN               NaN
+overall_horizon      4H       52    26      25      1         50.00       -0.009136           0.003034         -0.475079     0.088765     -0.111319       -0.009136       -0.374201        0.455756                True       NaN  NaN    NaN               NaN
+
+WARNING: 24H has only 28 completed directional signals. Do not optimize thresholds before 30 signals.
+Metrics scan completed: Thu 08/13/2026 19:35:46.47

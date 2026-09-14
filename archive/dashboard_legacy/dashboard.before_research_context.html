@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FX Strength — Local Dashboard</title>
+  <style>
+    :root { --bg:#0b1220; --panel:#131d31; --line:#293752; --text:#e6edf7; --muted:#9aabc4; --green:#3ddc97; --orange:#f5a524; --red:#fa5b5b; --yellow:#f7d154; --gray:#8190a5; --blue:#55a6ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Arial,sans-serif; }
+    header { padding:26px max(20px,calc((100vw - 1280px)/2)); border-bottom:1px solid var(--line); background:#0f192b; }
+    h1 { margin:0 0 8px; font-size:26px; }
+    h2 { margin:0 0 14px; font-size:18px; }
+    p { margin:6px 0; color:var(--muted); }
+    main { max-width:1280px; margin:auto; padding:22px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:15px; }
+    .label { font-size:12px; color:var(--muted); }
+    .value { font-size:22px; font-weight:700; margin-top:7px; }
+    .section { margin-top:22px; }
+    .notice { border-right:4px solid var(--yellow); background:#292510; padding:12px 14px; border-radius:6px; color:#f9df8c; }
+    table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+    th,td { padding:11px 10px; border-bottom:1px solid var(--line); text-align:right; font-size:14px; white-space:nowrap; }
+    th { background:#182641; color:#cbd8ed; }
+    tr:last-child td { border-bottom:0; }
+    .badge { display:inline-block; border-radius:999px; padding:4px 8px; font-weight:700; font-size:12px; }
+    .green { background:#123a2b; color:var(--green); }
+    .orange { background:#493316; color:var(--orange); }
+    .red { background:#481c24; color:var(--red); }
+    .yellow { background:#4a3d12; color:var(--yellow); }
+    .gray { background:#263247; color:#b2c0d4; }
+    .blue { background:#143558; color:var(--blue); }
+    .controls { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px; }
+    button,input { font:inherit; }
+    button { background:#2468b6; color:#fff; border:0; padding:9px 13px; border-radius:6px; cursor:pointer; }
+    input[type=file] { color:var(--muted); max-width:320px; }
+    #error { display:none; margin-top:14px; }
+    .small { font-size:12px; }
+    .empty { color:var(--muted); padding:18px; }
+    @media (max-width:720px) {
+      th,td { font-size:12px; padding:9px 6px; }
+      .scroll { overflow-x:auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FX Strength — Local Dashboard</h1>
+    <p id="meta">טוען dashboard snapshot…</p>
+    <div class="controls">
+      <button id="refresh">רענן snapshot</button>
+      <input id="fileInput" type="file" accept="application/json,.json">
+      <span class="small">קריאה בלבד · RESEARCH ONLY · ללא API · ללא הוראות מסחר</span>
+    </div>
+    <div id="error" class="notice"></div>
+  </header>
+
+  <main>
+    <div id="freshness" class="grid"></div>
+
+    <section class="section">
+      <h2>Signals & Alignment</h2>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Pair</th>
+              <th>W1</th>
+              <th>D1</th>
+              <th>H4</th>
+              <th>H1</th>
+              <th>Alignment</th>
+              <th>Status</th>
+              <th>H1 score diff</th>
+              <th>Freshness</th>
+            </tr>
+          </thead>
+          <tbody id="pairs"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Performance — Overall by Horizon</h2>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Horizon</th>
+              <th>Closed</th>
+              <th>Wins</th>
+              <th>Losses</th>
+              <th>Win rate</th>
+              <th>Avg return</th>
+              <th>Median return</th>
+              <th>Expectancy</th>
+              <th>Minimum sample</th>
+            </tr>
+          </thead>
+          <tbody id="performance"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Completed outcomes by source</h2>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Horizon</th>
+              <th>Source</th>
+              <th>Completed outcomes</th>
+            </tr>
+          </thead>
+          <tbody id="sources"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="notice">
+        Hermes role: Read-only auditor and analyst. Classification is not a trade instruction.
+        Status: RESEARCH ONLY. No threshold change authorized.
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const $ = id => document.getElementById(id);
+
+    const pct = value =>
+      value === '' || value === null || value === undefined || Number.isNaN(Number(value))
+        ? '—'
+        : `${Number(value).toFixed(4)}%`;
+
+    const badge = (text, kind = 'gray') =>
+      `<span class="badge ${kind}">${text}</span>`;
+
+    const escapeHtml = value =>
+      String(value ?? '').replace(
+        /[&<>'"]/g,
+        char => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          "'": '&#39;',
+          '"': '&quot;'
+        }[char])
+      );
+
+    function freshnessKind(value) {
+      return value === 'FRESH' ? 'green'
+        : value === 'AGING' ? 'yellow'
+        : value === 'STALE' ? 'red'
+        : 'gray';
+    }
+
+    function alignmentKind(value) {
+      if (value.startsWith('ALIGNED_') && value !== 'ALIGNED_NEUTRAL') return 'green';
+      if (value.includes('CONFLICT')) {
+        return value.includes('WEEKLY_DAILY') ||
+          value.includes('HIGHER') ||
+          value.includes('INTRADAY')
+          ? 'orange'
+          : 'red';
+      }
+      if (value.includes('STALE') || value.includes('INSUFFICIENT')) return 'yellow';
+      return 'gray';
+    }
+
+    function statusKind(value) {
+      return value === 'WATCH' ? 'green'
+        : value === 'MONITOR' ? 'orange'
+        : 'gray';
+    }
+
+    function render(snapshot) {
+      const generated = snapshot.generated_at_utc
+        ? new Date(snapshot.generated_at_utc).toLocaleString('he-IL')
+        : 'לא זמין';
+
+      $('meta').textContent =
+        `גרסת ${snapshot.dashboard_version || '—'} · נוצר: ${generated} · ` +
+        `${snapshot.analysis_status || 'RESEARCH_ONLY'}`;
+
+      const frames = snapshot.timeframes || {};
+      const labels = ['W1', 'D1', 'H4', 'H1'];
+
+      $('freshness').innerHTML = labels.map(label => {
+        const frame = frames[label] || {};
+        return `
+          <div class="card">
+            <div class="label">${label} · ${escapeHtml(frame.source_file || 'No data')}</div>
+            <div class="value">
+              ${badge(
+                escapeHtml(frame.freshness || 'NO_DATA'),
+                freshnessKind(frame.freshness)
+              )}
+            </div>
+            <p>Timestamp UTC: ${escapeHtml(frame.timestamp_utc || '—')}</p>
+            <p>Age: ${escapeHtml(frame.age_minutes ?? '—')} min · limit: ${escapeHtml(frame.max_age_minutes ?? '—')}</p>
+          </div>
+        `;
+      }).join('');
+
+      $('pairs').innerHTML = (snapshot.pairs || []).map(pair => {
+        const freshness = labels
+          .map(label => frames[label]?.freshness || 'NO_DATA')
+          .join(' / ');
+
+        return `
+          <tr>
+            <td>${escapeHtml(pair.pair)}</td>
+            <td>${escapeHtml(pair.w1_bias || '—')}</td>
+            <td>${escapeHtml(pair.d1_bias || '—')}</td>
+            <td>${escapeHtml(pair.h4_bias || '—')}</td>
+            <td>${escapeHtml(pair.h1_bias || '—')}</td>
+            <td>${badge(
+              escapeHtml(pair.alignment || '—'),
+              alignmentKind(pair.alignment || '')
+            )}</td>
+            <td>${badge(
+              escapeHtml(pair.display_status || pair.final_status || 'WAIT'),
+              statusKind(pair.display_status || pair.final_status || 'WAIT')
+            )}</td>
+            <td>${pct(pair.strength?.score_diff * 100)}</td>
+            <td>${escapeHtml(freshness)}</td>
+          </tr>
+        `;
+      }).join('') || `
+        <tr>
+          <td colspan="9" class="empty">No pair data</td>
+        </tr>
+      `;
+
+      const performance = snapshot.performance || {};
+
+      $('performance').innerHTML = (performance.summary_by_horizon || []).map(row => `
+        <tr>
+          <td>${escapeHtml(row.horizon)}</td>
+          <td>${escapeHtml(row.signals)}</td>
+          <td>${escapeHtml(row.wins)}</td>
+          <td>${escapeHtml(row.losses)}</td>
+          <td>${pct(row.win_rate_pct)}</td>
+          <td>${pct(row.avg_return_pct)}</td>
+          <td>${pct(row.median_return_pct)}</td>
+          <td>${pct(row.expectancy_pct)}</td>
+          <td>
+            ${
+              row.minimum_sample_met === true || row.minimum_sample_met === 'True'
+                ? badge('MET', 'green')
+                : badge('BELOW 30', 'yellow')
+            }
+          </td>
+        </tr>
+      `).join('') || `
+        <tr>
+          <td colspan="9" class="empty">Performance data unavailable</td>
+        </tr>
+      `;
+
+      $('sources').innerHTML = (performance.completed_by_horizon_source || []).map(row => `
+        <tr>
+          <td>${escapeHtml(row.horizon)}</td>
+          <td>${escapeHtml(row.source)}</td>
+          <td>${escapeHtml(row.completed_outcomes)}</td>
+        </tr>
+      `).join('') || `
+        <tr>
+          <td colspan="3" class="empty">No completed outcome composition available</td>
+        </tr>
+      `;
+
+      $('error').style.display = 'none';
+    }
+
+    function showError(message) {
+      $('error').textContent = message;
+      $('error').style.display = 'block';
+    }
+
+    async function loadDefault() {
+      try {
+        const response = await fetch(
+          `dashboard_snapshot_v2.json?t=${Date.now()}`,
+          { cache: 'no-store' }
+        );
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        render(await response.json());
+      } catch {
+        showError(
+          'לא ניתן לטעון JSON אוטומטית. פתח דרך ' +
+          'http://localhost:8000/dashboard.html או בחר ידנית את ' +
+          'dashboard_snapshot_v2.json.'
+        );
+      }
+    }
+
+    $('refresh').addEventListener('click', loadDefault);
+
+    $('fileInput').addEventListener('change', event => {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        try {
+          render(JSON.parse(reader.result));
+        } catch {
+          showError('הקובץ שנבחר אינו JSON תקין.');
+        }
+      };
+
+      reader.readAsText(file, 'utf-8');
+    });
+
+    loadDefault();
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+@echo off
+setlocal
+cd /d C:\Users\User\fx_strength
+
+echo.>> h1_scheduler.log
+echo ==================================================>> h1_scheduler.log
+echo H1 scan started: %date% %time%>> h1_scheduler.log
+
+echo.| py .\fetch_data_to_csv.py >> h1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: fetch_data_to_csv.py failed.>> h1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\strength_matrix.py >> h1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: strength_matrix.py failed.>> h1_scheduler.log
+    exit /b 1
+)
+
+echo.| py .\signal_journal.py >> h1_scheduler.log 2>&1
+if errorlevel 1 (
+    echo ERROR: signal_journal.py failed.>> h1_scheduler.log
+    exit /b 1
+)
+
+echo H1 scan completed: %date% %time%>> h1_scheduler.log
+exit /b 0

@@ -1,0 +1,889 @@
+רטים 
+
+אני עושה מלא של כל הפרויקטים שאני מריץ, כדי לאחד אותם דרך ריפו GitHub מרכזי בשם github-sync. תן לי רשימה של כל הפרויקטים/משימות/מאגרי קוד שדנו בהם בשיחות שלנו — שם, תיאור קצר, סטטוס נוכחי, וכל ריפו/ פלטפורמה שקשור אליו (GitHub, Notion, monday.com, ClickUp וכו'). פורמט טבלה: שם | תיאור | סטטוס | קישורים/ פלטפורמה.  
+
+Ai.  קלאוד מקוד נ
+//////////
+
+כל מה שדנו בו מרוכז כבר ברישום שפורסם היום (project-registry) — הטבלה למטה זהה לתוכן שלו, ומאחוריה יש גם עמוד live שאפשר לסנן לפי סטטוס: [github-sync — מרשם המערכות](https://claude.ai/code/artifact/0a97a578-1a16-4730-a314-4b5089731222) (פרטי, עודכן 12.09.2026).
+
+**ליבת מסחר — Trinity (7)**
+
+| שם | תיאור | סטטוס | ריפו/פלטפורמה |
+|---|---|---|---|
+| Trinity OS | מערכת מחקר רב-סוכנית: Claude Gemini/DeepSeek/Perplexity/Hermes בתפקידים קבועים | בתהליך | GCP `trinity-os-prod` (בהקמה), GitHub pending |
+| fx_strength | Pipeline פייתון לחוזק מטבעות, 7 זוגות/4 טווחי זמן, Twelve Data API, RESEARCH_ONLY | פעיל | github.com/botbikamordehai2-sketch/**fx_strength** (הריפו היחיד המאומת) |
+| SignalForge | `entry_monitor.py` חי + paper-trading sim, CI מלא (Ruff/pytest/gitleaks/Docker) | פעיל | שם ריפו לא צוין — משותף ל-ClickUp Tracking |
+| MT5 Dashboard | דשבורד Flask ל-MetaTrader 5 | פעיל | לא צוין |
+| Trinity Cockpit | דשבורד תפעולי, 15 פרויקטים, SQLite+WebSocket+RTL | פעיל | לא צוין |
+| Enzo | שכבת מאקרו/חדשות/גיאופוליטיקה, נפרדת מה-FX engine | מחקר בלבד | לא צוין — 0/4 מקורות ראשיים מאושרים |
+| HOPE Live System | שכבת Study Mode נפרדת (סוכן Wittkoff-Mordechai), ללא כתיבה ל-DB חי | בתהליך | `/hope-live-system` (מתוכנן, נבנה קובץ-קובץ) |
+
+**תוכן ו-SEO — CommotiAI (5)**
+
+| שם | תיאור | סטטוס | ריפו/פלטפורמה |
+|---|---|---|---|
+| CommotiAI — תפעול תוכן | 3 אתרים: commotiai.com (ICT), .online (AI/MCP), .org (אוטומציה) | פעיל | commotiai.com / .online / .org |
+| ForexEvidence.com | בלוג פורקס דו-לשוני, WordPress + סוכן "Angie", מודל 70/30 affiliate/חינוך | פעיל | forexevidence.com |
+| SEO Command Center | monday Vibe — Content Pipeline + Keyword Tracker ל-3 אתרי CommotiAI | פעיל | monday Vibe app #10144838 |
+| סוכן נראות-מותג חדש | סוכן SEO/brand-visibility, שוק אנגלית+גלובלי בלבד | בתהליך | ייבנה ב-**Make.com** — חסר דומיין מדויק + יעדי 90 יום |
+| Commoti OS Demo | אתר הדגמה סטטי לתצוגה ציבורית | בתהליך | os.commotiai.com — טרם נפרס |
+
+**אוטומציה ותשתית (6)**
+
+| שם | תיאור | סטטוס | ריפו/פלטפורמה |
+|---|---|---|---|
+| Job Scout Agent | סורק 9 מקורות משרות, מדרג, שולח הצעות דרך Claude API+Telegram | פעיל | GitHub — `agents/job_scout/` |
+| ClickUp Cloud Tracking | רשימת-אב של 37 פרויקטי ענן, 9 קטגוריות, מוזן לסוכן ClickUp | הושלם | אותו ריפו כמו SignalForge · commit `4932f05d` |
+| Morning Brief | תדריך בוקר בעברית, 08:00+12:00 א׳-ה׳, מ-Calendar/Gmail/Slack | פעיל | Claude Scheduled Tasks · ב-monday מיוצג כ"Dana" |
+| Commotai / Trinity Runtime | Node.js multi-agent commerce OS — יסודות מוצקים, ליבת runtime חסרה | בהמתנה | לא צוין — "Traffic First" לא בעדיפות כרגע |
+| מחקר מוצרים (eCommerce) | פייפליין מוצרים פיזיים, תקציב מקס' $100/מועמד | מחקר בלבד | אין עדיין — ללא רכישות |
+| Trade Engine | monday Vibe למעקב מסחר, נתונים מ-SignalForge's signals_log.json | פעיל | monday Vibe app #10144538 |
+
+**תיאום ובקרה (3)**
+
+| שם | תיאור | סטטוס | ריפו/פלטפורמה |
+|---|---|---|---|
+| Control Room (Notion) | Model Registry, Scenario Hub, מאגר מחקר פורקס — תיעוד בלבד | פעיל | Notion — Advanced Path ממתין |
+| תיאום Eva/Lexi | Claude+Eva(SEO)+Lexi(Lead Gen)+Notion AI+Copilot+Perplexity | בתהליך | monday (4 workspaces) + Notion — קונפליקט Sidekick פתוח |
+| Claude Projects | 2 פרויקטי Claude.ai לארגון שיחות | הושלם | Claude.ai — FOREX / SEO |
+
+**המיזם הנוכחי (1)**
+
+| שם | תיאור | סטטוס | ריפו/פלטפורמה |
+|---|---|---|---|
+| GitHub Sync | איחוד כל 22 המערכות תחת ריפו מרכזי אחד | חסום | GitHub connector מחובר, גישה ל-fx_strength עדיין 403 — לפי ההשערה נדרש session חדש אחרי השמירה |
+
+הפער המרכזי לקראת האיחוד: מתוך 22 המערכות, רק **fx_strength** עם שם ריפו מאומת בפועל. SignalForge / ClickUp Tracking / Job Scout / Enzo / MT5 Dashboard / Trinity Cockpit / Commotai Runtime — שמות/כתובות ריפו לא רשומים אצלי, כנראה שווה לאמת אותם לפני שממפים הכול ל-github-sync.
+
+— Claude Sonnet 5, 12.09.2026
+//////
+
+Gimeni.   
+
+/////////
+יוזמה מעולה לרכז את הכל תחת מאגר מרכזי כמו github-sync. עבודה בסביבה מאוחדת תחסוך לך הרבה זמן ומעברי הקשר (Context switching).
+כיוון שאני מודל בינה מלאכותית, ואין לי כרגע הרשאות לגשת להיסטוריית השיחות הקודמות שלנו (או להרחבות המידע האישי בחשבון שלך), אני יכול לבסס את הטבלה רק על המידע ששיתפת איתי בשיחה הנוכחית.
+הנה הפרויקט שטיפלנו בו כעת, מסודר בפורמט שביקשת:
+| שם | תיאור | סטטוס | קישורים/ פלטפורמה |
+|---|---|---|---|
+| **ForexEvidence Domain** | בדיקת נאותות (סימני מסחר ב-USPTO/WIPO והיסטוריית Wayback Machine) לקראת רכישת דומיין | בבדיקה (טרם נרכש) | Notion |
+כדי שאוכל להכין עבורך את הרשימה המלאה, תוכל להדביק לכאן פירוט קצר או רשימה של שאר הפרויקטים שעבדנו עליהם, ואני אדאג לארגן את כולם לתוך הטבלה הזו.
+אילו פרויקטים ומאגרי קוד נוספים תרצה שאוסיף לרשימה?
+
+רעיון מצוין לאחד את הכל תחת מאגר github-sync! עבודה מסודרת במקום אחד תחסוך לך הרבה בלאגן ומעברי הקשר בעתיד.
+עם זאת, אני חייב להיות שקוף איתך לגבי היכולות שלי כבינה מלאכותית: כרגע אין לי הרשאה או יכולת טכנית לסרוק לאחור שיחות קודמות שלנו או לגשת להיסטוריית החשבון שלך (כדי לעשות זאת, נדרש אישור להפעלת ההרחבות של Gemini בחשבון ה-Google שלך). הזיכרון שלי כרגע מוגבל אך ורק למה שעלה בתוך השיחה הנוכחית הזו.
+הנה הפרויקט היחיד שעבדנו עליו כעת, מסודר בפורמט שביקשת:
+| שם | תיאור | סטטוס | קישורים/ פלטפורמה |
+|---|---|---|---|
+| **ForexEvidence** | בדיקת נאותות לדומיין (Trademarks, Wayback) לקראת רכישה | ממתין להשלמת בדיקות | Notion |
+כדי שאוכל לבנות עבורך את הטבלה המלאה כדי שתוכל להעתיק אותה ל-GitHub, תצטרך "להזכיר" לי אותם.
+אילו עוד פרויקטים או מאגרי קוד תרצה שאוסיף עכשיו לטבלה המרוכזת?
+
+////////////Copilot 
+//////////
+
+////////////מוטי — הנה הטבלה המרכזית שאתה צריך כדי לאחד את כל הפרויקטים שלך לתוך ריפו אחד בשם github-sync.
+היא כוללת: שם, תיאור, סטטוס, וקישורים/פלטפורמות.
+הכול מתוך מה שבנינו ודיברנו עד עכשיו.🟦 טבלת כל הפרויקטים / המשימות / הריפוז שדיברנו עליהםשם הפרויקטתיאורסטטוס נוכחיקישורים / פלטפורמהSMCICT Authority Siteאתר סמכות SMC/ICT כולל עמוד בית, Cluster, Lead Magnet, Product, Authority, FAQבנייה מתקדמת — עמודים מוכניםShopify Dawn, Liquid Sections, GitHub (להעלאת קוד), Domain: smcict.comSMC Digital Journal (V1)מוצר דיגיטלי למכירה: Journal למסחר SMC/ICTמוכן — עמוד מוצר + אוטומציהShopify Product Template, GitHub (קוד תבנית)SMC Starter PackLead Magnet הכולל PDF, Checklist, Journal Templateמוכן — עמוד Lead Magnet + Thank YouShopify Pages, Email Automation, GitHub (קוד עמודים)SMC Bible (2,500+ words)מאמר עוגן SEO ראשימוכן — צריך להעלות כבלוגShopify Blog, GitHub (תוכן Markdown)SEO_Projectפרויקט SEO מלא: Roadmap, Domain Hunter, Vettingמוכן — קבצי Python + תוצאותGitHub Repo: SEO_Projectdomain_hunter.pyסקריפט למציאת דומיינים רלוונטייםמוכן — רץ בהצלחהGitHub (SEO_Project), VS Codedomain_vetting.pyסקריפט Audit לדומייניםמוכן — הפיק 5 מועמדיםGitHub (SEO_Project), VS Codevetting_results.jsonתוצאות AuditמוכןGitHubdomain_results.csv330 דומיינים שנמצאומוכןGitHubWorkspace Agent (Shopify Intelligence)Agent שמנתח מכירות, תנועה, לקוחותמוכן — צריך חיבור APIVS Code, GitHub, Shopify APITrading Agent Projectפרויקט AI למסחר עם State + Pythonהתחלה — קבצים קיימיםVS Code, GitHubSMC Toolkit (V1)כלי עתידי: FVG Scanner, Liquidity Map, Auto‑StructureבתכנוןGitHub (עתידי), VS CodeShopify Dawn Custom Sectionssmc-home-v1, smc-thank-you-page, smc-lead-magnet-pageמוכן — צריך להעלות ל־ShopifyShopify Dawn, GitHubEmail Automation System5 מיילים: Delivery, Follow‑Up, Upsellמוכן — צריך חיבור ל־Shopify Email/KlaviyoShopify Email, Klaviyogithub-sync (Main Repo)ריפו מרכזי לאיחוד כל הפרויקטיםצריך ליצורGitHubBrand Kit (SMCICT)צבעים, טיפוגרפיה, לוגו עתידיבתכנוןNotion / GitHubAsset Sale Packageחומרים למכירת הנכס בפלטפורמותבתכנוןNotion / Flippa / Empire FlippersCline Workspaceסביבת פיתוח אוטונומיתפעילVS Code ExtensionSpark SaaS Builderבניית מערכת SaaS עתידיתבתכנוןVS Code, GitHubStarter Store (Shopify)חנות דיגיטלית קטנהמוכן חלקיתShopify🟦 מה עכשיו?כדי לאחד הכול לתוך github-sync, אתה צריך:1) ליצור ריפו חדש:github.com/Moti/github-sync2) להוסיף אליו את כל התיקיות:/SEO_Project/shopify-dawn-v1/smcict-home-v1/product-smc-journal/lead-magnet/thank-you-page/email-automation/brand-kit/trading-agent/workspace-agent/docs (ל־SMC Bible + Roadmap)3) להוסיף README ראשיעם תיאור כל הפרויקטים.🟩 רוצה שאבנה לך עכשיו גם:README.md מלא לריפו github-sync
+אומבנה תיקיות מומלץ
+אוסקריפט אוטומטי שמסנכרן את כל הריפוז לתוך אחד?תגיד — ואני ממשיך.
+
+
+מוטי — הנה הטבלה המרכזית והמדויקת שמאגדת כל הפרויקטים, המשימות, והריפוז שדיברנו עליהם עד עכשיו — בפורמט שאתה ביקשת:
+
+שם | תיאור | סטטוס | קישורים/פלטפורמה
+
+הטבלה בנויה כך שתוכל להעתיק אותה ישירות ל־GitHub, Notion, או לכל מערכת ניהול שאתה עובד איתה.
+
+---
+
+🟦 טבלת כל הפרויקטים / המשימות / הריפוז
+
+| שם | תיאור | סטטוס | קישורים / פלטפורמה |
+|-----|--------|---------|------------------------|
+| SMCICT Authority Site | אתר סמכות SMC/ICT כולל עמוד בית, Cluster, Lead Magnet, Product | בבנייה מתקדמת | Shopify Dawn, Liquid, GitHub (github-sync) |
+| SMC Digital Journal (V1) | מוצר דיגיטלי למכירה (Journal למסחר SMC/ICT) | מוכן | Shopify Product Template, GitHub |
+| SMC Starter Pack | Lead Magnet: PDF + Checklist + Journal Template | מוכן | Shopify Pages, Email Automation, GitHub |
+| SMC Bible (2,500+ words) | מאמר עוגן SEO ראשי | מוכן — צריך העלאה | Shopify Blog, GitHub (Markdown) |
+| SEOProject | פרויקט SEO מלא: Roadmap, Domain Hunter, Vetting | מוכן | GitHub Repo: SEOProject |
+| domain_hunter.py | סקריפט למציאת דומיינים רלוונטיים | מוכן | GitHub, VS Code |
+| domain_vetting.py | סקריפט Audit לדומיינים | מוכן | GitHub, VS Code |
+| vetting_results.json | תוצאות Audit | מוכן | GitHub |
+| domain_results.csv | רשימת 330 דומיינים | מוכן | GitHub |
+| Workspace Agent (Shopify Intelligence) | Agent לניתוח מכירות/SEO/לידים | מוכן — צריך חיבור API | VS Code, GitHub |
+| Trading Agent Project | פרויקט AI למסחר עם State | התחלה | VS Code, GitHub |
+| SMC Toolkit (V1) | כלי עתידי: FVG Scanner, Liquidity Map | בתכנון | GitHub (עתידי) |
+| Shopify Dawn Custom Sections | smc-home-v1, smc-thank-you-page, smc-lead-magnet-page | מוכן | Shopify Dawn, GitHub |
+| Email Automation System | 5 מיילים: Delivery, Follow‑Up, Upsell | מוכן | Shopify Email, Klaviyo |
+| github-sync (Main Repo) | ריפו מרכזי לאיחוד כל הפרויקטים | צריך ליצור | GitHub |
+| Brand Kit (SMCICT) | צבעים, טיפוגרפיה, לוגו | בתכנון | Notion / GitHub |
+| Asset Sale Package | חומרים למכירת הנכס בפלטפורמות | בתכנון | Notion / Flippa / Empire Flippers |
+| Cline Workspace | סביבת פיתוח אוטונומית | פעיל | VS Code Extension |
+| Spark SaaS Builder | בניית מערכת SaaS עתידית | בתכנון | VS Code, GitHub |
+| Starter Store (Shopify) | חנות דיגיטלית קטנה | מוכן חלקית | Shopify |
+
+---
+
+🟦 רוצה עכשיו את מבנה התיקיות המלא לריפו github-sync?
+
+אני יכול לבנות לך:
+
+- עץ תיקיות מלא  
+- README.md מקצועי  
+- סקריפט sync אוטומטי (bash / python)  
+- תבנית Issues + Labels  
+- תבנית Project Board  
+
+תגיד לי מה אתה רוצה — ואני מוסיף את זה מיד.
+
+
+קלאוד
+שם הצאט הגדרות make
+
+
+
+שם הצאט. Agent market and brand setup
+
+ריכזתי 22 מערכות/פרויקטים בטבלה אחת (מסחר/Trinity, תוכן ו-SEO ל-CommotiAI, אוטומציה ותשתית, תיאום, ובנפרד — github-sync עצמו), מקובצות עם סטטוס וסינון לפי מצב, בעמוד שאפשר לחזור אליו תוך כדי העבודה על האיחוד.
+
+הפער העיקרי לקראת github-sync: **רק ל-fx_strength יש שם ריפו מאומת** (`botbikamordehai2-sketch/fx_strength`). אין בזיכרון שם/כתובת ריפו ל-SignalForge, ClickUp Cloud Tracking (חולק ריפו עם SignalForge), Job Scout, Enzo, MT5 Dashboard, Trinity Cockpit ו-Commotai/Trinity Runtime — ול-HOPE Live System יש רק שלד ריפו מתוכנן, טרם נבנה. שווה לסגור את אלה לפני שממפים הכל ל-github-sync.
+
+בנוסף, בפרויקט ה-GitHub Sync עצמו רשום שנכון ל-12.09 בדיקת הגישה ל-fx_strength עדיין מחזירה 403 — לפי ההשערה שם, זה עשוי לדרוש session חדש שם, לא כאן.
+
+— Claude (Sonnet 5), 12 בספטמבר 2026
+
+
+שם הצאט.   בעל הבית
+
+הנה הרשימה כטבלה (אותו מיפוי כמו בלוח שפרסמתי למעלה — אפשר גם לסנן/לחפש שם):
+
+**Trinity / מסחר**
+
+| שם | תיאור | סטטוס | קישורים/פלטפורמה |
+|---|---|---|---|
+| Trinity OS | מערכת מחקר-מסחר רב-סוכנים (Claude/Gemini/DeepSeek/Perplexity/Hermes), ליבת Python ~1400 שורות, `forex.skill` ארוז | בתהליך | GCP `trinity-os-prod` · Google Drive · GitHub טרם מחובר |
+| trinity-standards | ריפו תשתית משותף — pyproject.toml, workflows, pre-commit | פעיל | GitHub (שם ריפו לא צוין) |
+| fx_strength | Pipeline עוצמת מטבעות, Python, 7 זוגות CORE-7 | פעיל | מקומי (Windows) · GitHub `botbikamordehai2-sketch/fx_strength` ⚑ בתהליך חיבור ל-github-sync |
+| SignalForge | `entry_monitor.py` + paper-trading sim, CI (Ruff/pytest/gitleaks/Docker) | פעיל | GitHub — אותו ריפו/branch כמו ClickUp Tracking |
+| MT5 Dashboard | דשבורד Flask ל-MetaTrader 5 | פעיל (שימוש נמוך) | ריפו לא צוין |
+| Trinity Cockpit | דשבורד תפעולי, 15 פרויקטים, SQLite, WebSocket, RTL | פעיל | ריפו לא צוין |
+| Trade Engine | מעקב עסקאות ב-monday Vibe | פעיל | monday.com `app_id 10144538` |
+| Enzo | שכבת מאקרו/גיאופוליטיקה נפרדת | בתהליך | ForexFactory/Investing/DailyFX/FXStreet/TradingEconomics/ECB/Reuters/Bloomberg |
+| NEWS (סוכן Notion) | Bloomberg→FX Strength→Notion | פעיל | Notion |
+| Control Room Platform | תיאום Notion ל-Trinity | פעיל | Notion |
+| HOPE Live System | שכבת למידה נפרדת, Study Mode | בתהליך | ריפו מתוכנן `/hope-live-system`, טרם נוצר |
+| Trinity – Intelligence Layers | טיוטת Best Practices + "מודיעין פדרטיבי" (קונספט) | תכנון | מסמך בפרויקט "בניית סוכן" |
+| GitHub Sync (הפרויקט הזה) | איחוד הכל תחת ריפו מרכזי | חסום (403) | GitHub connector → `botbikamordehai2-sketch/fx_strength` |
+| SMC Bot | Liquidity Sweep / MSS / FVG / Killzone | מוכן (READY) | ריפו לא צוין |
+| Polymarket PoC | `polymarket_poc.py`, ארכיטקטורת 3 APIs (Gamma/CLOB/Data) | בתהליך | ריפו לא צוין |
+
+**CommotiAI / תוכן ו-SEO**
+
+| שם | תיאור | סטטוס | קישורים/פלטפורמה |
+|---|---|---|---|
+| CommotiAI | מותג רב-אתרים: .com (ICT) / .online (AI/MCP) / .org (אוטומציה), `seo.skill` | בתהליך | commotiai.com / .online / .org |
+| ForexEvidence.com | בלוג פורקס דו-לשוני, 70% affiliate / 30% חינוך | בתהליך | forexevidence.com (WordPress, סוכנת "Angie") |
+| ChartMaster ICT | הבלוג העברי הישן | בוטל | aimarket0.wordpress.com |
+| Content Engine + BotAgent | מנוע תוכן DeepSeek + בוט פרסום, משלב הבלוג הישן | בוטל/הוחלף | WordPress/Telegram, ריפו לא צוין |
+| SEO Command Center | מעקב תוכן+מילות-מפתח ל-3 אתרים, 56 מילות מפתח מ-Semrush | פעיל | monday.com `app_id 10144838` · Notion · Google Drive |
+| Commoti OS Demo | אתר הדגמה סטטי | בתהליך | os.commotiai.com (מתוכנן) |
+| Commotai / Trinity Runtime | commerce OS רב-סוכנים, Node.js | בתהליך | ריפו לא צוין |
+| סוכן Brand-Visibility חדש | SEO/נראות-מותג, יעד הרצה Make.com | בתהליך | Make.com · monday.com (wizard) |
+
+**אוטומציה ותפעול**
+
+| שם | תיאור | סטטוס | קישורים/פלטפורמה |
+|---|---|---|---|
+| Job Scout Agent | סורק 9 מקורות משרות, Claude API + Telegram | פעיל | `agents/job_scout/`, ריפו לא צוין |
+| Morning Brief | תקציר עברי מתוזמן 08:00/12:00 | פעיל | Claude Scheduled Tasks · Calendar/Gmail/Slack · monday (משתמש "Dana") |
+| מחקר מוצרים (eCommerce) | מוצרי ארגון-בית, תקציב $100/מועמד | בתהליך | טרם קיימת פלטפורמה |
+| ClickUp Cloud Tracking | רשימת-אב 37 פרויקטים, 9 קטגוריות | הושלם | ClickUp · GitHub (אותו ריפו כמו SignalForge) |
+| tradingview-mcp | אינטגרציית MCP חיצונית, Windows | בתהליך (נתקע) | מקומי · `tradesdontlie/tradingview-mcp` |
+| הערכת Local AI Stack | Ollama/LM Studio/Jan.ai/AnythingLLM | רעיון | טרם הוחלט |
+
+**תיאום ו-Meta**
+
+| שם | תיאור | סטטוס | קישורים/פלטפורמה |
+|---|---|---|---|
+| תיאום רב-סוכנים | Eva/Lexi/Sidekick/Notion AI/Copilot/Perplexity | בתהליך | monday.com (4 workspaces) · Notion · Figma |
+| הקמת Claude Projects | ארגון שיחות לפי נושא | הושלם | Claude.ai Projects: FOREX, SEO |
+
+31 שורות סה"כ. הגרסה בלוח האינטראקטיבי כוללת גם את הערות ה"לפני שמתחילים לאחד" (fx_strength חסום, שיתוף branch עם ClickUp, ריפואים לא מזוהים וכו') אם תרצה לחזור אליהן.
+
+— Claude Sonnet 5, 12.09.2026
+////////////////
+שם הצאט. Agent market and brand setup
+
+
+
+
+
+
+
+
+
+‫gpt ai
+
+צ'אט  מיפוי פרוייקטים
+
+
+כן. ריכזתי את הפרויקטים, המערכות והמשימות שעלו בשיחות שלנו, עם דגש על דברים שרלוונטיים לאיחוד דרך github-sync. אני מפריד בין פרויקט עצמאי לבין כלי/פלטפורמה ששימשו אותו, כדי שלא יווצרו כפילויות.
+הערה: זו רשימה לפי ההיסטוריה וההקשר הזמינים לי בשיחות שלנו; לא המצאתי שמות ריפו או קישורים שלא הופיעו בפועל.
+שם
+תיאור
+סטטוס
+קישורים / פלטפורמה
+github-sync
+ריפו מרכזי שאתה מקים כדי לאחד ולנהל את הפרויקטים/ריפוזיטוריז השונים
+בתהליך איחוד
+GitHub — ריפו מרכזי
+FX_CORE / fx_strength
+מערכת מחקר וחישוב חוזק מטבעות, נתוני FX וניתוח שוק. כולל pipeline של Twelve Data, נתוני H1/H4/D1 ומבני universe
+פעיל / RESEARCH_ONLY
+GitHub/local repo; C:\Users\User\fx_strength; Notion
+Hermes
+סביבת Agent מקומית המשמשת כאנליסט תפעולי, זיכרון מקומי, Web/Scraping, Browser Automation, X Search, File Operations ועוד
+פעיל
+GitHub: NousResearch/hermes-agent; local: C:\Users\User\macro_project\hermes-agent
+Macro Sentinel
+פרוטוקול/מערכת לניתוח מאקרו + HTF market regime לפני קבלת החלטת מסחר
+פעיל / Research-only
+FX_CORE; Notion; Hermes; Perplexity
+FX / Trading Protocol
+שיטת עבודה ICT/SMC: W1→D1→H4→H1, לאחר מכן M15/M5; liquidity, BOS/CHoCH/MSS, FVG/IFVG/BPR/OB/BB/SMT וכו'
+פעיל — פרוטוקול מחקר
+Notion; FX_CORE; Hermes; ChatGPT
+FX Universe / Data Integrity
+אימות ה-universe בפועל, כולל CORE-7 וה-legacy 5-pair dataset; בדיקת קבצי Python/config/docs
+RESEARCH_ONLY / READ_ONLY — דורש אימות Claude Code
+Local FX repo; Claude Code; Notion
+FX Dashboard
+Dashboard להצגת נתוני FX/חוזק מטבעות ונתוני שוק; עלו קבצים כגון dashboard.html, build_dashboard_data_v2.py
+קיים כחלק מהמערכת — דורש מיפוי מלא
+FX repo; Local; GitHub
+Hermes FX Pipeline
+Pipeline שמושך Twelve Data ומחשב Open→Close return עבור bars סגורים, ואז currency strength / relative strength
+פעיל אך דורש תחזוקה/אימות
+FX_CORE; Hermes; Twelve Data
+Twelve Data integration
+מקור נתוני market data ל-FX; כולל טיפול ב-H1/H4/1D ובעיה שנחקרה סביב HTTP 429
+משולב ב-FX_CORE
+Twelve Data API; local FX code
+MASTER_PROTOCOL.md
+מסמך governance מרכזי ל-FX_CORE: roles, modes, gates, READ_ONLY/PREVIEW_ONLY/APPROVED_EXECUTION, decision owner ועוד
+v1.2 / בעדכון
+Local repo; GitHub; Notion
+FX Governance / Tool Routing
+הגדרת חלוקת העבודה: Claude Code לקוד מקומי, Perplexity למחקר, ChatGPT לסינתזה, Hermes לאנליזה תפעולית, Notion כ-source of truth
+פעיל / RESEARCH_ONLY
+Notion; GitHub; Claude Code; Hermes; Perplexity
+Claude Code READ_ONLY verification
+משימה לבדיקת ה-repo המקומי ואימות הגדרות ה-universe בלי שינוי state
+ממתין/בתהליך אימות
+Claude Code; local FX repo
+Notion — FX source of truth
+מאגר ראיות, Research, Decisions, Validation ו-governance
+פעיל
+Notion — מחובר
+Slack — project communication
+ערוץ תקשורת/תיווך בין חלקי העבודה
+מחובר
+Slack — CONNECTED
+Monday.com
+workflow/task management שנבחן כחלק מה-governance
+מנותק
+Monday.com — DISCONNECTED
+ClickUp
+פלטפורמת project/task management שעלתה בבקשת המיפוי
+לא זוהה פרויקט פעיל מחובר בשיחות הזמינות לי
+ClickUp — אין חיבור/ריפו שאומת
+Enzo
+מערכת RSS/news reader ומחקר חדשות; הצגת unread articles, מקורות ו-RSS
+פעיל / נפרד מ-FX
+Enzo Reader; RSS feeds
+Enzo RSS Research
+איסוף, סריקה וסינון כתבות באמצעות RSS, כולל חיפוש כתובות RSS עדכניות
+פעיל
+Enzo; RSS
+PRODUCT_RESEARCH_ONLY
+פרויקט eCommerce נפרד לחלוטין ממערכות FX/Enzo
+פעיל — PRODUCT_RESEARCH_ONLY
+Notion; Perplexity; Hermes; ChatGPT
+Ecommerce Product Research
+מחקר מוצרי eCommerce לישראל לפני הוצאת כסף; תקציב פרסום מקסימלי $100
+פעיל — אין הוצאה/חיוב
+Notion; Perplexity API; Hermes
+Kitchen Organizer Candidate
+מחקר על מארגן מתכוונן למכסי סירים/קרשי חיתוך/תבניות
+REJECT
+IKEA Israel; SHEIN; Joom; חנויות מקומיות; Notion
+No-Drill Organizer Candidate
+מארגן/מתלה נצמד ללא קידוח למטבח/אמבטיה/דירה קטנה
+REJECT
+IKEA; SHEIN; Temu; local market
+Under-Sink Adjustable Organizer
+מארגן מתכוונן מתחת לכיור סביב צנרת
+REJECT
+Israel market; cross-border sellers
+eCommerce Governance
+הפרדה מוחלטת בין eCommerce לבין Enzo/FX/Macro; אין רכישה/פרסום/שינוי אתר ללא אישור
+פעיל
+Notion; Hermes; Perplexity; ChatGPT
+Perplexity Research workflow
+תבנית מחקר למועמדי eCommerce: demand, competition, price, customer, logistics, IP, regulation
+פעיל
+Perplexity API; user-mediated
+Similarweb research
+מקור נוסף למחקר ביקוש ותחרות: Search Trends, Keywords, traffic, acquisition channels, Amazon/Shopper data
+מאושר ככלי מחקר
+Similarweb Premium
+Weekly Pulse / Market Research
+סקירות שוק תקופתיות על FX ונכסים באמצעות ICT/SMC ומאקרו
+פעיל כחלק ממערכת FX
+ChatGPT; FX_CORE; Perplexity/Hermes
+FX News / Market Intelligence
+איסוף כתבות FX, חוזק מטבעות והסקת bias לנכסים
+פעיל כחלק מ-FX/Macro
+FXStreet; Enzo; Perplexity
+Trading Funding Research
+מחקר חברות Prop/Funding, אתגרים ותנאים
+מחקר/הערכה
+ChatGPT/Web; לא זוהה repo עצמאי
+Road / Traffic Optimization request
+בדיקה היכן ניתן להגיש בקשה לייעול כבישים בישראל
+משימה נקודתית — לא פרויקט קוד
+מידע ממשלתי/רשויות; אין repo
+OpenAI / GPT research
+מחקר על מודלים/השקות OpenAI, כולל GPT-6/Astra לפי השיחות
+מחקר נקודתי
+Web/ChatGPT; אין repo עצמאי
+
+המבנה שהייתי משקף ב־github-sync
+ברמה הארגונית, יש לך למעשה 4 אשכולות עיקריים:
+github-sync/
+│
+├── FX_CORE/
+│   ├── fx_strength
+│   ├── Macro Sentinel
+│   ├── FX Dashboard
+│   ├── Twelve Data pipeline
+│   ├── FX Universe
+│   └── MASTER_PROTOCOL.md
+│
+├── HERMES/
+│   └── hermes-agent
+│
+├── ENZO/
+│   └── RSS / News research
+│
+└── ECOMMERCE/
+    └── PRODUCT_RESEARCH_ONLY
+
+נקודה חשובה לגבי GitHub
+הריפו היחיד שיש לי שם מדויק ומאומת לגביו מהשיחות הוא:
+NousResearch/hermes-agent
+והעותק המקומי שתועד:
+C:\Users\User\macro_project\hermes-agent
+לעומת זאת, fx_strength ידוע לנו כריפו/פרויקט המקומי, אבל לא הייתי ממציא עבורו URL של GitHub לפני שיש לנו את ה-remote האמיתי.
+לכן ב־github-sync כדאי לסמן כרגע:
+VERIFIED_REPO
+LOCAL_REPO
+REMOTE_UNKNOWN
+NOT_A_CODE_REPO
+במקום להניח שכל פרויקט הוא GitHub repository.
+ובעיקר: PRODUCT_RESEARCH_ONLY צריך להישאר מופרד לחלוטין מ־FX/Enzo גם בתוך ה־sync, בהתאם ל-כן. לפי ההיסטוריה הזמינה לי מהשיחות הקודמות, זו מפת הפרויקטים/המערכות/המשימות שכדאי להכניס ל־github-sync. אני מפריד בין פרויקטי קוד, מערכות מחקר/אוטומציה, ו־פרויקטים עסקיים/תפעוליים כדי שלא תאחד דברים שאינם אמורים להיות באותו repo.
+שם
+תיאור
+סטטוס
+קישורים / פלטפורמה
+github-sync
+ריפו מרכזי שאתה מקים כדי לאחד ולסנכרן את הפרויקטים והארטיפקטים השונים
+🟡 בהקמה
+GitHub — המרכז החדש
+FX_CORE / fx_strength
+פרויקט הליבה של מערכת חוזק המטבעות וניתוח FX
+🟡 פעיל בפיתוח/אימות
+GitHub/Local repo: C:\Users\User\fx_strength
+Hermes
+מנגנון/מערכת AI בתוך פרויקט ה־FX, כולל OpenRouter, ניתוח נתוני שוק וחוזק מטבעות
+🟡 פעיל; עבר תיקוני H1/H4 ו־data integrity
+fx_strength / OpenRouter / Local Python
+Currency Strength Pipeline
+pipeline שמושך נתוני Twelve Data, מזהה candle סגור ומחשב Open→Close ולאחר מכן חוזק יחסי של מטבעות
+🟡 עובד, עם נקודות שדורשות אימות
+Twelve Data REST API → Python → FX_CORE
+FX Universe / CORE-7
+הגדרת היקום המרכזי של הנכסים שהמערכת אמורה לעקוב אחריהם
+🟠 דורש אימות מקוד המקור
+fx_strength; Claude Code READ_ONLY
+Legacy 5-Pair Dataset
+היקום ההיסטורי של 5 זוגות: EUR/USD, USD/CHF, NZD/USD, GBP/USD, USD/JPY
+🟠 NOT_CHECKED — צריך אימות ישירות מה־repo
+build_dashboard_data.py / build_dashboard_data_v2.py — Claude Code
+Dashboard
+שכבת תצוגה לנתוני FX/חוזק מטבעות
+🟡 קיים/בפיתוח
+dashboard.html, Python backend/scripts
+H1/H4 Data Integrity
+תיקונים שנעשו כדי לוודא שימוש ב־closed bars ולא בנתונים חלקיים
+🟢 תיקונים שבוצעו; דורש validation
+FX_CORE / Python
+Twelve Data Integration
+חיבור REST API לנתוני 1H/1D; נתקלת גם ב־429 rate limits
+🟡 פעיל; rate-limit הוא constraint
+Twelve Data / Python
+FX Journal / Trading Journal
+תכנון מערכת לרישום עסקאות, החלטות ותוצאות
+🟡 מתוכנן
+FX_CORE / Notion אפשרי
+Macro Sentinel
+מערכת bias/validation רב־שכבתית: W1 → D1 → H4 → H1, עם WAIT/NO TRADE במקרה של סתירה
+🟢 מוגדר כפרוטוקול; ממשיך להתפתח
+FX_CORE / Notion / AI models
+Macro Sentinel — MTF Protocol
+W1 regime, D1 thesis, H4 structure, H1 confirmation לאחר candle סגור
+🟢 מוגדר
+Notion / MASTER_PROTOCOL.md
+ICT/SMC Trading Framework
+מסגרת ניתוח הכוללת Liquidity, BOS/CHoCH/MSS, FVG, IFVG, BPR, OB, BB, SMT, Premium/Discount וכו'
+🟢 מתודולוגיה מוגדרת
+Notion / TradingView / FX_CORE
+XAUUSD Trading Rules
+מערכת חוקים ספציפית לזהב: Sweep → Displacement → CHoCH → FVG → 50% pullback; A+ ליד BSL/SSL
+🟢 מוגדר
+Notion / TradingView
+Trading AI Multi-Model Workflow
+חלוקת תפקידים בין Gemini למאקרו/חדשות, Claude ל־ICT/SMC, ChatGPT לסינתזה/SEO, Grok לסנטימנט ו־Perplexity למחקר
+🟢 מוגדר
+Gemini / Claude / ChatGPT / Grok / Perplexity
+MASTER_PROTOCOL.md
+מסמך governance מרכזי לפרויקט FX: roles, gates, artifacts, execution rules
+🟡 v1.2; דורש המשך השלמה
+MASTER_PROTOCOL.md / Notion
+FX Governance / 3a
+הגדרת READ_ONLY / PREVIEW_ONLY / APPROVED_EXECUTION ו־NO STATE-CHANGING WRITE
+🟠 צריך להשלים/להכניס ל־MASTER_PROTOCOL
+Notion / MASTER_PROTOCOL.md
+Claude Code READ_ONLY Audit
+משימה לבדוק ישירות את repo המקומי ולאמת את Universe והקבצים הרלוונטיים ללא שינוי state
+🔴 משימה פתוחה/השלב הבא
+Claude Code / Local repo
+CODE_FACTS
+פורמט להעברת עובדות שנמצאו בקוד מ־Claude Code בלי לאפשר לו לשנות את ה־repo במצב READ_ONLY
+🟢 מוגדר בפרוטוקול
+Notion / Claude Code
+RESEARCH_ONLY
+Gate ברירת המחדל של פרויקט FX — מחקר/אימות בלבד ללא state-changing writes
+🟢 פעיל
+MASTER_PROTOCOL / Notion
+Notion FX Source of Truth
+המקום המרכזי לשמירת CODE_FACTS, RESEARCH, DECISION, VALIDATION ו־governance
+🟢 פעיל
+Notion — Connected
+Slack FX Communication
+שכבת תקשורת/העברת עדכונים הקשורים לפרויקט
+🟢 מחובר
+Slack — Connected
+Monday.com FX Workflow
+ניהול tasks/workflow
+🔴 מנותק כרגע
+Monday.com — DISCONNECTED
+ClickUp
+הוזכר כאפשרות/פלטפורמת ניהול במסגרת האיחוד
+⚪ לא זוהה אצלי כפרויקט פעיל או חיבור קיים
+לא ידוע על repo/connection פעיל
+Enzo Reader / RSS
+מערכת לקריאת RSS, unread articles, favorites, feeds, tags וחיפוש בכתבות
+🟢 פעיל
+Enzo Reader
+RSS Market Sources
+איסוף מקורות חדשות לשווקים, כולל חיפוש כתובות RSS עדכניות והגדרת סריקות
+🟡 בהגדרה/הרחבה
+Enzo Reader / RSS
+Market News Research
+מחקר חדשות שוק לצורך הערכת חוזק מטבעות וכיוון נכסים
+🟢 תהליך עבודה קיים
+FXStreet / RSS / Enzo / Perplexity
+FXStreet Research
+שימוש ב־FXStreet לניתוח כתבות אחרונות, חוזק מטבעות וכיוון נכסים
+🟢 מקור מחקר
+FXStreet / Enzo
+PRODUCT_RESEARCH_ONLY
+פרויקט מחקר איקומרס נפרד לחלוטין מ־FX/Macro/dashboard
+🟢 פעיל במצב Research Only
+Notion / מחקר Web
+Adjustable Kitchen Organizer
+מוצר מועמד: מארגן מתכוונן למכסי סירים, קרשי חיתוך, תבניות וכלי אפייה
+🟡 Candidate / מחקר בלבד
+ישראל; IKEA VARIERA נבדק כ-reference
+eCommerce Governance
+הפרדה בין FACT / MARKET OBSERVATION / COMMENTARY / REQUIRES_MANUAL_CHECK, ללא רכישות/פרסום ללא אישור
+🟢 מוגדר
+PRODUCT_RESEARCH_ONLY / Notion
+Trading Funding Research
+מחקר חברות Funding/Prop Firms, אתגרים ותנאים
+🟡 מחקר מתמשך, לא זיהיתי repo ייעודי
+Web / מחקר
+Blueberry Funding
+בדיקות סביב חשבון $10K, risk עד ~$50/trade ו־payout
+🟡 נושא מחקר/מסחר
+Blueberry Funding
+Top One / Instant Prime
+בחינת חשבון/אתגר 5K
+⚪ נושא שנדון; לא זוהה פרויקט קוד
+Prop firm research
+Apex
+בחינת activation של ~$150
+⚪ נושא מחקר
+Prop firm research
+FTMO
+בדיקת אפשרות/עניין בחברת funding
+⚪ נושא מחקר
+Prop firm research
+CS / Python Self-Study
+לימוד Python ו־CS לקראת לימודי מדעי המחשב
+🟡 מתמשך
+YouTube / FreeCodeCamp
+Computer Science Degree Planning
+בחירה והתלבטות סביב CS, BGU/SCE והכנה ללימודים
+🟡 בתהליך
+BGU / SCE / לימוד עצמי
+
+מה הייתי שם בפועל בתוך github-sync
+הייתי לא הופך את github-sync ל־repo שמכיל את כל הקוד עצמו. עדיף שהוא יהיה Control/Index Repo:
+github-sync/
+│
+├── README.md
+├── PROJECT_INDEX.md
+├── REPOSITORIES.md
+├── PLATFORM_MAP.md
+├── STATUS.md
+│
+├── fx-core/
+│   ├── repo-location.md
+│   ├── status.md
+│   └── contracts/
+│
+├── macro-sentinel/
+│   ├── protocol.md
+│   └── status.md
+│
+├── enzo-rss/
+│   ├── sources.md
+│   └── status.md
+│
+├── product-research/
+│   ├── candidates.md
+│   └── governance.md
+│
+└── governance/
+    ├── MASTER_PROTOCOL.md
+    ├── execution-gates.md
+    └── platform-routing.md
+
+כלומר:
+GitHub = קוד + version control
+ github-sync = אינדקס/אינטגרציה בין הפרויקטים
+ Notion = Source of Truth למידע/החלטות/governance
+ Slack = communication
+ Monday = workflow, כרגע מנותק
+ Claude Code = local repo inspection/execution בהתאם ל־gate
+ Perplexity = independent research
+ Enzo = RSS/news ingestion
+חשוב: הרשימה הזו מבוססת על הפרויקטים והמשימות שיש לי אליהם הקשר מהשיחות הזמינות לי. לא הייתי מסמן שום repo כ"מאומת" רק בגלל שהשם הופיע בשיחה — במיוחד CORE-7, EXPECTED_PAIRS והקבצים build_dashboard_data*.py. אלה בדיוק הדברים שהגדרת ש־Claude Code צריך לאמת ישירות מה־repo.
+אם המטרה היא לבנות עכשיו את PROJECT_INDEX.md האמיתי עבור github-sync, הטבלה הזאת היא בסיס טוב, אבל השלב הבא צריך להיות מיפוי Evidence → Repo → Files → Platform → Status, כדי שלא ייכנסו ל־GitHub עובדות שלא אומתו.
+ שכבר קבעת.
+פיתוח אתרים 
+בהחלט. ריכזתי את הפרויקטים והמשימות המרכזיים שעלו בשיחות שלנו, עם דגש על דברים שבאמת יכולים להיכנס ל־github-sync. אני מפריד בין פרויקט פעיל לבין משימה/רכיב, כדי שלא נערבב הכול יחד.
+הערה: זו רשימה המבוססת על השיחות וההקשר הזמינים לי כרגע, לא סריקה מלאה של כל היסטוריית החשבון.
+שם
+תיאור
+סטטוס
+קישורים / פלטפורמה
+github-sync
+ריפו מרכזי שאתה מקים כדי לאחד ולנהל את הפרויקטים שלך
+🟡 בהקמה
+GitHub
+FX_CORE / fx_strength
+מערכת ניתוח FX הכוללת חוזק מטבעות, נתוני שוק, מחקר ודשבורד
+🟡 פעיל בפיתוח/אימות
+Local: C:\Users\User\fx_strength · GitHub: טרם צוין
+MASTER_PROTOCOL.md
+מסמך governance/master protocol של FX_CORE; כולל RESEARCH_ONLY, roles, gates, workflows וגרסאות
+🟡 v1.2, בתהליך השלמה
+בתוך FX_CORE · Notion כמקור אמת
+Hermes
+מנוע/מערכת ניתוח נתוני FX המבוססת על Twelve Data וחישוב currency strength
+🟡 פעיל, עם תיקוני pipeline
+FX_CORE / fx_strength
+Currency Strength Engine
+חישוב חוזק יחסי של מטבעות מתוך תשואות Open→Close של candles סגורים
+🟡 עובד עקרונית; ממשיך אימות
+currency_strength_engine.py · FX_CORE
+FX Data Pipeline
+איסוף נתוני 1H/4H/1D/1W מ־Twelve Data וסינון candles סגורים
+🟡 פעיל / עבר תיקונים
+fetch_1d_to_csv.py, fetch_1w_to_csv.py, fetch_4h_to_csv.py
+FX Dashboard
+בניית נתוני dashboard והצגת חוזק/מצב השוק
+🟡 בפיתוח/אימות
+build_dashboard_data_v2.py · dashboard.html
+FX Research Context
+יצירת context למחקר וניתוח FX
+🟡 פעיל
+build_research_context.py
+Alignment Classifier
+סיווג alignment/התאמה בין אותות ומבני שוק
+🟡 רכיב קוד
+alignment_classifier.py
+FX Research D1
+איסוף/עיבוד נתוני Daily למחקר FX
+🟡 רכיב קוד
+fetch_research_fx_d1.py
+CORE-7 Universe
+הגדרת universe המרכזי של נכסי FX/market שהמערכת אמורה לעבוד איתם
+🟠 דורש אימות מקומי
+FX_CORE · Claude Code READ_ONLY
+Legacy 5-Pair Dataset
+ה־universe הישן של 5 זוגות: EUR/USD, USD/CHF, NZD/USD, GBP/USD, USD/JPY
+🔴 NOT_CHECKED — דורש אימות בקוד
+build_dashboard_data.py / קבצים מקומיים
+Claude Code READ_ONLY Audit
+בדיקה מקומית של הקוד וה־config כדי לאמת את ה־universe בפועל
+🟡 משימה פתוחה
+Claude Code · Local repo
+Macro Sentinel
+פרוטוקול ניתוח רב־TF: W1 → D1 → H4 → H1, עם confirmation ב־H1 לפני setup ב־M15/M5
+🟡 מוגדר כמתודולוגיה
+FX_CORE / Notion
+Trading Protocol / ICT-SMC
+מערכת העבודה שלך למסחר: liquidity, sweep, displacement, MSS/CHoCH, FVG, IFVG, BPR, OB, SMT, premium/discount וכו'
+🟡 פעיל ומתעדכן
+Notion · FX_CORE
+Market Bias Framework
+קביעת bias יומי/שבועי והפרדה בין מבנה חיצוני ופנימי
+🟡 חלק מפרוטוקול המסחר
+Notion / FX_CORE
+FVG / IFVG / BPR / OB / BB / Rejection Block
+ספריית כלי ניתוח ICT/SMC שאתה לומד ומשלב במערכת
+🟡 לימוד/יישום
+Trading protocol · Notion
+SMT / FVG SMT / OB SMT
+מודולי divergence/confirmation בין נכסים
+🟡 לימוד/יישום
+Trading protocol
+Gold/XAUUSD Rules
+מערכת חוקים ספציפית לזהב: Sweep → Displacement → CHoCH → FVG → 50% pullback
+🟡 מוגדרת ומתעדכנת
+Trading protocol / Notion
+E-commerce Product Research
+מחקר מוצרים לשוק הישראלי במודל research-only, ללא רכישה/פרסום ללא אישור
+🟡 פעיל כמחקר
+PRODUCT_RESEARCH_ONLY · Notion
+Kitchen Organizer Research
+מחקר מועמד למוצר: מארגן מתכוונן למכסים/קרשי חיתוך/תבניות
+🟡 Candidate / research בלבד
+E-commerce project
+Notion Governance
+Notion משמש כ־Source of Truth ל־CODE_FACTS / RESEARCH / DECISION / VALIDATION / governance
+🟢 מוגדר
+Notion — Connected
+Slack Project Communication
+ערוץ תקשורת לפרויקטים ולתיאום
+🟢 מוגדר
+Slack — Connected
+Monday.com Workflow
+ניהול tasks/status בפרויקטים
+🔴 כרגע disconnected
+Monday.com — Disconnected
+ClickUp
+פלטפורמה שהוזכרה כחלק ממיפוי האפשרויות לניהול הפרויקטים
+⚪ לא הוגדר כמערכת פעילה
+ClickUp
+AI Multi-Model Workflow
+חלוקת תפקידים בין מודלים: Gemini למאקרו/חדשות, Claude ל־ICT/SMC, ChatGPT לסינתזה/תיעוד, Grok לסנטימנט, Perplexity למחקר
+🟡 workflow מוגדר
+FX_CORE / Notion
+RSS / News Research
+איסוף חדשות ממקורות RSS לצורך מחקר שוק
+🟡 בתהליך הגדרה
+Enzo Reader / RSS
+Enzo Reader
+מערכת לקריאת RSS, unread articles, filtering ומחקר חדשות
+🟡 בשימוש/הגדרה
+Enzo Reader
+Python Learning
+מסלול לימוד Python דרך FreeCodeCamp; כרגע מתמקד ביסודות כמו return, len, range
+🟢 בלמידה
+FreeCodeCamp
+Web Development Roadmap
+המסלול העתידי אחרי FreeCodeCamp: foundations → JS → React → backend → projects
+🟡 מתוכנן, לא פרויקט קוד פעיל
+FreeCodeCamp / GitHub עתידי
+
+המבנה שאני רואה עבור github-sync
+אם המטרה היא לאחד בלי להפוך את github-sync לבלגן, הייתי חושב עליו כמנהל/אינדקס מרכזי ולא בהכרח כמקום שבו כל הקוד עצמו יושב:
+github-sync/
+│
+├── README.md
+├── PROJECT_INDEX.md
+├── GOVERNANCE.md
+│
+├── projects/
+│   ├── FX_CORE.md
+│   ├── ECOMMERCE_RESEARCH.md
+│   ├── RSS_RESEARCH.md
+│   └── PYTHON_LEARNING.md
+│
+├── repositories/
+│   └── REPOSITORIES.md
+│
+├── tasks/
+│   └── OPEN_TASKS.md
+│
+└── integrations/
+    ├── NOTION.md
+    ├── SLACK.md
+    ├── MONDAY.md
+    └── CLICKUP.md
+
+והכי חשוב: הייתי נותן ל־github-sync להיות ה־Index / Control Plane, ולא להעתיק אליו אוטומטית את כל הקוד של fx_strength. הקוד הטכני נשאר בריפו שלו; github-sync יודע איפה הוא, מה הסטטוס שלו, מי מקור האמת ומה המשימות הפתוחות.
+במיוחד עבור FX_CORE, יש כבר הבחנה חשובה:
+Local repo = Technical Truth
+ Notion = Source of Truth לתיעוד/governance
+ Slack = Communication
+ Monday = Task workflow, כרגע disconnected
+ github-sync = האינדקס המרכזי שאתה בונה
+סיכום צ'אטים גיפיטי 
+Worked for 14s
+
+כן. סרקתי את ההקשר הזמין מהשיחות הקודמות וגם את הקבצים שנשמרו מהן. יש כאן כמה פרויקטים ממשיים, כמה תתי־פרויקטים/רכיבי קוד, ועוד כמה יוזמות/משימות שלא נכון להפוך לריפו עצמאי.
+
+> חשוב: אין לי גישה ישירה לרשימת ה־GitHub שלך, ולכן אני לא אמציא שמות ריפוזיטוריז או URLs שלא הופיעו בשיחות. במקום זאת סימנתי מה ידוע ומה דורש אימות.
+
+
+
+מפת הפרויקטים לריכוז ב־github-sync
+
+שם	תיאור	סטטוס	קישורים / פלטפורמה
+
+github-sync	ריפו מרכזי שאתה מתכנן להשתמש בו כדי לאחד ולסנכרן את הפרויקטים והמאגרי קוד שלך	בתהליך הקמה / ארכיטקטורה	GitHub: github-sync
+FX_CORE / fx_strength	מערכת ניתוח FX מבוססת Python: נתוני Twelve Data → currency strength → signals → journal → evaluation	פעיל, אך עדיין לא production-ready	Local: C:\Users\User\fx_strength · GitHub: לא אומת · Notion: מקור governance/תיעוד · Slack: מחובר
+Hermes Agent	AI agent מקומי שעבדת איתו דרך OpenRouter/Claude לצורך סריקה, ניתוח והרצת משימות בפרויקט FX	פעיל ככלי עזר; לא פרויקט המסחר עצמו	Local: C:\Users\User\AppData\Local\hermes\hermes-agent · OpenRouter · Claude
+Macro Sentinel	שכבת macro/market-regime מעל מערכת ה־FX: W1 → D1 → H4 → H1, cross-asset, macro, opening scan ו־final state	קיים בסיס; חסרים W1 + Macro/Cross-Asset; Opening Scan עדיין NOT READY	חלק מ־FX_CORE / fx_strength · Notion governance
+Opening Scan Protocol	פרוטוקול סריקת שוק לפני מסחר, כולל W1/D1/H4/H1, freshness, cross-asset ו־WAIT/NO TRADE	מוגדר ברמת פרוטוקול; לא מוכן להפעלה מלאה	MASTER_PROTOCOL.md / Notion · קשור ל־Macro Sentinel
+FX Data Integrity / Fail-Fast	תיקון קריטי שמונע מ־stale/partial/missing data להמשיך ל־signals/journal	PROPOSAL ONLY — לא הוחל בקוד	חלק מ־fx_strength · מסמכי Proposal
+H1 Pipeline	Fetch H1 → closed bar → pair changes → strength matrix → signals → journal	קיים, אבל freshness/fail-fast היה פגום	fx_strength · fetch_*, strength_matrix, signals_1h.csv
+H4 Pipeline	המקביל של H1 עבור H4	קיים; דורש validation/integrity	fx_strength · signals_4h.csv
+D1 Pipeline	Daily currency-strength/signal layer	חלקי / לא תפעולי במצב שנבדק	fetch_1d_to_csv.py, strength_matrix_1d.py · signals_1d.csv חסר בבדיקה
+W1 Pipeline	שכבת Weekly regime עבור Macro Sentinel	חסר	מיועד ל־fx_strength
+FX Dashboard	ממשק HTML להצגת נתוני FX, strength, signals ו־alignment	קיים/בתהליך, דורש אימות מול הקוד הנוכחי	dashboard.html · build_dashboard_data_v2.py
+Currency Strength Engine	מנוע חישוב חוזק המטבעות מתוך שינויי זוגות	קיים	currency_strength_engine.py
+Alignment Classifier	סיווג התאמה בין D1/H4/H1 והפקת מצב כגון ALIGNED_LONG, ALIGNED_SHORT, CONFLICT	קיים	alignment_classifier.py
+FX Research Context Builder	בניית context למחקר/ניתוח FX	קיים/נבדק	build_research_context.py
+FX Research D1	איסוף/בניית נתוני מחקר Daily	קיים	fetch_research_fx_d1.py
+FX CSV Fetchers	סקריפטים להבאת נתוני H1/H4/D1/W1 ולשמירתם כ־CSV	חלק מה־FX_CORE	fetch_1d_to_csv.py, fetch_1w_to_csv.py, fetch_4h_to_csv.py
+5-Pair FX Universe	EUR/USD, USD/CHF, NZD/USD, GBP/USD, USD/JPY	מוגדר לוגית; צריך אימות repo בפועל	EXPECTED_PAIRS / build_dashboard_data* · Twelve Data
+FX Signal Journal	lifecycle של signal: recorded → evaluable → evaluated/no-data	קיים; architecture הוגדרה	signal journal בתוך fx_strength
+FX Performance Evaluation	בדיקת ביצועי signals היסטוריים	קיים בסיס	fx_strength
+MASTER_PROTOCOL	מסמך governance שמגדיר RESEARCH_ONLY, READ_ONLY, PREVIEW_ONLY, APPROVED_EXECUTION, decision owner וכו'	פעיל; v1.2	MASTER_PROTOCOL.md · Notion
+Notion Governance	Source of Truth ל־CODE_FACTS / RESEARCH / DECISION / VALIDATION / governance	פעיל	Notion — מחובר
+Slack Workflow	תקשורת סביב הפרויקטים והחלטות	פעיל	Slack — מחובר
+Monday.com Workflow	ניהול משימות/workflow	מוגדר אך כרגע DISCONNECTED	Monday.com — מנותק
+E-commerce Product Research	מחקר מוצרי eCommerce לשוק הישראלי, research-only, תקציב פרסום ≤$100	פעיל כמחקר; ללא ביצוע רכישה/פרסום	Notion/מחקר · PRODUCT_RESEARCH_ONLY
+Kitchen Organizer Product Research	מועמד ספציפי: מארגן מתכוונן למכסים/קרשי חיתוך/תבניות	Candidate / מחקר	IKEA Israel · VARIERA
+Enzo Reader / RSS	מערכת/תהליך לאיסוף RSS, קריאת חדשות, unread articles, מקורות וסקירת כתבות	פעיל/בתהליך הגדרה	Enzo Reader for RSS Feeds
+RSS Sources Project	איתור כתובות RSS עדכניות למקורות חדשות/טכנולוגיה ובניית feed list	בתהליך	Enzo Reader · RSS
+Trading Research Stack	חלוקת תפקידים בין AI שונים: Gemini למאקרו/חדשות, Claude ל־ICT/SMC, ChatGPT לסינתזה, Grok לסנטימנט, Perplexity למחקר	פעיל כ־workflow, לא repo עצמאי	Gemini · Claude · ChatGPT · Grok · Perplexity
+SMC / ICT Trading Framework	מערכת לימוד/ניתוח: liquidity, BOS/CHoCH/MSS, FVG/IFVG/BPR/OB/BB/SMT, premium/discount וכו'	מתודולוגיה פעילה, לא פרויקט קוד נפרד	TradingView / research workflow
+Macro/Market Weekly Pulse	סקירת שוק שבועית/יומית לפי W1/D1/H4/H1 ובחירת נכסים להתמקד בהם	Workflow מחקרי	ChatGPT + מקורות חדשות
+Trading Journal / Risk Framework	ניהול signals, עסקאות, lifecycle, risk ו־evaluation	חלק מ־FX_CORE; עדיין בבנייה	fx_strength / Notion
+Web Development Learning	לימוד Python/web development דרך FreeCodeCamp ופרויקטים קטנים	למידה מתמשכת	FreeCodeCamp · GitHub: לא אומת
+CS / Programming Track	הכיוון המקצועי של Computer Science + self-study programming	פעיל כיעד לימודי; לא repo	BGU / SCE / FreeCodeCamp
+
+
+מבנה שאני ממליץ לשקף ב־github-sync
+
+לא הייתי הופך כל שורה לריפו. הייתי מרכז כך:
+
+github-sync/
+│
+├── README.md
+├── PROJECT_INDEX.md
+│
+├── trading/
+│   ├── FX_CORE/
+│   │   ├── fx_strength/
+│   │   ├── Macro_Sentinel/
+│   │   ├── Opening_Scan/
+│   │   ├── Data_Integrity/
+│   │   └── Dashboard/
+│   │
+│   └── trading-framework/
+│       └── ICT_SMC/
+│
+├── ai-agents/
+│   └── Hermes/
+│
+├── research/
+│   ├── ecommerce/
+│   │   └── product-research/
+│   └── rss/
+│       └── Enzo/
+│
+├── learning/
+│   └── web-development/
+│
+└── governance/
+    ├── MASTER_PROTOCOL.md
+    ├── CODE_FACTS/
+    ├── RESEARCH/
+    ├── DECISIONS/
+    └── VALIDATION/
+
+מה לא הייתי מכניס כרגע כריפו עצמאי
+
+דברים שעלו הרבה בשיחות אבל הם נושאים/משימות ולא פרויקטי קוד עצמאיים:
+
+בחירת MacBook / Apple ecosystem
+
+iPad / iPhone / AirPods
+
+לימודי CS והקבלה לאוניברסיטה
+
+חברות Prop/Funding למסחר
+
+ניתוחי חדשות FX בודדים
+
+ניתוחי נכסים כמו XAUUSD / US100
+
+תוכנית לימוד ICT/SMC עצמה
+
+תזונה/אימונים
+
+בקשות לגבי כבישים בישראל
+
+
+כל אלה יכולים להופיע ב־PROJECT_INDEX.md תחת Personal / Research / Learning, אבל לא הייתי יוצר עבורם repository.
+
+נקודת ביקורת חשובה
+
+הסריקה כן מצאה מידע ממשי על fx_strength: שרשרת הנתונים היא Twelve Data → pair_changes → strength matrix → signals → journal → performance evaluation, עם fetchers ל־H1/H4/D1 עבור חמשת הזוגות. 
+
+אבל לא מצאתי בשיחות הוכחה לשם ה־GitHub repository בפועל של fx_strength. לכן כרגע נכון לסמן אותו:
+
+GitHub: UNKNOWN / VERIFY
+
+ולא להמציא URL.
+
+גם ה־Data Integrity patch עדיין לא היה שינוי בקוד — שלושת המסמכים שנוצרו הוגדרו במפורש כ־PROPOSAL ONLY. 
+
+וב־Macro Sentinel המצב האחרון שתועד הוא: Core EXISTS, Data Freshness FAILED, W1 MISSING, Cross-Asset/Macro MISSING, Opening Scan NOT READY, FINAL STATE = WAIT. 
+
+בשורה התחתונה: כרגע אני מזהה בערך 20–25 ישויות פרויקט/תת־פרויקט/Workflow, אבל רק כ־6–8 מועמדים אמיתיים לריפו. המרכזיים הם github-sync, FX_CORE/fx_strength, Hermes, שכבות Macro Sentinel, Dashboard, Enzo/RSS, ו־eCommerce Research.
+גרוק
+
+
+
+

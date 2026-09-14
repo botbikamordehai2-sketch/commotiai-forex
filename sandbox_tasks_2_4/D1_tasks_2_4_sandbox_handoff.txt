@@ -1,0 +1,22 @@
+TASK 2 — D1 implementation
+• Change D1 max_age_minutes from 1560 to 1800.
+• Keep comparator age_minutes <= max_age_minutes unchanged.
+• Fix fx_previous_close_timestamp_utc and fx_latest_close_timestamp_utc so they export actual close times.
+
+TASK 3 — Snapshot-to-Context traceability
+• Add source Snapshot generated_at_utc.
+• Add source Snapshot SHA256.
+• Add W1/D1/H4/H1 timestamp_utc values to the Context.
+
+TASK 4 — Offline validation
+• Verify 1800 minutes = FRESH.
+• Verify above 1800 follows the existing non-FRESH path.
+• Verify close-time semantics.
+• Verify 7/7 pairs, no duplicates and unchanged timestamps.
+
+SCOPE
+Sandbox copies only.
+No Fetch.
+No DB or Ledger writes.
+No Scheduler, Retry, Make or Notion data changes.
+Output: corrected files, unified patch, SHA256 manifest and verification report.

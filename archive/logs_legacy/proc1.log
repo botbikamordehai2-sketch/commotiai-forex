@@ -1,0 +1,3 @@
+JOURNAL_LOCK_ACQUIRED pid=25792
+No new signals to add. Journal is already up to date.
+JOURNAL_LOCK_RELEASED pid=25792

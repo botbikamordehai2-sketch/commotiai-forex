@@ -1,0 +1,499 @@
+{
+  "generated_at_utc": "2026-09-13T21:10:23.316641+00:00",
+  "source_snapshot_generated_at_utc": "2026-09-13T21:10:23.070698+00:00",
+  "source_snapshot_sha256": "bfbe42e0c9df61508ed5c4795e5c43c14fd2b06cab90fb6f1085d3b0fcfce0bf",
+  "timeframe_timestamps_utc": {
+    "W1": "2026-09-07T04:00:00+00:00",
+    "D1": "2026-09-13T00:00:00+00:00",
+    "H4": "2026-09-13T21:00:00+00:00",
+    "H1": "2026-09-13T21:00:00+00:00"
+  },
+  "research_only": true,
+  "purpose": "Read-only research context. Not a trade instruction.",
+  "market_session_utc": "NEW_YORK",
+  "timeframe_freshness": {
+    "W1": "FRESH",
+    "D1": "FRESH",
+    "H4": "FRESH",
+    "H1": "FRESH"
+  },
+  "data_quality_flags": [],
+  "pair_context": [
+    {
+      "pair": "AUD/USD",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": 7.75083883767805e-05,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BULLISH",
+        "D1": "NEUTRAL",
+        "H4": "BEARISH",
+        "H1": "NEUTRAL"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": 2.8052440384055237e-05,
+        "H4": -0.0020592197648291,
+        "H1": 7.75083883767805e-05
+      }
+    },
+    {
+      "pair": "EUR/USD",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": 0.0002601406201887,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BULLISH",
+        "D1": "NEUTRAL",
+        "H4": "BEARISH",
+        "H1": "NEUTRAL"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": 1.740539891219541e-05,
+        "H4": -0.0013387684742107,
+        "H1": 0.0002601406201887
+      }
+    },
+    {
+      "pair": "GBP/USD",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": 0.0002835714496561,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BEARISH",
+        "D1": "NEUTRAL",
+        "H4": "BEARISH",
+        "H1": "NEUTRAL"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": 0.0001628116501607,
+        "H4": -0.001288431316574,
+        "H1": 0.0002835714496561
+      }
+    },
+    {
+      "pair": "NZD/USD",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": 0.0019199032408872,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BEARISH",
+        "D1": "NEUTRAL",
+        "H4": "NEUTRAL",
+        "H1": "BULLISH"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": 3.45652136862785e-05,
+        "H4": -0.0003151066083074,
+        "H1": 0.0019199032408872
+      }
+    },
+    {
+      "pair": "USD/CAD",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": -0.0002819116300936,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BEARISH",
+        "D1": "NEUTRAL",
+        "H4": "BULLISH",
+        "H1": "NEUTRAL"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": -0.0001803784866986,
+        "H4": 0.0019957908105193,
+        "H1": -0.0002819116300936
+      }
+    },
+    {
+      "pair": "USD/CHF",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": -8.227461605318049e-05,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BULLISH",
+        "D1": "NEUTRAL",
+        "H4": "BULLISH",
+        "H1": "NEUTRAL"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": 6.107879884402497e-05,
+        "H4": 0.0011691547119271,
+        "H1": -8.227461605318049e-05
+      }
+    },
+    {
+      "pair": "USD/JPY",
+      "alignment": "CONFLICT",
+      "display_status": "WAIT",
+      "signal_quality": "N/A",
+      "h1_score_diff": -0.0001330959927294,
+      "all_timeframe_timestamps_present": true,
+      "timeframe_freshness": {
+        "W1": "FRESH",
+        "D1": "FRESH",
+        "H4": "FRESH",
+        "H1": "FRESH"
+      },
+      "timeframe_directions": {
+        "W1": "BEARISH",
+        "D1": "NEUTRAL",
+        "H4": "BULLISH",
+        "H1": "NEUTRAL"
+      },
+      "timeframe_scores": {
+        "W1": null,
+        "D1": 0.0003598672520756,
+        "H4": 0.0056292052136918,
+        "H1": -0.0001330959927294
+      }
+    }
+  ],
+  "manual_notes": [
+    {
+      "created_at_utc": "2026-08-26T15:45:00Z",
+      "event_time_utc": "2026-08-26T14:00:00Z",
+      "minutes_to_event": -26350.4,
+      "event_window": "PAST_EVENT",
+      "currency": "ALL",
+      "pair": "",
+      "category": "GEOPOLITICAL",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "Reports and political statements concerning Strait of Hormuz shipping and Iran/Oman negotiations. Treat as unverified context; confirm through primary or multiple reputable sources.",
+      "source_url": "https://www.forexfactory.com/news/1415117-trump-reiterates-us-blockade-in-hormuz-is-working",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "SECONDARY"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:45:00Z",
+      "event_time_utc": "2026-08-26T14:00:00Z",
+      "minutes_to_event": -26350.4,
+      "event_window": "PAST_EVENT",
+      "currency": "USD",
+      "pair": "",
+      "category": "INFLATION",
+      "severity": "HIGH",
+      "status": "ACTIVE",
+      "summary": "US PCE coverage indicates headline inflation above consensus while core PCE was reported in line. Verify values using BEA release before relying on the interpretation.",
+      "source_url": "https://www.bea.gov/news/2026/personal-income-and-outlays-july-2026",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "PENDING",
+      "source_tier": "USER_SUPPLIED"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:45:00Z",
+      "event_time_utc": "2026-08-26T14:00:00Z",
+      "minutes_to_event": -26350.4,
+      "event_window": "PAST_EVENT",
+      "currency": "USD",
+      "pair": "",
+      "category": "GDP",
+      "severity": "MEDIUM",
+      "status": "ACTIVE",
+      "summary": "US Q2 GDP second estimate reported at 1.5% in the supplied news feed. Verify details against BEA release.",
+      "source_url": "https://www.bea.gov/news/2026/gross-domestic-product-2nd-quarter-2026-second-estimate-and-corporate-profits-preliminary",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "PENDING",
+      "source_tier": "USER_SUPPLIED"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:45:00Z",
+      "event_time_utc": "2026-08-26T14:00:00Z",
+      "minutes_to_event": -26350.4,
+      "event_window": "PAST_EVENT",
+      "currency": "EUR",
+      "pair": "",
+      "category": "CENTRAL_BANK",
+      "severity": "MEDIUM",
+      "status": "PENDING",
+      "summary": "ECB commentary in the supplied feed said inflation may remain above 2% for an extended period. Treat as commentary pending review of the original ECB communication.",
+      "source_url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp260826~3641116314.en.html",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "PENDING",
+      "source_tier": "USER_SUPPLIED"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:05:00Z",
+      "event_time_utc": "2026-08-26T15:05:00Z",
+      "minutes_to_event": -26285.4,
+      "event_window": "PAST_EVENT",
+      "currency": "AUD",
+      "pair": "",
+      "category": "INFLATION",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "FXStreet reported that higher-than-expected July Australian CPI lifted expectations for additional RBA tightening. Verify CPI details and figures against the Australian Bureau of Statistics release.",
+      "source_url": "https://www.fxstreet.com/news/neither-a-confirmed-hike-nor-a-guaranteed-pause-why-the-australian-dollar-is-climbing-toward-07200-202608261405",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "PENDING",
+      "source_tier": "SECONDARY"
+    },
+    {
+      "created_at_utc": "2026-08-26T17:16:00Z",
+      "event_time_utc": "2026-08-26T17:16:00Z",
+      "minutes_to_event": -26154.4,
+      "event_window": "PAST_EVENT",
+      "currency": "AUD",
+      "pair": "",
+      "category": "CENTRAL_BANK",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "FXStreet cited TD Securities: August RBA minutes were less hawkish than June but still emphasized upside inflation risks and the possibility of pre-emptive tightening. Analyst interpretation; verify against the official RBA minutes.",
+      "source_url": "https://www.fxstreet.com/news/reserve-bank-of-australia-preemptive-hike-debate-intensifies-td-securities-202608261616",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "PENDING",
+      "source_tier": "SECONDARY"
+    },
+    {
+      "created_at_utc": "2026-08-26T17:43:00Z",
+      "event_time_utc": "2026-08-26T17:43:00Z",
+      "minutes_to_event": -26127.4,
+      "event_window": "PAST_EVENT",
+      "currency": "ALL",
+      "pair": "",
+      "category": "GEOPOLITICAL",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "Reuters headline: Iran and Oman are still working on details of a Strait of Hormuz accord, according to a senior Iranian source. Treat as developing and verify through the full Reuters report or independent primary sources.",
+      "source_url": "",
+      "verified_by": "User",
+      "evidence_type": "OBSERVATION",
+      "verification_status": "PENDING",
+      "source_tier": "SECONDARY"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-27T12:30:00Z",
+      "minutes_to_event": -25000.4,
+      "event_window": "PAST_EVENT",
+      "currency": "USD",
+      "pair": "",
+      "category": "EMPLOYMENT",
+      "severity": "MEDIUM",
+      "status": "PENDING",
+      "summary": "US initial jobless claims; forecast 208K, previous 206K.",
+      "source_url": "https://www.forexfactory.com/calendar/11-us-unemployment-claims",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-27T16:15:00Z",
+      "minutes_to_event": -24775.4,
+      "event_window": "PAST_EVENT",
+      "currency": "ALL",
+      "pair": "",
+      "category": "CENTRAL_BANK",
+      "severity": "MEDIUM",
+      "status": "PENDING",
+      "summary": "Jackson Hole Economic Policy Symposium begins; monitor policy communication.",
+      "source_url": "https://www.forexfactory.com/calendar/474-jackson-hole-symposium",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-27T23:30:00Z",
+      "minutes_to_event": -24340.4,
+      "event_window": "PAST_EVENT",
+      "currency": "JPY",
+      "pair": "",
+      "category": "INFLATION",
+      "severity": "MEDIUM",
+      "status": "PENDING",
+      "summary": "Tokyo Core CPI y/y; forecast 1.8%, previous 1.9%.",
+      "source_url": "https://www.forexfactory.com/calendar/175-jn-tokyo-core-cpi-yy",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-28T12:30:00Z",
+      "minutes_to_event": -23560.4,
+      "event_window": "PAST_EVENT",
+      "currency": "CAD",
+      "pair": "",
+      "category": "GDP",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "Canada monthly GDP; forecast 0.2%, previous 0.3%.",
+      "source_url": "https://www.forexfactory.com/calendar/29-ca-gdp-mm",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-28T14:00:00Z",
+      "minutes_to_event": -23470.4,
+      "event_window": "PAST_EVENT",
+      "currency": "USD",
+      "pair": "",
+      "category": "CENTRAL_BANK",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "Fed Chair Kevin Warsh speaks at Jackson Hole.",
+      "source_url": "https://www.forexfactory.com/calendar/129-us-fed-chairman-warsh-speaks",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-28T14:00:00Z",
+      "minutes_to_event": -23470.4,
+      "event_window": "PAST_EVENT",
+      "currency": "USD",
+      "pair": "",
+      "category": "EMPLOYMENT",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "US preliminary benchmark payrolls revision; previous -911K.",
+      "source_url": "https://www.forexfactory.com/calendar/925-us-prelim-benchmark-payrolls-revision",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-28T14:00:00Z",
+      "minutes_to_event": -23470.4,
+      "event_window": "PAST_EVENT",
+      "currency": "USD",
+      "pair": "",
+      "category": "NOTE",
+      "severity": "MEDIUM",
+      "status": "PENDING",
+      "summary": "Revised UoM consumer sentiment; forecast 51.0, previous 51.0. Inflation expectations also scheduled.",
+      "source_url": "https://www.forexfactory.com/calendar/54-us-revised-uom-consumer-sentiment",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    },
+    {
+      "created_at_utc": "2026-08-26T15:29:00Z",
+      "event_time_utc": "2026-08-28T16:15:00Z",
+      "minutes_to_event": -23335.4,
+      "event_window": "PAST_EVENT",
+      "currency": "ALL",
+      "pair": "",
+      "category": "CENTRAL_BANK",
+      "severity": "HIGH",
+      "status": "PENDING",
+      "summary": "Jackson Hole Symposium continues; policy headlines may affect broad FX volatility.",
+      "source_url": "https://www.forexfactory.com/calendar/474-jackson-hole-symposium",
+      "verified_by": "User",
+      "evidence_type": "EVENT_RISK",
+      "verification_status": "UNVERIFIED",
+      "source_tier": "CALENDAR"
+    }
+  ],
+  "manual_note_template": {
+    "allowed_status": [
+      "ACTIVE",
+      "PENDING",
+      "ARCHIVED"
+    ],
+    "allowed_severity": [
+      "LOW",
+      "MEDIUM",
+      "HIGH"
+    ],
+    "categories": [
+      "CENTRAL_BANK",
+      "INFLATION",
+      "EMPLOYMENT",
+      "GDP",
+      "GEOPOLITICAL",
+      "DATA_QUALITY",
+      "NOTE"
+    ],
+    "evidence_types": [
+      "FACT",
+      "OBSERVATION",
+      "EVENT_RISK"
+    ],
+    "verification_statuses": [
+      "VERIFIED",
+      "PENDING",
+      "UNVERIFIED"
+    ],
+    "source_tiers": [
+      "PRIMARY",
+      "SECONDARY",
+      "CALENDAR",
+      "USER_SUPPLIED"
+    ]
+  }
+}

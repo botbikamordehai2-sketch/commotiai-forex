@@ -1,0 +1,189 @@
+{
+  "generated_at_utc": "2026-09-14T06:11:45.727283+00:00",
+  "analysis_status": "RESEARCH_ONLY",
+  "read_only": true,
+  "methodology": "EMA20_EMA50_RSI14_and_20_bar_price_structure; not a trading instruction",
+  "timeframes": {
+    "D1": {
+      "AUD/USD": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      },
+      "EUR/USD": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      },
+      "GBP/USD": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      },
+      "NZD/USD": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      },
+      "USD/CAD": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      },
+      "USD/CHF": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      },
+      "USD/JPY": {
+        "signal": "INSUFFICIENT_HISTORY",
+        "score": 0,
+        "reason": "13 rows available; need at least 55"
+      }
+    },
+    "H4": {
+      "AUD/USD": {
+        "signal": "NO_CONFIRMED_REVERSAL",
+        "score": 20,
+        "latest_close": 0.71507,
+        "ema_20": 0.71706,
+        "ema_50": 0.717718,
+        "rsi_14": 33.98,
+        "structure": "NO_BREAK",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      },
+      "EUR/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 1.1566,
+        "ema_20": 1.159886,
+        "ema_50": 1.160851,
+        "rsi_14": 26.84,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      },
+      "GBP/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 1.35031,
+        "ema_20": 1.352443,
+        "ema_50": 1.353172,
+        "rsi_14": 35.08,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      },
+      "NZD/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 0.57843,
+        "ema_20": 0.581819,
+        "ema_50": 0.584765,
+        "rsi_14": 27.64,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      },
+      "USD/CAD": {
+        "signal": "BULLISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 1.38749,
+        "ema_20": 1.385938,
+        "ema_50": 1.385532,
+        "rsi_14": 58.61,
+        "structure": "BULLISH_BREAKOUT",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      },
+      "USD/CHF": {
+        "signal": "BULLISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 0.81824,
+        "ema_20": 0.815596,
+        "ema_50": 0.812863,
+        "rsi_14": 79.08,
+        "structure": "BULLISH_BREAKOUT",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      },
+      "USD/JPY": {
+        "signal": "NO_CONFIRMED_REVERSAL",
+        "score": 25,
+        "latest_close": 154.03202,
+        "ema_20": 153.905573,
+        "ema_50": 155.29695,
+        "rsi_14": 47.39,
+        "structure": "NO_BREAK",
+        "timestamp": "2026-09-14T05:00:00+00:00"
+      }
+    },
+    "H1": {
+      "AUD/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 0.71486,
+        "ema_20": 0.716569,
+        "ema_50": 0.717176,
+        "rsi_14": 19.53,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      },
+      "EUR/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 1.15886,
+        "ema_20": 1.159776,
+        "ema_50": 1.160212,
+        "rsi_14": 35.47,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      },
+      "GBP/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 1.35184,
+        "ema_20": 1.352625,
+        "ema_50": 1.35265,
+        "rsi_14": 33.82,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      },
+      "NZD/USD": {
+        "signal": "BEARISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 0.58012,
+        "ema_20": 0.581278,
+        "ema_50": 0.581817,
+        "rsi_14": 35.46,
+        "structure": "BEARISH_BREAKDOWN",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      },
+      "USD/CAD": {
+        "signal": "NO_CONFIRMED_REVERSAL",
+        "score": 20,
+        "latest_close": 1.38667,
+        "ema_20": 1.386612,
+        "ema_50": 1.385951,
+        "rsi_14": 51.8,
+        "structure": "NO_BREAK",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      },
+      "USD/CHF": {
+        "signal": "BULLISH_REVERSAL_WATCH",
+        "score": 55,
+        "latest_close": 0.8173,
+        "ema_20": 0.816523,
+        "ema_50": 0.815546,
+        "rsi_14": 66.69,
+        "structure": "BULLISH_BREAKOUT",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      },
+      "USD/JPY": {
+        "signal": "BULLISH_REVERSAL_WATCH",
+        "score": 80,
+        "latest_close": 153.70647,
+        "ema_20": 153.532207,
+        "ema_50": 153.768909,
+        "rsi_14": 54.03,
+        "structure": "BULLISH_BREAKOUT",
+        "timestamp": "2026-09-14T01:00:00+00:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,574 @@
+{
+  "generated_at_utc": "2026-09-05T11:00:11.877524+00:00",
+  "dashboard_version": "v2-w1",
+  "read_only": true,
+  "analysis_status": "RESEARCH_ONLY",
+  "no_threshold_change_authorized": true,
+  "timeframes": {
+    "W1": {
+      "label": "W1",
+      "source_file": "pair_changes_1w.csv",
+      "methodology": "weekly_pair_price_change",
+      "timestamp_utc": "2026-08-31T04:00:00+00:00",
+      "rows": 7,
+      "age_minutes": 7620.2,
+      "max_age_minutes": 11520,
+      "freshness": "FRESH"
+    },
+    "D1": {
+      "label": "D1",
+      "source_file": "signals_1d.csv",
+      "methodology": "currency_strength_signal",
+      "timestamp_utc": "2026-09-04T00:00:00+00:00",
+      "rows": 7,
+      "age_minutes": 2100.2,
+      "max_age_minutes": 1560,
+      "freshness": "AGING"
+    },
+    "H4": {
+      "label": "H4",
+      "source_file": "signals_4h.csv",
+      "methodology": "currency_strength_signal",
+      "timestamp_utc": "2026-09-05T09:00:00+00:00",
+      "rows": 7,
+      "age_minutes": 120.2,
+      "max_age_minutes": 480,
+      "freshness": "FRESH"
+    },
+    "H1": {
+      "label": "H1",
+      "source_file": "signals_1h.csv",
+      "methodology": "currency_strength_signal",
+      "timestamp_utc": "2026-09-05T11:00:00+00:00",
+      "rows": 7,
+      "age_minutes": 0.2,
+      "max_age_minutes": 180,
+      "freshness": "FRESH"
+    }
+  },
+  "pairs": [
+    {
+      "pair": "AUD/USD",
+      "w1_bias": "SHORT",
+      "d1_bias": "LONG",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "AUD",
+        "base_score": 0.0,
+        "quote_currency": "USD",
+        "quote_score": -1.8086530932824856e-06,
+        "score_diff": 1.8086530932824856e-06,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "AUD/USD",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0011861568518001,
+          "base_currency": "AUD",
+          "quote_currency": "USD",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "AUD/USD",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.0042957363422083,
+          "base_currency": "AUD",
+          "quote_currency": "USD",
+          "base_score": 0.0042957363422083,
+          "quote_score": -0.0063491318236165,
+          "score_diff": 0.0106448681658248
+        },
+        "H4": {
+          "pair": "AUD/USD",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 0.0,
+          "base_currency": "AUD",
+          "quote_currency": "USD",
+          "base_score": 0.0,
+          "quote_score": 9.142670929625235e-06,
+          "score_diff": -9.142670929625235e-06
+        },
+        "H1": {
+          "pair": "AUD/USD",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 0.0,
+          "base_currency": "AUD",
+          "quote_currency": "USD",
+          "base_score": 0.0,
+          "quote_score": -1.8086530932824856e-06,
+          "score_diff": 1.8086530932824856e-06
+        }
+      }
+    },
+    {
+      "pair": "EUR/USD",
+      "w1_bias": "SHORT",
+      "d1_bias": "LONG",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "EUR",
+        "base_score": 6.88835695464516e-05,
+        "quote_currency": "USD",
+        "quote_score": -1.8086530932824856e-06,
+        "score_diff": 7.069222263973409e-05,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "EUR/USD",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0080162380206058,
+          "base_currency": "EUR",
+          "quote_currency": "USD",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "EUR/USD",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.0032446799330353,
+          "base_currency": "EUR",
+          "quote_currency": "USD",
+          "base_score": 0.0032446799330353,
+          "quote_score": -0.0063491318236165,
+          "score_diff": 0.0095938117566518
+        },
+        "H4": {
+          "pair": "EUR/USD",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 0.0,
+          "base_currency": "EUR",
+          "quote_currency": "USD",
+          "base_score": 0.0,
+          "quote_score": 9.142670929625235e-06,
+          "score_diff": -9.142670929625235e-06
+        },
+        "H1": {
+          "pair": "EUR/USD",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 6.88835695464516e-05,
+          "base_currency": "EUR",
+          "quote_currency": "USD",
+          "base_score": 6.88835695464516e-05,
+          "quote_score": -1.8086530932824856e-06,
+          "score_diff": 7.069222263973409e-05
+        }
+      }
+    },
+    {
+      "pair": "GBP/USD",
+      "w1_bias": "SHORT",
+      "d1_bias": "LONG",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "GBP",
+        "base_score": 5.178395733002989e-05,
+        "quote_currency": "USD",
+        "quote_score": -1.8086530932824856e-06,
+        "score_diff": 5.359261042331237e-05,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "GBP/USD",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0074730303541438,
+          "base_currency": "GBP",
+          "quote_currency": "USD",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "GBP/USD",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.0029366615497563,
+          "base_currency": "GBP",
+          "quote_currency": "USD",
+          "base_score": 0.0029366615497563,
+          "quote_score": -0.0063491318236165,
+          "score_diff": 0.0092857933733728
+        },
+        "H4": {
+          "pair": "GBP/USD",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 5.178625592768752e-05,
+          "base_currency": "GBP",
+          "quote_currency": "USD",
+          "base_score": 5.178625592768752e-05,
+          "quote_score": 9.142670929625235e-06,
+          "score_diff": 4.2643584998062285e-05
+        },
+        "H1": {
+          "pair": "GBP/USD",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 5.178395733002989e-05,
+          "base_currency": "GBP",
+          "quote_currency": "USD",
+          "base_score": 5.178395733002989e-05,
+          "quote_score": -1.8086530932824856e-06,
+          "score_diff": 5.359261042331237e-05
+        }
+      }
+    },
+    {
+      "pair": "NZD/USD",
+      "w1_bias": "SHORT",
+      "d1_bias": "LONG",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "NZD",
+        "base_score": 6.803068183757675e-05,
+        "quote_currency": "USD",
+        "quote_score": -1.8086530932824856e-06,
+        "score_diff": 6.983933493085924e-05,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "NZD/USD",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0094244869262446,
+          "base_currency": "NZD",
+          "quote_currency": "USD",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "NZD/USD",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.005332786380884,
+          "base_currency": "NZD",
+          "quote_currency": "USD",
+          "base_score": 0.005332786380884,
+          "quote_score": -0.0063491318236165,
+          "score_diff": 0.0116819182045005
+        },
+        "H4": {
+          "pair": "NZD/USD",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": -0.0001020338752466,
+          "base_currency": "NZD",
+          "quote_currency": "USD",
+          "base_score": -0.0001020338752466,
+          "quote_score": 9.142670929625235e-06,
+          "score_diff": -0.0001111765461762
+        },
+        "H1": {
+          "pair": "NZD/USD",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 6.803068183757675e-05,
+          "base_currency": "NZD",
+          "quote_currency": "USD",
+          "base_score": 6.803068183757675e-05,
+          "quote_score": -1.8086530932824856e-06,
+          "score_diff": 6.983933493085924e-05
+        }
+      }
+    },
+    {
+      "pair": "USD/CAD",
+      "w1_bias": "LONG",
+      "d1_bias": "SHORT",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "USD",
+        "base_score": -1.8086530932824856e-06,
+        "quote_currency": "CAD",
+        "quote_score": -4.33648210116644e-05,
+        "score_diff": 4.155616791838192e-05,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "USD/CAD",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.0080894185186796,
+          "base_currency": "USD",
+          "quote_currency": "CAD",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "USD/CAD",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0037197812913058,
+          "base_currency": "USD",
+          "quote_currency": "CAD",
+          "base_score": -0.0063491318236165,
+          "quote_score": 0.0037197812913058,
+          "score_diff": -0.0100689131149223
+        },
+        "H4": {
+          "pair": "USD/CAD",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 1.445514928548846e-05,
+          "base_currency": "USD",
+          "quote_currency": "CAD",
+          "base_score": 9.142670929625235e-06,
+          "quote_score": -1.445514928548846e-05,
+          "score_diff": 2.359782021511369e-05
+        },
+        "H1": {
+          "pair": "USD/CAD",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 4.33648210116644e-05,
+          "base_currency": "USD",
+          "quote_currency": "CAD",
+          "base_score": -1.8086530932824856e-06,
+          "quote_score": -4.33648210116644e-05,
+          "score_diff": 4.155616791838192e-05
+        }
+      }
+    },
+    {
+      "pair": "USD/CHF",
+      "w1_bias": "LONG",
+      "d1_bias": "SHORT",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "USD",
+        "base_score": -1.8086530932824856e-06,
+        "quote_currency": "CHF",
+        "quote_score": -6.175355391702113e-05,
+        "score_diff": 5.994490082373864e-05,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "USD/CHF",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.009530700331828,
+          "base_currency": "USD",
+          "quote_currency": "CHF",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "USD/CHF",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0065562881322575,
+          "base_currency": "USD",
+          "quote_currency": "CHF",
+          "base_score": -0.0063491318236165,
+          "quote_score": 0.0065562881322575,
+          "score_diff": -0.012905419955874
+        },
+        "H4": {
+          "pair": "USD/CHF",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 0.0,
+          "base_currency": "USD",
+          "quote_currency": "CHF",
+          "base_score": 9.142670929625235e-06,
+          "quote_score": 0.0,
+          "score_diff": 9.142670929625235e-06
+        },
+        "H1": {
+          "pair": "USD/CHF",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 6.175355391702113e-05,
+          "base_currency": "USD",
+          "quote_currency": "CHF",
+          "base_score": -1.8086530932824856e-06,
+          "quote_score": -6.175355391702113e-05,
+          "score_diff": 5.994490082373864e-05
+        }
+      }
+    },
+    {
+      "pair": "USD/JPY",
+      "w1_bias": "LONG",
+      "d1_bias": "SHORT",
+      "h4_bias": "NEUTRAL",
+      "h1_bias": "NEUTRAL",
+      "alignment": "AGING_DATA_WARNING",
+      "display_status": "MONITOR",
+      "signal_quality": "LOW",
+      "strength": {
+        "base_currency": "USD",
+        "base_score": -1.8086530932824856e-06,
+        "quote_currency": "JPY",
+        "quote_score": -7.091926213239532e-05,
+        "score_diff": 6.911060903911282e-05,
+        "source_timeframe": "H1"
+      },
+      "timeframes": {
+        "W1": {
+          "pair": "USD/JPY",
+          "timestamp_utc": "2026-08-31T04:00:00+00:00",
+          "signal": "LONG",
+          "pair_change": 0.0066245085686633,
+          "base_currency": "USD",
+          "quote_currency": "JPY",
+          "base_score": null,
+          "quote_score": null,
+          "score_diff": null
+        },
+        "D1": {
+          "pair": "USD/JPY",
+          "timestamp_utc": "2026-09-04T00:00:00+00:00",
+          "signal": "SHORT",
+          "pair_change": -0.0183579891358687,
+          "base_currency": "USD",
+          "quote_currency": "JPY",
+          "base_score": -0.0063491318236165,
+          "quote_score": 0.0183579891358687,
+          "score_diff": -0.0247071209594852
+        },
+        "H4": {
+          "pair": "USD/JPY",
+          "timestamp_utc": "2026-09-05T09:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": -7.040720970242955e-07,
+          "base_currency": "USD",
+          "quote_currency": "JPY",
+          "base_score": 9.142670929625235e-06,
+          "quote_score": 7.040720970242955e-07,
+          "score_diff": 8.43859883260094e-06
+        },
+        "H1": {
+          "pair": "USD/JPY",
+          "timestamp_utc": "2026-09-05T11:00:00+00:00",
+          "signal": "NEUTRAL",
+          "pair_change": 7.091926213239532e-05,
+          "base_currency": "USD",
+          "quote_currency": "JPY",
+          "base_score": -1.8086530932824856e-06,
+          "quote_score": -7.091926213239532e-05,
+          "score_diff": 6.911060903911282e-05
+        }
+      }
+    }
+  ],
+  "performance": {
+    "available": true,
+    "mfe_mae_available": false,
+    "summary_by_horizon": [
+      {
+        "horizon": "1H",
+        "signals": 52,
+        "wins": 14,
+        "losses": 26,
+        "flats": 12,
+        "win_rate_pct": 26.92,
+        "avg_return_pct": -0.009477,
+        "median_return_pct": -0.001112,
+        "total_return_pct": -0.49282,
+        "expectancy_pct": -0.009477,
+        "minimum_sample_met": true
+      },
+      {
+        "horizon": "24H",
+        "signals": 28,
+        "wins": 14,
+        "losses": 14,
+        "flats": 0,
+        "win_rate_pct": 50.0,
+        "avg_return_pct": 0.027264,
+        "median_return_pct": -0.02075,
+        "total_return_pct": 0.763405,
+        "expectancy_pct": 0.027264,
+        "minimum_sample_met": false
+      },
+      {
+        "horizon": "4H",
+        "signals": 52,
+        "wins": 26,
+        "losses": 25,
+        "flats": 1,
+        "win_rate_pct": 50.0,
+        "avg_return_pct": -0.009136,
+        "median_return_pct": 0.003034,
+        "total_return_pct": -0.475079,
+        "expectancy_pct": -0.009136,
+        "minimum_sample_met": true
+      }
+    ],
+    "completed_by_horizon_source": [
+      {
+        "horizon": "1H",
+        "source": "api",
+        "completed_outcomes": 52
+      },
+      {
+        "horizon": "24H",
+        "source": "api",
+        "completed_outcomes": 16
+      },
+      {
+        "horizon": "24H",
+        "source": "legacy_journal",
+        "completed_outcomes": 12
+      },
+      {
+        "horizon": "4H",
+        "source": "api",
+        "completed_outcomes": 38
+      },
+      {
+        "horizon": "4H",
+        "source": "legacy_journal",
+        "completed_outcomes": 14
+      }
+    ],
+    "notes": [
+      "Performance is research-only. api and legacy_journal sources remain separately identified."
+    ]
+  }
+}

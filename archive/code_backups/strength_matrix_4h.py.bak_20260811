@@ -1,0 +1,179 @@
+import logging
+from datetime import datetime, timezone
+
+import pandas as pd
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+INPUT_PATH = "pair_changes_4h.csv"
+OUTPUT_PATH = "signals_4h.csv"
+
+
+def load_pair_changes() -> pd.DataFrame:
+    """
+    קורא את pair_changes_4h.csv ומכין את עמודת הזמן כ-UTC datetime.
+    """
+    try:
+        df = pd.read_csv(INPUT_PATH)
+    except FileNotFoundError:
+        logging.error(f"{INPUT_PATH} not found.")
+        return pd.DataFrame()
+
+    if df.empty:
+        logging.error(f"{INPUT_PATH} is empty.")
+        return pd.DataFrame()
+
+    df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
+    return df
+
+
+def check_freshness(df: pd.DataFrame, max_age_minutes: float = 480.0) -> bool:
+    """
+    בודק שהדאטה לטווח 4 שעות לא ישן מדי.
+    בר 4H אחד מכסה כבר 4 שעות, אז סף 8 שעות (480 דקות) הגיוני לביאס סווינג.
+    """
+    now_utc = datetime.now(timezone.utc)
+    latest_ts = df["timestamp"].max()
+    age_min = (now_utc - latest_ts).total_seconds() / 60.0
+
+    logging.info(f"4H: latest timestamp={latest_ts.isoformat()}, age={age_min:.1f} minutes")
+
+    if age_min > max_age_minutes:
+        print(
+            f"ERROR: STALE DATA (4H): latest timestamp is {latest_ts.isoformat()}, age={age_min:.1f} minutes"
+        )
+        return False
+
+    return True
+
+
+def compute_currency_strength(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    מחשב חוזק מטבעות מתוך שינויי הזוגות (4 שעות).
+    לכל שורה:
+      base מקבל +change
+      quote מקבל -change
+    ואז לוקחים ממוצע לכל מטבע.
+    """
+    records = []
+
+    for _, row in df.iterrows():
+        pair = row["pair"]
+        base, quote = pair.split("/")
+        change = float(row["change"])
+
+        records.append({"currency": base, "change": change})
+        records.append({"currency": quote, "change": -change})
+
+    strength_df = (
+        pd.DataFrame(records)
+        .groupby("currency", as_index=False)["change"]
+        .mean()
+        .rename(columns={"change": "strength"})
+    )
+
+    strength_df = strength_df.sort_values("strength", ascending=False).reset_index(drop=True)
+    return strength_df
+
+
+def compute_strength_matrix(strength_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    יוצר מטריצה Base/Quote Strength לטווח 4H.
+    """
+    currencies = strength_df["currency"].tolist()
+    scores = {row["currency"]: row["strength"] for _, row in strength_df.iterrows()}
+
+    matrix = []
+
+    for base in currencies:
+        row = {"currency": base}
+        for quote in currencies:
+            if base == quote:
+                row[quote] = 0.0
+            else:
+                row[quote] = scores[base] - scores[quote]
+        matrix.append(row)
+
+    matrix_df = pd.DataFrame(matrix)
+    matrix_df = matrix_df.set_index("currency")
+    return matrix_df
+
+
+def generate_signals(
+    df_pairs: pd.DataFrame,
+    strength_df: pd.DataFrame,
+    threshold: float = 0.0005
+) -> pd.DataFrame:
+    """
+    מייצר סיגנל 4H לכל זוג על פי diff = base_score - quote_score:
+      diff >= threshold     -> LONG
+      diff <= -threshold    -> SHORT
+      אחרת                  -> NEUTRAL
+    """
+    scores = {row["currency"]: row["strength"] for _, row in strength_df.iterrows()}
+
+    rows = []
+
+    for _, row in df_pairs.iterrows():
+        pair = row["pair"]
+        base, quote = pair.split("/")
+        pair_change = float(row["change"])
+        ts = row["timestamp"]
+
+        base_score = scores.get(base, 0.0)
+        quote_score = scores.get(quote, 0.0)
+        diff = base_score - quote_score
+
+        if diff >= threshold:
+            signal = "LONG"
+        elif diff <= -threshold:
+            signal = "SHORT"
+        else:
+            signal = "NEUTRAL"
+
+        rows.append({
+            "pair": pair,
+            "timestamp": ts.isoformat(),
+            "pair_change": pair_change,
+            "base_currency": base,
+            "quote_currency": quote,
+            "base_score": base_score,
+            "quote_score": quote_score,
+            "score_diff": diff,
+            "signal": signal,
+        })
+
+    signals_df = pd.DataFrame(rows)
+    return signals_df
+
+
+def main():
+    df = load_pair_changes()
+    if df.empty:
+        return
+
+    if not check_freshness(df, max_age_minutes=480.0):
+        return
+
+    strength_df = compute_currency_strength(df)
+    logging.info(f"4H: Currency Strength:\n{strength_df}")
+
+    matrix_df = compute_strength_matrix(strength_df)
+    logging.info(f"4H: Base/Quote Strength Matrix:\n{matrix_df}")
+
+    signals_df = generate_signals(df, strength_df, threshold=0.0005)
+    logging.info(f"4H: Signals:\n{signals_df[['pair','score_diff','signal']]}")
+
+    signals_df.to_csv(OUTPUT_PATH, index=False)
+    logging.info(f"4H: Saved {OUTPUT_PATH} with {len(signals_df)} rows")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as e:
+        print(f"\nERROR: {e}")
+    input("\nPress Enter to exit...")

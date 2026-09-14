@@ -1,0 +1,213 @@
+diff --git a/fetch_data_to_csv.py b/fetch_data_to_csv.py
+--- a/fetch_data_to_csv.py
++++ b/fetch_data_to_csv.py
+@@ -1,6 +1,7 @@
+ import os
+ import logging
++import sys
+ from datetime import datetime, timedelta, timezone
+ 
+ import pandas as pd
+@@
+ OUTPUT_SIZE_1H = 5  # מספר ברים שעתי למשיכה
+ 
+ 
++def is_fx_weekend(now_utc: datetime) -> bool:
++    return now_utc.weekday() >= 5
++
++
+ def parse_bar_datetime(dt_str: str) -> datetime:
+     dt = pd.to_datetime(dt_str, utc=True)
+     if isinstance(dt, pd.Timestamp):
+@@
+ def fetch_1h() -> pd.DataFrame:
+@@
+     now_utc = datetime.now(timezone.utc)
++
++    if is_fx_weekend(now_utc):
++        logging.info("Weekend guard: FX market is closed; H1 pipeline will not run.")
++        return pd.DataFrame()
+ 
+     params = {
+@@
+     df = pd.DataFrame(results)
+ 
+-    if not df.empty:
+-        df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
+-        df = df.sort_values(["timestamp", "pair"]).reset_index(drop=True)
+-        df["timestamp"] = df["timestamp"].dt.strftime("%Y-%m-%d %H:%M:%S")
++    expected_pairs = set(SYMBOLS)
++    received_pairs = set(df["pair"]) if not df.empty else set()
++    if received_pairs != expected_pairs:
++        missing = sorted(expected_pairs - received_pairs)
++        unexpected = sorted(received_pairs - expected_pairs)
++        raise RuntimeError(
++            f"1H market-data failure: expected all {len(expected_pairs)} pairs; "
++            f"missing={missing}, unexpected={unexpected}"
++        )
++
++    df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
++    unique_timestamps = df["timestamp"].drop_duplicates()
++    if len(unique_timestamps) != 1:
++        raise RuntimeError(
++            "1H market-data failure: the five pairs do not share one closed-bar timestamp: "
++            f"{[ts.isoformat() for ts in unique_timestamps]}"
++        )
++
++    df = df.sort_values(["timestamp", "pair"]).reset_index(drop=True)
++    df["timestamp"] = df["timestamp"].dt.strftime("%Y-%m-%d %H:%M:%S")
+ 
+     return df
+@@
+ def main():
+     df_1h = fetch_1h()
+     if df_1h.empty:
+-        logging.warning("1H: No rows fetched. pair_changes_1h.csv was not updated.")
++        logging.info("1H: no output written (weekend guard).")
+     else:
+         df_1h.to_csv("pair_changes_1h.csv", index=False)
+         logging.info(f"Saved pair_changes_1h.csv with {len(df_1h)} rows")
+@@
+ if __name__ == "__main__":
+     try:
+         main()
+     except Exception as e:
+-        print(f"\nERROR: {e}")
+-    input("\nPress Enter to exit...")
++        logging.exception("1H fetch failed: %s", e)
++        sys.exit(1)
+
+diff --git a/fetch_4h_to_csv.py b/fetch_4h_to_csv.py
+--- a/fetch_4h_to_csv.py
++++ b/fetch_4h_to_csv.py
+@@ -1,6 +1,7 @@
+ import os
+ import logging
++import sys
+ from datetime import datetime, timedelta, timezone
+ 
+ import pandas as pd
+@@
+ OUTPUT_SIZE_4H = 5  # מספר ברים 4H למשיכה
+ 
+ 
++def is_fx_weekend(now_utc: datetime) -> bool:
++    return now_utc.weekday() >= 5
++
++
+ def parse_bar_datetime(dt_str: str) -> datetime:
+@@
+     now_utc = datetime.now(timezone.utc)
++
++    if is_fx_weekend(now_utc):
++        logging.info("Weekend guard: FX market is closed; H4 pipeline will not run.")
++        return pd.DataFrame()
+@@
+     df = pd.DataFrame(results)
+ 
+-    if not df.empty:
+-        df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
+-        df = df.sort_values(["timestamp", "pair"]).reset_index(drop=True)
+-        df["timestamp"] = df["timestamp"].dt.strftime("%Y-%m-%d %H:%M:%S")
++    expected_pairs = set(SYMBOLS)
++    received_pairs = set(df["pair"]) if not df.empty else set()
++    if received_pairs != expected_pairs:
++        missing = sorted(expected_pairs - received_pairs)
++        unexpected = sorted(received_pairs - expected_pairs)
++        raise RuntimeError(
++            f"4H market-data failure: expected all {len(expected_pairs)} pairs; "
++            f"missing={missing}, unexpected={unexpected}"
++        )
++
++    df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
++    unique_timestamps = df["timestamp"].drop_duplicates()
++    if len(unique_timestamps) != 1:
++        raise RuntimeError(
++            "4H market-data failure: the five pairs do not share one closed-bar timestamp: "
++            f"{[ts.isoformat() for ts in unique_timestamps]}"
++        )
++
++    df = df.sort_values(["timestamp", "pair"]).reset_index(drop=True)
++    df["timestamp"] = df["timestamp"].dt.strftime("%Y-%m-%d %H:%M:%S")
+@@
+     if df_4h.empty:
+-        logging.warning("4H: No rows fetched. pair_changes_4h.csv was not updated.")
++        logging.info("4H: no output written (weekend guard).")
+@@
+ if __name__ == "__main__":
+     try:
+         main()
+     except Exception as e:
+-        print(f"\nERROR: {e}")
+-    input("\nPress Enter to exit...")
++        logging.exception("4H fetch failed: %s", e)
++        sys.exit(1)
+
+diff --git a/strength_matrix.py b/strength_matrix.py
+--- a/strength_matrix.py
++++ b/strength_matrix.py
+@@
+ INPUT_PATH = "pair_changes_1h.csv"
+ OUTPUT_PATH = "signals_1h.csv"
++EXPECTED_PAIRS = {"EUR/USD", "GBP/USD", "NZD/USD", "USD/CHF", "USD/JPY"}
+@@
+ def check_freshness(df: pd.DataFrame, max_age_minutes: float = 90.0) -> bool:
+@@
+     return True
+ 
+ 
++def validate_input(df: pd.DataFrame) -> bool:
++    received_pairs = set(df["pair"])
++    if received_pairs != EXPECTED_PAIRS or len(df) != len(EXPECTED_PAIRS):
++        print(
++            "ERROR: INVALID 1H INPUT: expected exactly the five baseline pairs; "
++            f"received={sorted(received_pairs)} rows={len(df)}"
++        )
++        return False
++
++    timestamps = df["timestamp"].drop_duplicates()
++    if len(timestamps) != 1:
++        print(f"ERROR: MISALIGNED 1H INPUT: timestamps={list(timestamps)}")
++        return False
++
++    return True
++
++
+ def compute_currency_strength(df: pd.DataFrame) -> pd.DataFrame:
+@@
+     if df.empty:
+         return
+ 
++    if not validate_input(df):
++        return
++
+     if not check_freshness(df, max_age_minutes=90.0):
+         return
+
+diff --git a/signal_journal.py b/signal_journal.py
+--- a/signal_journal.py
++++ b/signal_journal.py
+@@
+ SIGNAL_SOURCES = [
+     {
+         "signals_file": "signals_1h.csv",
+         "prices_file": "pair_changes_1h.csv",
+         "timeframe": "H1",
+     },
+-    {
+-        "signals_file": "signals_4h.csv",
+-        "prices_file": "pair_changes_4h.csv",
+-        "timeframe": "H4",
+-    },
+ ]
+
+diff --git a/run_h4.bat b/run_h4.bat
+--- a/run_h4.bat
++++ b/run_h4.bat
+@@
+-py .\signal_journal.py >> h4_scheduler.log 2>&1
+-if errorlevel 1 (
+-echo ERROR: signal_journal.py failed.>> h4_scheduler.log
+-exit /b 1
+-)
++echo H4 journal ingestion is disabled pending approval.>> h4_scheduler.log

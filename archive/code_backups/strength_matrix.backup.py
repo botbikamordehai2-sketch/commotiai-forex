@@ -1,0 +1,238 @@
+import sys
+import logging
+from datetime import datetime, timezone
+
+import pandas as pd
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+INPUT_PATH = "pair_changes_1h.csv"
+OUTPUT_PATH = "signals_1h.csv"
+
+EXPECTED_PAIRS = {
+    "EUR/USD",
+    "USD/CHF",
+    "NZD/USD",
+    "GBP/USD",
+    "USD/JPY",
+}
+
+REQUIRED_COLUMNS = {"pair", "timestamp", "change"}
+
+
+def load_pair_changes() -> pd.DataFrame:
+    try:
+        df = pd.read_csv(INPUT_PATH)
+    except FileNotFoundError as e:
+        raise RuntimeError(f"{INPUT_PATH} not found") from e
+
+    if df.empty:
+        raise RuntimeError(f"{INPUT_PATH} is empty")
+
+    missing_columns = sorted(REQUIRED_COLUMNS - set(df.columns))
+    if missing_columns:
+        raise RuntimeError(
+            f"{INPUT_PATH} is missing required columns: {missing_columns}"
+        )
+
+    df["timestamp"] = pd.to_datetime(df["timestamp"], utc=True)
+    return df
+
+
+def validate_input(df: pd.DataFrame) -> None:
+    pairs = df["pair"].astype(str)
+    actual_pairs = set(pairs)
+
+    missing_pairs = sorted(EXPECTED_PAIRS - actual_pairs)
+    unexpected_pairs = sorted(actual_pairs - EXPECTED_PAIRS)
+    duplicate_pairs = sorted(
+        pairs[pairs.duplicated()].unique().tolist()
+    )
+
+    if (
+        missing_pairs
+        or unexpected_pairs
+        or duplicate_pairs
+        or len(df) != len(EXPECTED_PAIRS)
+    ):
+        raise RuntimeError(
+            "1H input invalid; signals_1h.csv was not updated. "
+            f"missing={missing_pairs}, "
+            f"unexpected={unexpected_pairs}, "
+            f"duplicates={duplicate_pairs}, "
+            f"rows={len(df)}, "
+            f"expected_rows={len(EXPECTED_PAIRS)}"
+        )
+
+    if df[["timestamp", "change"]].isna().any().any():
+        raise RuntimeError(
+            "1H input contains missing timestamp or change values"
+        )
+
+
+def check_freshness(
+    df: pd.DataFrame,
+    max_age_minutes: float = 90.0,
+) -> None:
+    now_utc = datetime.now(timezone.utc)
+    age_minutes = (
+        now_utc - df["timestamp"]
+    ).dt.total_seconds() / 60.0
+
+    freshness = pd.DataFrame({
+        "pair": df["pair"],
+        "timestamp": df["timestamp"],
+        "age_minutes": age_minutes,
+    })
+
+    logging.info(
+        "1H freshness:\n%s",
+        freshness.to_string(index=False),
+    )
+
+    stale = freshness[
+        freshness["age_minutes"] > max_age_minutes
+    ]
+
+    if not stale.empty:
+        raise RuntimeError(
+            "STALE DATA (1H); signals_1h.csv was not updated:\n"
+            + stale.to_string(index=False)
+        )
+
+
+def compute_currency_strength(
+    df: pd.DataFrame,
+) -> pd.DataFrame:
+    records = []
+
+    for _, row in df.iterrows():
+        pair = row["pair"]
+        base, quote = pair.split("/")
+        change = float(row["change"])
+
+        records.append({"currency": base, "change": change})
+        records.append({"currency": quote, "change": -change})
+
+    strength_df = (
+        pd.DataFrame(records)
+        .groupby("currency", as_index=False)["change"]
+        .mean()
+        .rename(columns={"change": "strength"})
+    )
+
+    return strength_df.sort_values(
+        "strength",
+        ascending=False,
+    ).reset_index(drop=True)
+
+
+def compute_strength_matrix(
+    strength_df: pd.DataFrame,
+) -> pd.DataFrame:
+    currencies = strength_df["currency"].tolist()
+    scores = {
+        row["currency"]: row["strength"]
+        for _, row in strength_df.iterrows()
+    }
+
+    matrix = []
+
+    for base in currencies:
+        row = {"currency": base}
+
+        for quote in currencies:
+            if base == quote:
+                row[quote] = 0.0
+            else:
+                row[quote] = scores[base] - scores[quote]
+
+        matrix.append(row)
+
+    return pd.DataFrame(matrix).set_index("currency")
+
+
+def generate_signals(
+    df_pairs: pd.DataFrame,
+    strength_df: pd.DataFrame,
+    threshold: float = 0.0004,
+) -> pd.DataFrame:
+    scores = {
+        row["currency"]: row["strength"]
+        for _, row in strength_df.iterrows()
+    }
+
+    rows = []
+
+    for _, row in df_pairs.iterrows():
+        pair = row["pair"]
+        base, quote = pair.split("/")
+        pair_change = float(row["change"])
+        ts = row["timestamp"]
+
+        base_score = scores[base]
+        quote_score = scores[quote]
+        diff = base_score - quote_score
+
+        if diff >= threshold:
+            classification = "LONG"
+        elif diff <= -threshold:
+            classification = "SHORT"
+        else:
+            classification = "NEUTRAL"
+
+        rows.append({
+            "pair": pair,
+            "timestamp": ts.isoformat(),
+            "pair_change": pair_change,
+            "base_currency": base,
+            "quote_currency": quote,
+            "base_score": base_score,
+            "quote_score": quote_score,
+            "score_diff": diff,
+            "signal": classification,
+        })
+
+    return pd.DataFrame(rows)
+
+
+def main() -> None:
+    df = load_pair_changes()
+
+    validate_input(df)
+    check_freshness(df, max_age_minutes=90.0)
+
+    strength_df = compute_currency_strength(df)
+    logging.info("1H Currency Strength:\n%s", strength_df)
+
+    matrix_df = compute_strength_matrix(strength_df)
+    logging.info("1H Base/Quote Strength Matrix:\n%s", matrix_df)
+
+    signals_df = generate_signals(
+        df,
+        strength_df,
+        threshold=0.0004,
+    )
+
+    logging.info(
+        "1H Signals:\n%s",
+        signals_df[["pair", "score_diff", "signal"]],
+    )
+
+    signals_df.to_csv(OUTPUT_PATH, index=False)
+    logging.info(
+        "Saved %s with %s rows",
+        OUTPUT_PATH,
+        len(signals_df),
+    )
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception:
+        logging.exception("1H strength calculation failed")
+        sys.exit(1)
